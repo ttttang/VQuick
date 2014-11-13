@@ -1,2 +1,12 @@
-<h1>Organizations#index</h1>
-<p>Find me in app/views/organizations/index.html.erb</p>
+<h1>Organizations</h1>
+
+<table>
+	<tbody>
+		<tr>
+			<th> Event </th>
+			<th> Date and Time </th>
+			<th> Organization </th>
+		</tr>
+		<%= render partial: "event", collection: @events %>
+	</tbody>
+<table>

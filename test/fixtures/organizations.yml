@@ -7,12 +7,16 @@
 
 whospice:
   name: Wilshire Hospice
+  description: To care for those near death 
 
 ucla:
   name: UCLA 
+  description: A university in CA
 
 sod:
   name: School of Devs
+  description: A coding bootcamp in CA
 
 ymca:
   name: YMCA
+  description: YMCA. What more to say? 
