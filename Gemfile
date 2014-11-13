@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 #for users
 gem 'devise'
 
+#for styling
+gem 'bootstrap-sass'
+
 #to make pages
 gem 'will_paginate'
 
