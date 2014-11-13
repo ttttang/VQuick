@@ -4,8 +4,38 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+
+
+tracy:
+  name: Tracy Tang
+  organization: ucla
+
+sylvester:
+  name: Sylvester Lan
+  organization: whospice
+
+ounie:
+  name: Ounie P
+  organization: sod
+
+community:
+  name: Community Peeps
+  organization: ymca
+
+cassidy:
+  name: Cassidy Tran
+  organization: ucla
+
+mary:
+  name: Mary Good
+  organization: whospice
+
+david:
+  name: David Nguyen
+  organization: sod
+
+village:
+  name: Village Peeps
+  organization: ymca
+
+

@@ -1,3 +1,9 @@
 class Event < ActiveRecord::Base
-has_and_belongs_to_many :users
+	has_many :attendances
+	has_many :users, :through=> :attendances
+	belongs_to :organization
+
+def to_s
+	"#{name}"
+end
 end

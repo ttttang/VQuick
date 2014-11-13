@@ -1,0 +1,42 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+a:
+  user: tracy
+  event: event_1
+
+b:
+  user: sylvester
+  event: event_2
+
+c:
+  user: tracy
+  event: event_2
+
+d:
+  user: tracy
+  event: event_3
+
+e:
+  user: mary
+  event: event_5
+
+f:
+  user: cassidy
+  event: event_6
+
+g:
+  user: david
+  event: event_6
+
+h:
+  user: ounie
+  event: event_18
+
+i:
+  user: village
+  event: event_12
+
+j:
+  user: community
+  event: event_13
+

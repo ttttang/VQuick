@@ -4,8 +4,15 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+
+<% 20.times do |n|%>
+event_<%= n %>:
+  name: event_<%= n %>
+  description: <%=n%2==0? 'Fun event': 'Swanky event' %>
+  requirements: <%=n%3==0? 'Ok for all ages': 'Permission slip needed' %>
+  date_and_time: <% Time.now-n.days %>
+  hours: <%= n%4+1%>
+  minutes: <%= n%4*10 %>
+  organization: <%= case n%3; when 0; "whospice"; when 1; "sod"; when 2; "ucla"; else "ymca"; end %> 
+<%end %>
+
