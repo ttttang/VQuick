@@ -3,10 +3,14 @@
 <table>
 	<tbody>
 		<tr>
-			<th> Event </th>
-			<th> Date and Time </th>
-			<th> Organization </th>
+			<th> Organization Name </th>
+			<th> Description </th>
 		</tr>
-		<%= render partial: "event", collection: @events %>
+		<% @organizations.each do |org| %>
+		<tr>
+			<td> <%= org.name %> </td>
+			<td> <%= org.description %> </td>
+		</tr>
+		<% end %>
 	</tbody>
 <table>
