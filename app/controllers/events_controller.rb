@@ -10,7 +10,6 @@ class EventsController < ApplicationController
   end
 
   def show
-
   end
 
 private

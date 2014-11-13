@@ -2,19 +2,24 @@
 
 <h1><%= @event.name %></h1>
 
-<p>Event: <%= @event.company.name %> </p>
-<p>Default Rate: <%= @project.default_rate %> </p>
-<p>Slug: <%= @project.slug %> </p>
 
 <table>
 	<tbody>
 		<tr>
-			<th> View </th>
-			<th> User </th>
-			<th> Project </th>
-			<th> Date/Time Performed </th>
-			<th> Hours </th>
+			<th> Name </th>
+			<th> Date </th>
+			<th> Description </th>
+			<th> Requirements </th>
+			<th> Organization </th>
 		</tr>
- 		<%= render partial: "works/work", collection: @project.works %>
+ 		<tr>
+			<td> <%= @event.name %></td>
+			<td> <%= @event.date_and_time %></td>
+			<td> <%= @event.description %></td>
+			<td> <%= @event.requirements %></td>
+			<td> <%= @event.organization %></td>
+		</tr>
 	</tbody>
 </table>
+
+  
