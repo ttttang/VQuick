@@ -9,14 +9,7 @@
 
 
 <body>
-
-<ul class= "navbar">
-	<li><%= link_to 'Organizations', organizations_path %></li>
-	<li><%= link_to 'Users', users_path %></li>
-	<li><%= link_to 'Events', events_path %></li>
-</ul>
-
-<%= yield %>
-
+	<%= render 'layouts/header'%>
+	<%= yield %>
 </body>
 </html>
