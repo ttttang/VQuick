@@ -14,6 +14,9 @@ class EventsController < ApplicationController
 
  
   def create
+    @event = Event.new(params[:event].permit(:name, :description, :requirements, :date_and_time, :hours, :minutes))
+    @event.save
+    redirect_to @event
   end  
 
 private
