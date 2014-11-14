@@ -7,35 +7,67 @@
 
 
 tracy:
-  name: Tracy Tang
+  fname: Tracy
+  lname: Tang
+  name: TracyT
   organization: ucla
+  email: tracyt.tang@gmail.com
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
 
 sylvester:
-  name: Sylvester Lan
+  fname: Sylvester 
+  lname: Lan
+  name: SylvesterL
   organization: whospice
+  email: sylvesterlan100@gmail.com
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
 
 ounie:
-  name: Ounie P
+  fname: Ounie
+  lname: Phakousonh
+  name: OunieP
   organization: sod
+  email: ounie@email.com
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
 
 community:
-  name: Community Peeps
+  fname: Community
+  lname: Peeps
+  name: CommunityP
   organization: ymca
+  email: community@email.com
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
 
 cassidy:
-  name: Cassidy Tran
+  fname: Cassidy
+  lname: Tran
+  name: CassidyT
   organization: ucla
+  email: cassidy@email.com
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
 
 mary:
-  name: Mary Good
+  fname: Mary
+  lname: Good
+  name: MaryG
   organization: whospice
+  email: mary@email.com
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
 
 david:
-  name: David Nguyen
+  fname: David
+  lname: Nguyen
+  name: DavidN
   organization: sod
+  email: david@email.com
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
 
 village:
-  name: Village Peeps
+  fname: Village
+  lname: Peeps
+  name: VillageP
   organization: ymca
+  email: village@email.com
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
 
 

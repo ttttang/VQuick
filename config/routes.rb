@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'pages/about_us'
 
   get 'pages/contact'
 
   root "events#index"
  resources :organizations
- resources :users
+ #resources :users
  resources :events
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
