@@ -1,2 +1,22 @@
-<h1>Organizations#show</h1>
-<p>Find me in app/views/organizations/show.html.erb</p>
+<h1>Organization Details</h1>
+
+<table>
+	<tbody>
+		<tr>
+			<th> Organization </th>
+			<th> Description </th>
+			<th> Contact Person </th>
+			<th> Email </th>
+			<th> Phone Number </th>
+			<th> Website </th>
+		</tr>
+		<tr>
+			<td> <%= link_to @organization.name, @organization.website %> </td>
+			<td> <%= @organization.description %> </td>
+			<td> <%= @organization.contact %> </td>
+			<td> <%= @organization.email %> </td>
+			<td> <%= @organization.phone %> </td>
+			<td> <%= @organization.website %> </td>
+		</tr>
+	</tbody>
+<table>
