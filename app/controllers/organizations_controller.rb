@@ -10,7 +10,10 @@ class OrganizationsController < ApplicationController
   end
 
   def create
-  end
+    @organization = Organization.new(params[:organization].permit(:name, :description, :contact, :phone, :email, :website))
+    @organization.save
+    redirect_to @organization
+  end  
 
   def show
   end

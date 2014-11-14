@@ -12,6 +12,10 @@ class EventsController < ApplicationController
   def show
   end
 
+ 
+  def create
+  end  
+
 private
   def set_event
 	 @event= Event.find(params[:id])
