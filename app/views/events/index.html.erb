@@ -1,14 +1,6 @@
 <h1>Events</h1>
 
-<table>
-	<tbody>
-		<tr>
-			<th> Event </th>
-			<th> Date and Time </th>
-			<th> Description </th>
-			<th> Requirements </th>
-			<th> Organization </th>
-		</tr>
-		<%= render partial: "event", collection: @events %>
-	</tbody>
-<table>
+<%=render 'eventitems'%>
+<br>
+<br>
+<%=render 'eventlist'%>
