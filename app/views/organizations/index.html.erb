@@ -4,11 +4,10 @@
 	<tbody>
 		<tr>
 			<th> Organization Name </th>
-			<th> Description </th>
 		</tr>
 		<% @organizations.each do |org| %>
 		<tr>
-			<td> <%= org.name %> </td>
+			<td> <%= link_to org.name, org %> </td>
 			<td> <%= org.description %> </td>
 		</tr>
 		<% end %>
