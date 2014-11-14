@@ -11,6 +11,11 @@
 <body>
 	<%= render 'layouts/header'%>
 	<div class="container contentunder">
+		<% [:notice, :alert].each do |level| %>
+			<% if flash[level] %>
+				<div class="flash <% level %>"> <%= flash[level] %> </div>
+			<% end %>
+		<% end %>
 		<%= yield %>
 	</div>
 </body>

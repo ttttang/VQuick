@@ -1,0 +1,58 @@
+
+<h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <!-- First Name -->
+  <div class="field">
+    <%= f.label :"First Name" %><br />
+    <%= f.text_field :fname, :autofocus => true %>
+  </div>
+
+  <!-- Last Name -->
+  <div class="field">
+    <%= f.label :"Last Name" %><br />
+    <%= f.text_field :lname %>
+  </div>
+
+  <!-- username -->
+  <div class="field">
+    <%= f.label :username %><br />
+    <%= f.text_field :name %>
+  </div>
+
+  <!-- Admin? -->
+  <div class="field">
+    <%= f.label :"Event Organizer" %>
+    <%= f.check_box :admin %>
+  </div>
+
+  <!-- Email -->
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email %>
+  </div>
+
+  <!-- Password -->
+  <div class="field">
+    <%= f.label :password %>
+    <% if @validatable %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <!-- Password Confirmation -->
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+
+  <!--   Submit Button -->
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
