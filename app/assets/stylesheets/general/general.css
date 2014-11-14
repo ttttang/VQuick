@@ -19,7 +19,7 @@ body {
 	margin: 0px;
 	width: 100%;
 	position: fixed;
-	z-index:1;
+	
 	background-color: rgb(43, 95, 138);
 
 }
@@ -30,9 +30,8 @@ body {
 }
 
 /*Prevent content from going on top of fixed navbar*/
-  #contentunder {
-    position:relative;
-    z-index:2;
+  .contentunder {
+    margin-top: 70px;
   }
 
 /*********LOGO**********/

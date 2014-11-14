@@ -12,7 +12,7 @@
 	<div class="header-fix">
 		<%= render 'layouts/header'%>
 	</div>
-	<div class="container contentunder containbg">
+	<div class="container containbg" id="contentunder">
 		<% [:notice, :alert].each do |level| %>
 			<% if flash[level] %>
 				<div class="flash <% level %>"> <%= flash[level] %> </div>
