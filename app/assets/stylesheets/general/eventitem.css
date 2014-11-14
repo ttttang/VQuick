@@ -1,0 +1,21 @@
+.alleventitems{
+	list-style-type: none;
+	background-color:;
+	border-radius: 15px;
+
+}
+
+.eventitem{
+	list-style-type: none;
+	background-color: #EEE8AA;
+	
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-radius: 15px;
+
+}
+
+
+.eventitem li{
+
+}
