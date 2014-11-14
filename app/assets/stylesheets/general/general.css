@@ -1,6 +1,7 @@
 
 /*******************NAVBAR**********************/
 
+/*****NAVBAR GENERAL******/
 body { margin-top:30px; }
 #login-nav input { margin-bottom: 15px; }
 
@@ -8,8 +9,16 @@ body { margin-top:30px; }
 	padding: 0px;
 	margin: 0px;
 	width: 100%;
+	position: fixed;
+	z-index:1;
 
 }
+
+/*Prevent content from going on top of fixed navbar*/
+  #contentunder {
+    position:relative;
+    z-index:2;
+  }
 
 /*********LOGO**********/
 .logofirst
@@ -26,13 +35,14 @@ body { margin-top:30px; }
 {
 	color: #0000FF;
 	font-size: 17px;
-	font-family: "Comic Sans MS";
+	font-family: "Verdana";
 	padding-right: 10px;
 	text-decoration: none;
 
 }
 a:hover{
 	text-decoration: none;
+
 }
 
 
@@ -137,7 +147,7 @@ tr:last-of-type td:last-child {
 }	
 
 tbody:hover td {
-	color: #ccc;
+	color: #bbb;
 	
 }
 
