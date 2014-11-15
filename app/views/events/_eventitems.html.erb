@@ -1,14 +1,18 @@
-<h1>All Events</h1>
-
 <ul class="alleventitems">
 	<% @events.each do |event| %>
 		<li>
 			<ul class="eventitem">
-				<li><%=event.name%></li>
-				<li><%=event.date_and_time%></li>
-				<li><%=event.description%></li>
-				<li><%=event.requirements%></li>
-				<li><%=event.organization%></li>
+				<div class="eventbody">
+				<li><h2><%=event.name%></h2></li>
+					<div class="eventbody-first">
+						<li class="event-date"><span>Date:</span> <%=event.date_and_time%></li>
+						<li class="event-description"><span>Description:</span> <%=event.description%></li>
+					</div>
+					<div class="eventbody-second">
+						<li class="event-req"><span>Requirements:</span> <%=event.requirements%></li>
+						<li class="event-org"><span>Organization:</span> <%=event.organization%></li>
+					</div>
+				</div>
 			</ul>
 		</li>
 	<%end%>

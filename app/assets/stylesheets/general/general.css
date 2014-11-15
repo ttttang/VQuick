@@ -10,7 +10,8 @@ body {
 #login-nav input { margin-bottom: 15px; }
 
 .nav-colored{
-
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
 
 }
 
@@ -19,7 +20,7 @@ body {
 	margin: 0px;
 	width: 100%;
 	position: fixed;
-	
+	z-index:1;
 	background-color: rgb(43, 95, 138);
 
 }
@@ -64,5 +65,11 @@ a:hover{
 
 /*******EVENT LIST********/
 
+.viewhead{
+	font-weight: bold;
+	text-align: right;
+	font-size: 40px;
+	border-bottom: solid #515151 2px;
+}
 
 
