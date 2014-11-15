@@ -12,7 +12,7 @@
                </button>
                
 
-               <%=link_to events_path, class: 'nav-brand' do%>
+               <%=link_to events_path, class: 'nav-brand logo' do%>
                   <span class="logofirst">V</span><span class="logostyle">Quick</span>
                <%end%>
 
@@ -23,12 +23,14 @@
                   
                   <%if user_signed_in?%>
                   <li><%=link_to "My Events", events_path%></li>
-                  <%end%>
+                  
 
                   <li><%=link_to "Create Event", new_event_path%></li>
+                  <%end%>
                   <li class="dropdown">
                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu <b class="caret"></b></a>
                      <ul class="dropdown-menu">
+                        <li><%=link_to "All Events", events_path%></li>
                         <li><%=link_to "Organizations", organizations_path%></li>
                         <li class="divider"></li>
                         <li><%=link_to "Contact Us", pages_contact_path%></li>
@@ -58,27 +60,31 @@
                                  <div class="col-md-12">
                                     <%if user_signed_in?%>
                                        <button class="btn btn-success btn-block"><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></button>
+                                       <button class="btn btn-success btn-block"><%= link_to "Account Settings", edit_user_registration_path, :method => :delete %></button>
                                     <%else%>
-                                       <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-                                          <div class="form-group">
-                                             <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                                             <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
-                                          </div>
-                                          <div class="form-group">
-                                             <label class="sr-only" for="exampleInputPassword2">Password</label>
-                                             <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
-                                          </div>
-                                          <div class="checkbox">
-                                             <label>
-                                             <input type="checkbox"> Remember me
-                                             </label>
-                                          </div>
-                                          <div class="form-group">
-                                             <button type="submit" class="btn btn-success btn-block">Sign in</button>
-                                          </div>
-                                          <li class="divider"></li>
-                                          <button class="btn btn-success btn-block"><%=link_to "Sign up", new_user_registration_path%></button>
-                                       </form>
+                                       <%= form_for(:user, :url => session_path(:user)) do |f| %>
+                                       <div class="form-group">
+                                          <%= f.label :name %><br>
+                                          <%= f.email_field :email, autofocus: true %>
+                                       </div>
+                                       <div class="form-group">
+                                          <%= f.label :password %><br>
+                                          <%= f.password_field :password, autocomplete: "off" %>
+                                       </div>
+                                       <div class="form-group">
+                                          
+                                          <%= f.check_box :remember_me %>
+                                          <%= f.label :remember_me %>
+                                       </div>
+                                      
+                                       <div class="actions">
+                                        <%= f.submit "Log in" %>
+                                       </div>
+                                       
+                                          <%= link_to "Forgot your password?", new_password_path(:user) %>
+                                       
+
+                                       <% end %>
                                     
 
                                     <%end%>
