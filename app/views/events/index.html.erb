@@ -1,6 +1,15 @@
+     <% if user_signed_in? %>
+          You're signed in!
+     <% else %>
+  <% end %>  
+</div>
+
 <h1>Events</h1>
 
+
 <%=render 'eventitems'%>
+
+
 <br>
 <br>
 <%=render 'eventlist'%>
