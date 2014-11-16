@@ -12,7 +12,7 @@
 
   <!--Organization -->
   <div>
-    <%= f.label :"Organization (for event planner)" %>
+    <%= f.label :"Organization (Required For Event Organizers)" %>
     <%= f.collection_select(:organization_id, Organization.all, :id, :name, prompt: "none") %>
   </div>
   <%=link_to "New Organization", new_organization_path%>

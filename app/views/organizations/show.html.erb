@@ -11,7 +11,7 @@
 			<th> Website </th>
 		</tr>
 		<tr>
-			<td> <%= link_to @organization.name, @organization.website %> </td>
+			<td> <%= link_to @organization.name, "http://"+@organization.website %> </td>
 			<td> <%= @organization.description %> </td>
 			<td> <%= @organization.contact %> </td>
 			<td> <%= @organization.email %> </td>

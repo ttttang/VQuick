@@ -16,13 +16,16 @@ class EventsController < ApplicationController
 
  
   def create
-    @event = Event.new(params[:event].permit(:name, :description, :requirements, :date_and_time, :hours, :minutes))
+    
+    @event = Event.new(params[:event].permit(:name, :description, :requirements, :date_and_time, :hours, :minutes, :organization_id))
+    @event.organization_id = current_user.organization_id
     @event.save
     redirect_to @event
   end  
 
   def myevents
-    @events=current_user.events
+    @myevents=current_user.events
+    @createdevents=current_user.organization.events
   end
 
 private

@@ -1,0 +1,61 @@
+<%if current_user.admin==true%>
+	
+	<h1>Organized Events</h1>
+	<%@createdevents.each do |event|%>
+
+		<table>
+			<tbody>
+				<tr>
+					<th> Name </th>
+					<th> Date </th>
+					<th> Description </th>
+					<th> Requirements </th>
+					<th> Organization </th>
+				</tr>
+		 		<tr>
+					<td> <%= link_to event.name, event %></td>
+					<td> <%= event.date_and_time %></td>
+					<td> <%= event.description %></td>
+					<td> <%= event.requirements %></td>
+					<td> <%= link_to event.organization, event.organization %></td>
+				</tr>
+
+			</tbody>
+		</table>
+
+	 
+	<%end%>
+
+
+
+
+
+<%end%>
+
+
+	<h1>Events to Attend</h1>
+	<%@myevents.each do |event|%>
+
+		<table>
+			<tbody>
+				<tr>
+					<th> Name </th>
+					<th> Date </th>
+					<th> Description </th>
+					<th> Requirements </th>
+					<th> Organization </th>
+				</tr>
+		 		<tr>
+					<td> <%= link_to event.name, event %></td>
+					<td> <%= event.date_and_time %></td>
+					<td> <%= event.description %></td>
+					<td> <%= event.requirements %></td>
+					<td> <%= link_to event.organization, event.organization %></td>
+				</tr>
+
+			</tbody>
+		</table>
+
+	 
+	<%end%>
+
