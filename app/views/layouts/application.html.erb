@@ -14,18 +14,18 @@
 	</div>
 	<p class="navbar-text pull-right">
 
-<% flash.each do |name, msg| %>
-     <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
-<% end %>
-
 	
-		<% [:notice, :alert].each do |level| %>
-			<% if flash[level] %>
-				<div class="flash <% level %>"> <%= flash[level] %> </div>
-			<% end %>
-		<% end %>
 
 	<div class="container contentunder containbg">
+
+	
+
+	
+	<% [:notice, :alert].each do |level| %>
+		<% if flash[level] %>
+			<div class="flash <% level %>"> <%= flash[level] %> </div>
+		<% end %>
+	<% end %>
 
 		<%= yield %>
 	</div>

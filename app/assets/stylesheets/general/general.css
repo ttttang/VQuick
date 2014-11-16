@@ -2,6 +2,11 @@
 /*******************NAVBAR**********************/
 
 /*****NAVBAR GENERAL******/
+a{
+
+	color: white;
+}
+
 body { 
 	background-image: url("/assets/subtlebg1.jpg");
 	
@@ -72,6 +77,10 @@ a:hover{
 	text-align: right;
 	font-size: 40px;
 	border-bottom: solid #515151 2px;
+}
+
+.viewchange{
+	color: white;
 }
 
 

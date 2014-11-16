@@ -1,11 +1,13 @@
 <table>
 	<tbody>
-		<tr>
-			<th> Event </th>
-			<th> Date and Time </th>
+		<tr class = "pretty">
+			
+
+			<th><%= sortable "name", "Event"%></th>
+			<th><%= sortable "date_and_time", "Date and Time"%></th>
 			<th> Description </th>
-			<th> Requirements </th>
-			<th> Organization </th>
+			<th><%= sortable "requirements", "Requirements" %></th>
+			<th>Organization</th>
 		</tr>
 		<%= render partial: "event", collection: @events %>
 	</tbody>

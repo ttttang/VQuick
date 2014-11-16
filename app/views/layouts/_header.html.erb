@@ -12,7 +12,7 @@
                </button>
                
 
-               <%=link_to events_path, class: 'nav-brand logo' do%>
+               <%=link_to root_url, class: 'nav-brand logo' do%>
                   <span class="logofirst">V</span><span class="logostyle">Quick</span>
                <%end%>
 
@@ -22,15 +22,16 @@
                <ul class="nav navbar-nav nav-colored">
                   
                   <%if user_signed_in?%>
-                  <li><%=link_to "My Events", events_path%></li>
+                  <li><%=link_to "My Events", myevents_path%></li>
                   
-
+                  <%if current_user.admin==true%>
                   <li><%=link_to "Create Event", new_event_path%></li>
+                  <%end%>
                   <%end%>
                   <li class="dropdown">
                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu <b class="caret"></b></a>
                      <ul class="dropdown-menu">
-                        <li><%=link_to "All Events", events_path%></li>
+                        <li><%=link_to "All Events", events_path(:listview=>'true')%></li>
                         <li><%=link_to "Organizations", organizations_path%></li>
                         <li class="divider"></li>
                         <li><%=link_to "Contact Us", pages_contact_path%></li>
@@ -58,9 +59,9 @@
                            <li>
                               <div class="row">
                                  <div class="col-md-12">
-                                    <%if user_signed_in?%>
-                                       <button class="btn btn-success btn-block"><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></button>
-                                       <button class="btn btn-success btn-block"><%= link_to "Account Settings", edit_user_registration_path, :method => :delete %></button>
+                                    <%if user_signed_in?%> 
+                                       <%= link_to "Sign out", destroy_user_session_path, :method => :delete, class: "btn btn-success btn-block" %>
+                                       <%=link_to "Account Settings", edit_user_registration_path, class: "btn btn-success btn-block"%>
                                     <%else%>
                                        <%= form_for(:user, :url => session_path(:user)) do |f| %>
                                        <div class="form-group">
@@ -78,12 +79,15 @@
                                        </div>
                                       
                                        <div class="actions">
-                                        <%= f.submit "Log in" %>
+                                        <%= f.submit "Log in", class: "btn btn-success btn-block"  %>
                                        </div>
                                        
                                           <%= link_to "Forgot your password?", new_password_path(:user) %>
                                        
-
+                                          <div class="divider"></div>
+                                          
+                                          <%=link_to "Sign up!", new_user_registration_path, class: "btn btn-success btn-block"%>
+                                          
                                        <% end %>
                                     
 

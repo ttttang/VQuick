@@ -4,6 +4,20 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
+   <!-- Admin? -->
+  <div class="field">
+    <%= f.label :"Event Organizer" %>
+    <%= f.check_box :admin %>
+  </div>
+
+  <!--Organization -->
+  <div>
+    <%= f.label :"Organization (for event planner)" %>
+    <%= f.collection_select(:organization_id, Organization.all, :id, :name, prompt: "none") %>
+  </div>
+  <%=link_to "New Organization", new_organization_path%>
+
+
   <!-- First Name -->
   <div class="field">
     <%= f.label :"First Name" %><br />
@@ -22,11 +36,7 @@
     <%= f.text_field :name %>
   </div>
 
-  <!-- Admin? -->
-  <div class="field">
-    <%= f.label :"Event Organizer" %>
-    <%= f.check_box :admin %>
-  </div>
+ 
 
   <!-- Email -->
   <div class="field">

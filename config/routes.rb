@@ -1,13 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users
+  get 'myevents' => 'events#myevents'
   get 'pages/about_us'
-
   get 'pages/contact'
-
-  root "events#index"
- resources :organizations
+  root "events#index", :listview=>'true'
+  resources :organizations
  #resources :users
- resources :events
+  resources :events
 
 
 

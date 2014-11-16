@@ -6,4 +6,8 @@ class User < ActiveRecord::Base
 	belongs_to :organization
 	has_many :attendances
 	has_many :events, :through=> :attendances
+
+	validates :fname, length: {minimum: 2}
+	validates :lname, length: {minimum: 2}
+	validates :admin, presence: true
 end

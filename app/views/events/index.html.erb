@@ -2,9 +2,21 @@
 <h1 class="viewhead">All Events</h1>
 
 
-<%=render 'eventitems'%>
 
+<%if @viewer=='true' %>
+	
 
-<br>
-<br>
-<%=render 'eventlist'%>
+	<%=link_to "Table View", events_path, class: 'viewchange'%>
+	
+	<%=render 'eventitems'%>
+	
+
+<%else%>
+	
+	<%=link_to "Items View", events_path(:listview=>'true'), class: 'viewchange' %>
+	
+	<%=render 'eventlist'%>
+
+	
+
+<%end%>
