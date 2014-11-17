@@ -1,6 +1,6 @@
 <%if current_user.admin==true%>
 	
-	<h1>Organized Events</h1>
+	<h1>My Created Events</h1>
 	<%@createdevents.each do |event|%>
 
 		<table>
@@ -22,6 +22,8 @@
 
 			</tbody>
 		</table>
+		<%= link_to "Delete Event", event, method: :delete %> |
+		<%= link_to "Edit Event", edit_event_path(event)%>
 
 	 
 	<%end%>

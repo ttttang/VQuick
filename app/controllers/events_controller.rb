@@ -19,13 +19,50 @@ class EventsController < ApplicationController
     
     @event = Event.new(params[:event].permit(:name, :description, :requirements, :date_and_time, :hours, :minutes, :organization_id))
     @event.organization_id = current_user.organization_id
-    @event.save
-    redirect_to @event
+    @event.created_by=current_user.id
+    if @event.save
+      redirect_to myevents_path, notice: "Event was successfully created."
+    else
+      render 'new'
+    end
+
   end  
 
   def myevents
     @myevents=current_user.events
-    @createdevents=current_user.organization.events
+
+    @createdevents=[]
+    
+    Event.all.each do |event|  
+      if event.created_by == current_user.id
+        @createdevents.push(event)
+      end
+    end
+     
+  end
+
+  def destroy
+    @event=Event.find(params[:id])
+    @event.destroy
+    redirect_to myevents_path
+
+  end
+
+  def edit
+    @event=Event.find(params[:id])
+
+  end
+
+  def update
+
+    @event=Event.find(params[:id])
+    if @event.update(params[:event].permit(:name, :company_id, :default_rate, :slug))
+      flash[:notice]='Event updated.'
+      redirect_to myevents_path
+    else
+      render 'edit'
+    end
+
   end
 
 private

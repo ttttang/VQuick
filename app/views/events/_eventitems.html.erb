@@ -1,6 +1,6 @@
 <ul class="alleventitems">
 	<% @events.each do |event| %>
-		<li>
+		<%=link_to (event) do%>
 			<ul class="eventitem">
 				<div class="eventbody">
 				<li><h2><%=event.name%></h2></li>
@@ -14,6 +14,6 @@
 					</div>
 				</div>
 			</ul>
-		</li>
+		<%end%>
 	<%end%>
 </ul>

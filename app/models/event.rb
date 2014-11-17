@@ -10,8 +10,8 @@ class Event < ActiveRecord::Base
 	validate :date_is_in_past
 
 def date_is_in_past
-    if date_and_time.present? && date_and_time > Time.now
-    	errors.add(:date_and_time, "can't be in the future")
+    if date_and_time.present? && date_and_time < Time.now
+    	errors.add(:date_and_time, "can't be in the past")
     end
 end	
 

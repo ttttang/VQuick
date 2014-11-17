@@ -1,40 +1,4 @@
 <h1>New Event</h1>
 
  
-<%= form_for (@event) do |f| %>
-	
-
-	<div>
-		<%= f.label :name %>
-		<%= f.text_field :name %>
-	</div>
-
-	<div>
-		<%= f.label :description %>
-		<%= f.text_field :description %>
-	</div>
-
-	<div>
-		<%= f.label :requirements %>
-		<%= f.text_field :requirements %>
-	</div>
-
-	<div>
-		<%= f.label :date_and_time %>
-		<%= f.datetime_select :date_and_time %>
-	</div>
-
-	<div>
-		<%= f.label :hours %>
-		<%= f.select(:hours, [1,2,3,4,5,6,7,8], prompt:true) %>
-	</div>
-
-	<div>
-		<%= f.label :minutes %>
-		<%= f.select(:minutes, [15,30,45], prompt:true)%>
-	</div>
-
-	<div>
-		<%= f.submit  "Create Event" %>
-	</div>
-<% end %>
+<%=render 'form'%>

@@ -5,7 +5,7 @@
 # below each fixture, per the syntax in the comments below
 #
 
-<% 20.times do |n|%>
+<% 3.times do |n|%>
 event_<%= n %>:
   name: event_<%= n %>
   description: <%=n%2==0? 'Fun event': 'Swanky event' %>
