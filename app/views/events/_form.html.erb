@@ -1,35 +1,31 @@
 <%= form_for (@event) do |f| %>
-	<div>
-		<%= f.label :name %>
+	<div class="field">
+		<%= f.label :name %><br>
 		<%= f.text_field :name %>
 	</div>
 
-	<div>
-		<%= f.label :description %>
-		<%= f.text_field :description %>
+	<div class="field">
+		<%= f.label :description %><br>
+		<%= f.text_area :description %>
 	</div>
 
-	<div>
-		<%= f.label :requirements %>
+	<div class="field">
+		<%= f.label :requirements %><br>
 		<%= f.text_field :requirements %>
 	</div>
 
-	<div>
-		<%= f.label :date_and_time %>
+	<div class="field">
+		<%= f.label :date_and_time %><br>
 		<%= f.datetime_select :date_and_time %>
 	</div>
 
-	<div>
-		<%= f.label :hours %>
-		<%= f.select(:hours, [1,2,3,4,5,6,7,8], prompt:true) %>
+	<div class="field">
+		<%= f.label :duration %><br>
+		<%= f.select(:hours, [1,2,3,4,5,6,7,8], prompt:"hours") %>
+		<%= f.select(:minutes, [0,15,30,45], prompt:"minutes")%>
 	</div>
 
-	<div>
-		<%= f.label :minutes %>
-		<%= f.select(:minutes, [0,15,30,45], prompt:true)%>
-	</div>
-
-	<div>
+	<div class="field-btn">
 		<%= f.submit @event.new_record? ? "New Event" : "Create Event" %>
 	</div>
 <% end %>

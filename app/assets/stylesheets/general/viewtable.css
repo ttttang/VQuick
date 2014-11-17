@@ -1,5 +1,5 @@
 
-/********TABLE**********/
+/************STYLE FOR EVENTS IN TABLE VIEW**********/
 .pretty th .current{
 	padding-right: 40px;
 	padding-top: 5px;
@@ -33,7 +33,7 @@ table {
 	line-height: 24px;
 	margin: 30px auto;
 	text-align: left;
-	width: 900px;
+	width: 93%;
 }	
 
 th {

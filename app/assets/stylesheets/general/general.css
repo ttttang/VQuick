@@ -53,6 +53,7 @@ body {
 	text-decoration: none;
 
 }
+
 .logostyle
 {
 	color: #0000FF;
@@ -62,6 +63,7 @@ body {
 	text-decoration: none;
 
 }
+
 a:hover{
 	text-decoration: none;
 
@@ -70,7 +72,7 @@ a:hover{
 
 /*******************VIEWS GENERAL***********************/
 
-/*******EVENT LIST********/
+/*******EVENT INDEX PAGE********/
 
 .viewhead{
 	font-weight: bold;
@@ -81,6 +83,10 @@ a:hover{
 
 .viewchange{
 	color: yellow;
+	font-weight: bold;
+	font-size: 20px;
+	padding-left: 45px;
 }
+
 
 

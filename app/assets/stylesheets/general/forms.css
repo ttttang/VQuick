@@ -1,0 +1,39 @@
+
+
+/********FORMS**************/
+.field{
+	padding: 10px;
+	width: 70%;
+	/*margin: 10px;*/
+}
+
+.field .web{
+	width: 45%;
+}
+
+.field label{
+	font-size: 16px;
+	width: 60%;
+}
+
+.field textarea{
+	height: 100px;
+	width: 70%;
+
+}
+
+.field input{
+	width: 70%;
+}
+
+.field textfield{
+
+}
+
+.field-btn{
+	padding-top: 20px;
+	padding-bottom: 40px;
+	padding-left: 10px;
+
+}
+
