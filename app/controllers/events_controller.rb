@@ -1,6 +1,9 @@
 class EventsController < ApplicationController
  before_action :set_event, only: [:show]
+ before_action :authenticate_user!, except: [:index, :show]
  helper_method :sort_column, :sort_direction
+  
+
   def index
 
   	@events= Event.order(sort_column+" "+sort_direction)

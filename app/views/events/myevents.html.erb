@@ -1,65 +1,70 @@
 <%if current_user.admin==true%>
-	
-	<h1>My Created Events</h1> <%=link_to "Create New Event", new_event_path%>
-	<%@createdevents.each do |event|%>
+	<%if @createdevents.size<1%>
+		<h5>You have not yet created an event!</h5>
+		<%=link_to "Create New Event", new_event_path, class: 'create-event coolbtn'%>
+	<%else%>
+		<h1>My Created Events</h1> <%=link_to "Create New Event", new_event_path, class: 'create-event coolbtn'%>
+		<%@createdevents.each do |event|%>
 
-		<table>
-			<tbody>
-				<tr>
-					<th> Name </th>
-					<th> Date </th>
-					<th> Description </th>
-					<th> Requirements </th>
-					<th> Organization </th>
-				</tr>
-		 		<tr>
-					<td> <%= link_to event.name, event %></td>
-					<td> <%= event.date_and_time %></td>
-					<td> <%= event.description %></td>
-					<td> <%= event.requirements %></td>
-					<td> <%= link_to event.organization, event.organization %></td>
-				</tr>
+			<table>
+				<tbody>
+					<tr>
+						<th> Name </th>
+						<th> Date </th>
+						<th> Description </th>
+						<th> Requirements </th>
+						<th> Organization </th>
+					</tr>
+			 		<tr>
+						<td> <%= link_to event.name, event %></td>
+						<td> <%= event.date_and_time %></td>
+						<td> <%= event.description %></td>
+						<td> <%= event.requirements %></td>
+						<td> <%= link_to event.organization, event.organization %></td>
+					</tr>
 
-			</tbody>
-		</table>
-		<%= link_to "Delete Event", event, method: :delete %> |
-		<%= link_to "Edit Event", edit_event_path(event)%>
+				</tbody>
+			</table>
+			<%= link_to "Delete Event", event, method: :delete %> |
+			<%= link_to "Edit Event", edit_event_path(event)%>
 
-	 
+		 
+		<%end%>
 	<%end%>
-
 
 
 
 
 <%end%>
 
+	<%if @createdevents.size<1%>
+		<h5>You do not have an event to attend yet.</h5>
+	<%else%>
+		<h1>Events to Attend</h1>
+		<%@myevents.each do |event|%>
 
-	<h1>Events to Attend</h1>
-	<%@myevents.each do |event|%>
+			<table>
+				<tbody>
+					<tr>
+						<th> Name </th>
+						<th> Date </th>
+						<th> Description </th>
+						<th> Requirements </th>
+						<th> Organization </th>
+					</tr>
+			 		<tr>
+						<td> <%= link_to event.name, event %></td>
+						<td> <%= event.date_and_time %></td>
+						<td> <%= event.description %></td>
+						<td> <%= event.requirements %></td>
+						<td> <%= link_to event.organization, event.organization %></td>
+					</tr>
 
-		<table>
-			<tbody>
-				<tr>
-					<th> Name </th>
-					<th> Date </th>
-					<th> Description </th>
-					<th> Requirements </th>
-					<th> Organization </th>
-				</tr>
-		 		<tr>
-					<td> <%= link_to event.name, event %></td>
-					<td> <%= event.date_and_time %></td>
-					<td> <%= event.description %></td>
-					<td> <%= event.requirements %></td>
-					<td> <%= link_to event.organization, event.organization %></td>
-				</tr>
+				</tbody>
+			</table>
 
-			</tbody>
-		</table>
-
-	 	<%=link_to "Unattend event", unattend_path(:unattend=>event.id), data: { confirm: 'Are you sure? Click OK to confirm your cancellation.' }%>
+		 	<%=link_to "Unattend event", unattend_path(:unattend=>event.id), data: { confirm: 'Are you sure? Click OK to confirm your cancellation.' }%>
 
 
+		<%end%>
 	<%end%>
-

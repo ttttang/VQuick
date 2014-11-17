@@ -26,14 +26,35 @@
 	width: 70%;
 }
 
-.field textfield{
-
-}
 
 .field-btn{
 	padding-top: 20px;
-	padding-bottom: 40px;
+	padding-bottom: 20px;
 	padding-left: 10px;
+	/*border-radius: 6px;*/
+}
+
+.field-links{
+	padding-top: 0px;
+	padding-bottom: 20px;
+	padding-left: 10px;
+	/*border-radius: 6px;*/
+}
+
+.field-check{
+	margin-left: 20px;
+}
+
+.box {
+	width: 20px;
+	
+}
+
+.field-header{
+	width: 100%
 
 }
 
+.form-group{
+	padding-right: 10px;
+};
