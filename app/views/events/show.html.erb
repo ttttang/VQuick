@@ -23,6 +23,14 @@
 	</tbody>
 </table>
 
+<%if current_user.events.include?(@event)%>
+	<p>Already attending event!</p>
+	<%=link_to "View my events", myevents_path%>
+	<%else%>
+<%=link_to "Attend event!", attendevent_path(:attend=>@event.id), data: { confirm: 'Click OK to confirm your attendance!' }%>
+
+<%end%>
+
 
 
   

@@ -5,7 +5,7 @@
 # below each fixture, per the syntax in the comments below
 #
 
-<% 3.times do |n|%>
+<% 5.times do |n|%>
 event_<%= n %>:
   name: event_<%= n %>
   description: <%=n%2==0? 'Fun event': 'Swanky event' %>
@@ -14,5 +14,6 @@ event_<%= n %>:
   hours: <%= n%4+1%>
   minutes: <%= n%4*10 %>
   organization: <%= case n%3; when 0; "whospice"; when 1; "sod"; when 2; "ucla"; else "ymca"; end %> 
+  created_by: <%= case n%3; when 0; "sylvester"; when 1; "ounie"; when 2; "tracy"; else "village"; end %>
 <%end %>
 

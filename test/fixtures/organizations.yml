@@ -8,31 +8,30 @@
 whospice:
   name: Wilshire Hospice
   description: To care for those near death 
-  contact: Mary Good
   phone: 1-111-1111
   email: hospice@email.com
-  website: http://www.hospice.com
+  website: www.hospice.com
+  
 
 ucla:
   name: UCLA 
   description: A university in CA
-  contact: Gene Block
   phone: 2-222-2222
   email: ucla@email.com
-  website: http://www.ucla.com
+  website: www.ucla.com
+  
 
 sod:
   name: School of Devs
   description: A coding bootcamp in CA
-  contact: Ounie Phakousonh
   phone: 3-333-3333
   email: sod@email.com
-  website: http://www.sod.com
+  website: www.sod.com
+  
 
 ymca:
   name: YMCA
   description: YMCA. What more to say? 
-  contact: Jane Doe
   phone: 4-444-4444
   email: ymca@email.com
-  website: http://www.ymca.com
+  website: www.ymca.com

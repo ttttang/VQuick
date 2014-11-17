@@ -1,6 +1,6 @@
 <%if current_user.admin==true%>
 	
-	<h1>My Created Events</h1>
+	<h1>My Created Events</h1> <%=link_to "Create New Event", new_event_path%>
 	<%@createdevents.each do |event|%>
 
 		<table>
@@ -58,6 +58,8 @@
 			</tbody>
 		</table>
 
-	 
+	 	<%=link_to "Unattend event", unattend_path(:unattend=>event.id), data: { confirm: 'Are you sure? Click OK to confirm your cancellation.' }%>
+
+
 	<%end%>
 

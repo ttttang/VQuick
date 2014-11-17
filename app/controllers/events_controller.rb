@@ -41,6 +41,17 @@ class EventsController < ApplicationController
      
   end
 
+  def attend
+    attendance=Attendance.new
+    attendance.event_id=params[:attend]
+    attendance.user_id=current_user.id
+    if(attendance.save)
+      redirect_to myevents_path, notice: "Attending event."
+    else
+      render Event.find(params[:attend])
+    end
+  end
+
   def destroy
     @event=Event.find(params[:id])
     @event.destroy
@@ -63,6 +74,12 @@ class EventsController < ApplicationController
       render 'edit'
     end
 
+  end
+
+  def unattend
+    event=Event.find(params[:unattend])
+    event.users.delete(current_user)
+    redirect_to myevents_path
   end
 
 private
