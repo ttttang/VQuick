@@ -1,3 +1,6 @@
+div.col-md-12 {
+	background-color: rgb(237, 230, 222);
+}
 
 /*******************NAVBAR**********************/
 
@@ -10,8 +13,7 @@ a{
 
 
 body { 
-	background-image: url("/assets/subtlebg1.jpg");
-	
+	background-color: rgb(237, 230, 222);
 	margin-top:30px; 
 }
 #login-nav input { margin-bottom: 15px; }
@@ -35,7 +37,7 @@ body {
 
 
 .containbg{
-	background-color: rgb(66, 120, 161);
+/*	background-color: rgb(66, 120, 161);*/
 
 }
 
@@ -54,7 +56,7 @@ body {
 
 .logofirst
 {
-	color: #FF7519;
+	color: ;
 	padding-left: 12px;
 	margin: 0px;
 	font-size: 30px;
@@ -65,7 +67,7 @@ body {
 
 .logostyle
 {
-	color: #0000FF;
+	color: ;
 	font-size: 17px;
 	font-family: "Verdana";
 	padding-right: 10px;
