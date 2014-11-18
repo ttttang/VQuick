@@ -26,7 +26,14 @@
 		http://	<%= f.text_field :website %>
 	</div>
 
+	<%if @organization.new_record?%>
+		<div class="field">
+			<%= f.label :code %><br>
+			<%= f.text_field :code %>
+		</div>
+	<%end%>
+
 	<div class="field-btn">
-		<%= f.submit  "Create Organization" %>
+		<%= f.submit @organization.new_record? ? "New Organization" : "Create Organization" %>
 	</div>
 <% end %>

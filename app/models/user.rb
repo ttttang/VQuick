@@ -11,12 +11,14 @@ class User < ActiveRecord::Base
 	validates :lname, length: {minimum: 2}
 	
 	validate :admin_organization
+	
 
 	def admin_organization
-    if admin && organization_id==nil
-    	errors.add(:organization_id, "Event organizers must select the organization they belong to.")
-    end
-end	
+	    if admin && organization_id==nil
+	    	errors.add(:organization_id, "Event organizers must select the organization they belong to.")
+	    end
+	end	
 
+	
 
 end
