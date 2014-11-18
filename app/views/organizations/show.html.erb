@@ -3,11 +3,12 @@
 <ul>
 	
 		
-			<li> Organization: <%= link_to @organization.name, "http://"+@organization.website %> </li>
+			<li> Organization: <%= @organization.name%></li>
+			<li> Website: <%= link_to @organization.website, "http://"+@organization.website %> </li>
 			<li> Description: <%= @organization.description %> </li>
 			<li> Email: <%= @organization.email %> </li>
 			<li> Phone Number: <%= @organization.phone %> </li>
-			<li> Website: <%= @organization.website %> </li>
+			
 		
 </ul>
 <ul>
