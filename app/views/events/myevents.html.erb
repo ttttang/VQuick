@@ -1,9 +1,11 @@
 <%if current_user.admin==true%>
 	<%if @createdevents.size<1%>
+		
+		<%=link_to "Create New Event", new_event_path, class: 'btn'%>
 		<h5>You have not yet created an event!</h5>
-		<%=link_to "Create New Event", new_event_path, class: 'create-event coolbtn'%>
+		
 	<%else%>
-		<h1>My Created Events</h1> <%=link_to "Create New Event", new_event_path, class: 'create-event coolbtn'%>
+		<h1>My Created Events</h1> <%=link_to "Create New Event", new_event_path, class: 'btn'%>
 		
 
 			<table>
@@ -41,6 +43,7 @@
 <%end%>
 
 	<%if @myevents.size<1%>
+		 <%=link_to "Checkout events", events_path, class: 'btn'%>
 		<h5>You do not have an event to attend yet.</h5>
 	<%else%>
 		<h1>Events to Attend</h1>

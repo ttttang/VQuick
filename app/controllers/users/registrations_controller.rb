@@ -13,7 +13,7 @@ before_filter :configure_account_update_params, only: [:update]
     
     org=Organization.find(params[:user][:organization_id])
 
-    if org.code==params[:code]||params[:user][:admin]!=true
+    if org.code==params[:code]
       super
     else
 

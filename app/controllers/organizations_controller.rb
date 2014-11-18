@@ -42,7 +42,7 @@ class OrganizationsController < ApplicationController
 
   def update
     @organization=Organization.find(params[:id])
-    if @organization.update(params[:organization].permit(:name, :company_id, :default_rate, :slug))
+    if @organization.update(params[:organization].permit(:name, :website, :description, :contact, :phone, :email))
       flash[:notice]='Organization updated.'
       redirect_to @organization
     else

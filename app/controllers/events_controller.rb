@@ -35,6 +35,8 @@ class EventsController < ApplicationController
 
   end  
 
+  
+
   def myevents
     @myevents=current_user.events
 
@@ -75,7 +77,7 @@ class EventsController < ApplicationController
   def update
 
     @event=Event.find(params[:id])
-    if @event.update(params[:event].permit(:name, :company_id, :default_rate, :slug))
+    if @event.update(params[:event].permit(:name, :description, :requirements, :date_and_time, :hours, :minutes))
       flash[:notice]='Event updated.'
       redirect_to myevents_path
     else
