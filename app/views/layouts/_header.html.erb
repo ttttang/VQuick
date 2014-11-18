@@ -45,12 +45,22 @@
                      </ul>
                   </li>
                </ul>
-               <form class="navbar-form navbar-left" role="search">
-                  <div class="form-group">
-                     <input type="text" class="form-control" placeholder="Search">
-                  </div>
-                  <button type="submit" class="btn btn-default">Submit</button>
-               </form>
+
+  <!-- .............   Search BAR  ...............-->   
+               
+               
+
+
+               <%if current_user&&current_page?(url_for(:controller => 'events', :action => 'index'))%>
+                  <%=render 'layouts/searchevent'%>
+
+               <%elsif current_user&&current_page?(url_for(:controller => 'events', :action => 'myevents'))%>
+                  <%=render 'layouts/searchmyevent'%>
+
+               <%elsif current_user&&current_page?(url_for(:controller => 'organizations', :action => 'index'))%>   
+                  <%=render 'layouts/searchorganization'%>
+               
+               <%end%>
 <!-- .............   Right Side of NavBar  ...............-->
                
                   <ul class="nav navbar-nav navbar-right">

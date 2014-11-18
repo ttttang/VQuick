@@ -5,9 +5,9 @@
 # below each fixture, per the syntax in the comments below
 #
 
-<% 5.times do |n|%>
+<% 20.times do |n|%>
 event_<%= n %>:
-  name: event_<%= n %>
+  name: Event_<%= n %>
   description: <%=n%2==0? 'Fun event': 'Swanky event' %>
   requirements: <%=n%3==0? 'Ok for all ages': 'Permission slip needed' %>
   date_and_time: <%= Time.now-n.days %>

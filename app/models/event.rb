@@ -15,6 +15,14 @@ def date_is_in_past
     end
 end	
 
+def self.search(search)
+  if search
+  	where('name LIKE ? OR description LIKE ? OR requirements LIKE ?', "%#{search}%","%#{search}%","%#{search}%")
+  else
+    all
+  end
+end
+
 def to_s
 	"#{name}"
 end

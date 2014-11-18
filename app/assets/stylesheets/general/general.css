@@ -10,17 +10,17 @@ a{
 
 
 body { 
-	background-image: url("/assets/subtlebg1.jpg");
-	
+	/*background-image: url("/assets/subtlebg1.jpg");*/
+	background-color: rgb(237, 230, 222);
 	margin-top:30px; 
 }
 #login-nav input { margin-bottom: 15px; }
 
-.nav-colored{
+/*.nav-colored{
 	border-bottom-right-radius: 0;
 	border-bottom-left-radius: 0;
 
-}
+}*/
 
 .header-fix{
 	padding: 0px;
@@ -28,14 +28,14 @@ body {
 	width: 100%;
 	position: fixed;
 	z-index:1;
-	background-color: rgb(43, 95, 138);
+	background-color: transparent;
 
 }
 
 
 
 .containbg{
-	background-color: rgb(66, 120, 161);
+	background-color: rgb(237, 230, 222);
 
 }
 

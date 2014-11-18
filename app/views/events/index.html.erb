@@ -5,15 +5,29 @@
 
 <%if @viewer=='true' %>
 	
+	<%= form_tag events_path, class: 'viewchange', :method => 'get' do %>
+		<%=hidden_field_tag :direction, params[:direction]%>
+		<%=hidden_field_tag :sort, params[:sort]%>
+		<%=hidden_field_tag :search, params[:search]%>
+		<%=submit_tag "Table View", :name => nil%>
+	<%end%>
 
-	<%=link_to "Table View", events_path, class: 'viewchange'%>
+
+	
 	
 	<%=render 'eventitems'%>
 	
 
 <%else%>
 	
-	<%=link_to "Items View", events_path(:listview=>'true'), class: 'viewchange' %>
+	<%= form_tag events_path, class: 'viewchange', :method => 'get' do %>
+		<%=hidden_field_tag :direction, params[:direction]%>
+		<%=hidden_field_tag :sort, params[:sort]%>
+		<%=hidden_field_tag :search, params[:search]%>
+		<%=hidden_field_tag :listview, "true"%>
+		<%=submit_tag "List View", :name => nil %>
+	<%end%>
+	
 	
 	<%=render 'eventlist'%>
 

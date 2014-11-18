@@ -2,7 +2,7 @@ class OrganizationsController < ApplicationController
   before_action :set_organization, only: [:show]
 
   def index
-  	@organizations=Organization.all
+  	@organizations=Organization.search(params[:search])
   end
 
   def new
@@ -19,6 +19,7 @@ class OrganizationsController < ApplicationController
     end
 
   end  
+  
 
   def show
     allevents=Event.all

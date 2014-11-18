@@ -6,7 +6,7 @@ class EventsController < ApplicationController
 
   def index
 
-  	@events= Event.order(sort_column+" "+sort_direction)
+  	@events= Event.search(params[:search]).order(sort_column+" "+sort_direction).paginate(:per_page => 10, :page=>params[:page])
     @viewer=params[:listview]
   end
 
@@ -18,11 +18,15 @@ class EventsController < ApplicationController
   end
 
  
+ 
   def create
     
     @event = Event.new(params[:event].permit(:name, :description, :requirements, :date_and_time, :hours, :minutes, :organization_id))
     @event.organization_id = current_user.organization_id
     @event.created_by=current_user.id
+         
+    capname=params[:event][:name]
+    @event.name=capname.slice(0,1).capitalize + capname.slice(1..-1)
     if @event.save
       redirect_to myevents_path, notice: "Event was successfully created."
     else
@@ -36,11 +40,12 @@ class EventsController < ApplicationController
 
     @createdevents=[]
     
-    Event.all.each do |event|  
+    Event.search(params[:search]).each do |event|  
       if event.created_by == current_user.id
         @createdevents.push(event)
       end
     end
+    
      
   end
 

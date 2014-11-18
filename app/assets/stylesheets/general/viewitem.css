@@ -5,25 +5,27 @@
 	background-color:;
 	border-radius: 15px;
 
+
 }
 
 .eventitem{
 	list-style-type: none;
-	background-color: #FFAB33;
+	background-image: linear-gradient(to bottom, rgb(117, 172, 171), rgb(90, 140, 140));
 	width: 93%;
 	margin-top: 15px;
 	margin-bottom: 15px;
 	border-radius: 15px;
-	padding-left: 30px;
-	padding-right: 30px;
+	padding-left: 15px;
+	padding-right: 15px;
 	padding-top: 15px;
 	padding-bottom: 15px;
-
+	
 }
 
 
 .eventitem .eventbody{
-	background-color: #FD7700;
+	
+	background-image: linear-gradient(to bottom, white, white);
 	padding: 1px;
 	padding-left: 50px;
 	color: #555555;
@@ -33,7 +35,8 @@
 }
 
 .eventitem li h2{
-	background-color: #FD7700;
+	
+	background-image: linear-gradient(to bottom, white, white);
 	color: #444444;
 	text-align: left;
 	border-radius: 3px; 

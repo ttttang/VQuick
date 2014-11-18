@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
 
 	validates :fname, length: {minimum: 2}
 	validates :lname, length: {minimum: 2}
-	validates :admin, presence: true
+	
 	validate :admin_organization
 
 	def admin_organization
