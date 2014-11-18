@@ -1,11 +1,13 @@
 
 <%if current_user.admin==true%>
 	<%if @createdevents.size<1%>
+		
+		<%=link_to "Create New Event", new_event_path, class: 'btn'%>
 		<h5>You have not yet created an event!</h5>
-		<%=link_to "Create New Event", new_event_path, class: 'create-event coolbtn'%>
+		
 	<%else%>
-		<h1>My Created Events</h1> <%=link_to "Create New Event", new_event_path, class: 'create-event coolbtn'%>
-		<%@createdevents.each do |event|%>
+		<h1>My Created Events</h1> <%=link_to "Create New Event", new_event_path, class: 'btn'%>
+		
 
 			<table>
 				<tbody>
@@ -15,22 +17,25 @@
 						<th> Description </th>
 						<th> Requirements </th>
 						<th> Organization </th>
+						<th></th>
 					</tr>
+				<%@createdevents.each do |event|%>
 			 		<tr>
 						<td> <%= link_to event.name, event %></td>
 						<td> <%= event.date_and_time %></td>
 						<td> <%= event.description %></td>
 						<td> <%= event.requirements %></td>
 						<td> <%= link_to event.organization, event.organization %></td>
+						<td><%= link_to "Delete", event, method: :delete %> <br>
+			<%= link_to "Edit", edit_event_path(event)%></td>
 					</tr>
-
+				<%end%>
 				</tbody>
 			</table>
-			<%= link_to "Delete Event", event, method: :delete %> |
-			<%= link_to "Edit Event", edit_event_path(event)%>
+			
 
 		 
-		<%end%>
+		
 	<%end%>
 
 
@@ -38,11 +43,12 @@
 
 <%end%>
 
-	<%if @createdevents.size<1%>
+	<%if @myevents.size<1%>
+		 <%=link_to "Checkout events", events_path, class: 'btn'%>
 		<h5>You do not have an event to attend yet.</h5>
 	<%else%>
 		<h1>Events to Attend</h1>
-		<%@myevents.each do |event|%>
+		
 
 			<table>
 				<tbody>
@@ -52,20 +58,23 @@
 						<th> Description </th>
 						<th> Requirements </th>
 						<th> Organization </th>
+						<th></th>
 					</tr>
+					<%@myevents.each do |event|%>
 			 		<tr>
 						<td> <%= link_to event.name, event %></td>
 						<td> <%= event.date_and_time %></td>
 						<td> <%= event.description %></td>
 						<td> <%= event.requirements %></td>
 						<td> <%= link_to event.organization, event.organization %></td>
+						<td><%=link_to "Unattend event", unattend_path(:unattend=>event.id), data: { confirm: 'Are you sure? Click OK to confirm your cancellation.' }%></td>
 					</tr>
-
+					<%end%>
 				</tbody>
 			</table>
 
-		 	<%=link_to "Unattend event", unattend_path(:unattend=>event.id), data: { confirm: 'Are you sure? Click OK to confirm your cancellation.' }%>
+		 	
 
 
-		<%end%>
+		
 	<%end%>

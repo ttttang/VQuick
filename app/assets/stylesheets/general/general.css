@@ -20,7 +20,12 @@ a{
 
 
 body { 
+<<<<<<< HEAD
 	background-color: white;
+=======
+	/*background-image: url("/assets/subtlebg1.jpg");*/
+	background-color: rgb(237, 230, 222);
+>>>>>>> 11dd31365e58ba6d12b82ef769107d968d528e67
 	margin-top:30px; 
 }
 #login-nav input { margin-bottom: 15px; }
@@ -44,7 +49,11 @@ body {
 
 
 .containbg{
+<<<<<<< HEAD
 /*	background-color: rgb(66, 120, 161);*/
+=======
+	background-color: rgb(237, 230, 222);
+>>>>>>> 11dd31365e58ba6d12b82ef769107d968d528e67
 
 }
 
@@ -108,7 +117,7 @@ a:hover{
 h5{
 	padding: 30px;
 	font-style: italic;
-	color: blue;
+	color: gray;
 
 }
 

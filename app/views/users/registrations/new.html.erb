@@ -4,7 +4,24 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-   
+   <div class="form-pad">  
+
+    <!--Organization -->
+      <div>
+        <%= f.label :"Organization" %>
+        <%= f.collection_select(:organization_id, Organization.all, :id, :name, prompt: "For Event Organizers Only") %>  <span><%=link_to "New Organization", new_organization_path%> </span>
+      </div>
+      <!--Admin?-->
+      <div>
+        <%= f.label :"Event Organizer", class: 'midbox' %>
+        <%= f.check_box :admin, class: 'box' %>
+      </div>
+
+      <div>
+        Organization Code (organizers only): <%= text_field_tag :code%>
+      </div>
+      
+    </div>
 
   <!-- First Name -->
   <div class="field">
@@ -26,24 +43,8 @@
     <%= f.email_field :email %>
   </div>
 
-  <!-- Admin? -->
-    <div class="form-pad">  
-      <div>
-      <%= f.label :"Event Organizer", class: 'midbox' %>
-      <%= f.check_box :admin, class: 'box' %>
-      </div>
+  
 
-    <!--Organization -->
-      <div>
-        <%= f.label :"Organization" %>
-        <%= f.collection_select(:organization_id, Organization.all, :id, :name, prompt: "Required For Event Organizers") %>  <span><%=link_to "New Organization", new_organization_path%> </span>
-      </div>
-
-      <div>
-        Organization Code: <%= text_field :code, :nil%>
-      </div>
-      
-    </div>
 
   <!-- Password -->
   <div class="field">

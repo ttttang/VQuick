@@ -2,7 +2,7 @@ class OrganizationsController < ApplicationController
   before_action :set_organization, only: [:show]
 
   def index
-  	@organizations=Organization.all
+  	@organizations=Organization.search(params[:search])
   end
 
   def new
@@ -10,7 +10,7 @@ class OrganizationsController < ApplicationController
   end
 
   def create
-    @organization = Organization.new(params[:organization].permit(:name, :website, :description, :contact, :phone, :email))
+    @organization = Organization.new(params[:organization].permit(:name, :website, :description, :contact, :phone, :email, :code))
     
     if @organization.save
       redirect_to new_user_registration_path, notice: "Organization was successfully created."
@@ -19,6 +19,7 @@ class OrganizationsController < ApplicationController
     end
 
   end  
+  
 
   def show
     allevents=Event.all
@@ -41,7 +42,7 @@ class OrganizationsController < ApplicationController
 
   def update
     @organization=Organization.find(params[:id])
-    if @organization.update(params[:organization].permit(:name, :company_id, :default_rate, :slug))
+    if @organization.update(params[:organization].permit(:name, :website, :description, :contact, :phone, :email))
       flash[:notice]='Organization updated.'
       redirect_to @organization
     else

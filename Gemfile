@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+#better where method
+gem 'squeel'
+
 #for users
 gem 'devise'
 
