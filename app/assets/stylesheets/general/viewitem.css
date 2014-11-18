@@ -1,8 +1,5 @@
-
-/*************STYLE FOR ITEMS IN LIST VIEW******************/
-
 h1 {
-	color: #545457;
+	color: rgb(60,60,60);
 }
 
 .alleventitems{
@@ -13,15 +10,15 @@ h1 {
 
 .eventitem{
 	list-style-type: none;
-	background-color: rgb(117, 172, 171);
+	background-color: rgb(60, 60, 60);
 	width: 93%;
-	margin-top: 15px;
-	margin-bottom: 15px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 	border-radius: 15px;
-	padding-left: 15px;
-	padding-right: 15px;
-	padding-top: 15px;
-	padding-bottom: 15px;
+	padding-left: 12.5px;
+	padding-right: 12.5px;
+	padding-top: 12.5px;
+	padding-bottom: 12.5px;
 
 }
 
@@ -30,7 +27,7 @@ h1 {
 	background-color: white;
 	padding: 1px;
 	padding-left: 50px;
-	color: #545457;
+	color: rgb(69,69,69);
 	border-radius: 10px; 
 	width: 100%;
 	padding-bottom: 10px;
@@ -38,7 +35,7 @@ h1 {
 
 .eventitem li h2{
 	background-color: white;
-	color: #545457;
+	color: rgb(69,69,69);
 	text-align: left;
 	border-radius: 3px; 
 	width: 100%;
@@ -65,7 +62,7 @@ h1 {
 }
 
 .event-title{
-	color: #545457;
+	color: rgb(56,128,147);
 
 }
 
@@ -79,6 +76,10 @@ h1 {
 
 .event-req{
 	
+}
+
+.viewchange{
+	color: rgb(69,69,69);
 }
 
 li span{

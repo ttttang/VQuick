@@ -1,6 +1,13 @@
-div.col-md-12 {
-	background-color: rgb(237, 230, 222);
+div#bs-example-navbar-collapse-1.collapse.navbar-collapse{
+	color:yellow;
 }
+
+img.volunteer{
+	width:100%;
+	height: auto;
+	margin:0;
+}
+
 
 /*******************NAVBAR**********************/
 
@@ -13,16 +20,16 @@ a{
 
 
 body { 
-	background-color: rgb(237, 230, 222);
+	background-color: white;
 	margin-top:30px; 
 }
 #login-nav input { margin-bottom: 15px; }
 
-.nav-colored{
+/*.nav-colored{
 	border-bottom-right-radius: 0;
 	border-bottom-left-radius: 0;
 
-}
+}*/
 
 .header-fix{
 	padding: 0px;
@@ -30,7 +37,7 @@ body {
 	width: 100%;
 	position: fixed;
 	z-index:1;
-	background-color: rgb(43, 95, 138);
+	background-color: transparent;
 
 }
 
@@ -50,13 +57,12 @@ body {
 .logo{
 	border-radius: 50%;
 	overflow: visible;
-	background-color: #ccc;
 
 }
 
 .logofirst
 {
-	color: ;
+	color:black ;
 	padding-left: 12px;
 	margin: 0px;
 	font-size: 30px;
@@ -67,7 +73,7 @@ body {
 
 .logostyle
 {
-	color: ;
+	color:black ;
 	font-size: 17px;
 	font-family: "Verdana";
 	padding-right: 10px;
