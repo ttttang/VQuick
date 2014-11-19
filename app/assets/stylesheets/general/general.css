@@ -1,17 +1,19 @@
 .home{
-	background-image: url('assets/volunteer.jpg');
-	background-size:100%;
+	background: url('assets/volunteer.jpg') no-repeat center center;
+	margin:-35px;
+	overflow: hidden;
+
+
 }
+
 
 .trans{
 	background-color:white;
 }
 
-img.volunteer{
-	width:90%;
-	height: 80%;
-	margin:0;
-
+.volunteer{
+	width:2000px;
+	height: ;
 }
 
 
