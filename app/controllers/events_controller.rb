@@ -15,6 +15,9 @@ class EventsController < ApplicationController
   end
 
   def show
+    @allusers=@event.users
+    
+
   end
 
  
