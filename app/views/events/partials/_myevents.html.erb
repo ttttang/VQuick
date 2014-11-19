@@ -1,0 +1,9 @@
+<tr>
+	<td> <%= link_to myevents.name, myevents %></td>
+	<td> <%= myevents.date_and_time %></td>
+	<td> <%= myevents.description %></td>
+	<td> <%= myevents.requirements %></td>
+	<td> <%= link_to myevents.organization, myevents.organization %></td>
+	<td><%= link_to "Delete", myevents, method: :delete %> <br>
+<%= link_to "Edit", edit_event_path(myevents)%></td>
+</tr>

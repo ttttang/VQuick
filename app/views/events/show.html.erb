@@ -1,21 +1,6 @@
 <h1><%= @event.name %></h1>
 
-
-<ul>
-	
-			<li> Name: <%= @event %></li>
-			<li> Date: <%= @event.date_and_time %></li>
-			<li> Description: <%= @event.description %></li>
-			<li> Requirements: <%= @event.requirements %></li>
-			<li> Organization: <%= link_to @event.organization, @event.organization %></li>		
-			<li> Number of People Attending: <%= @allusers.size %></li>
-			<%if current_user&&@event.created_by==current_user.id%>
-				<%@allusers.each do |user|%>
-					<%=user.fname%> <%=user.lname%> | <%=user.email%> 
-
-				<%end%>
-			<%end%>
-</ul>
+<%=render 'events/partials/event'%>
 
 <%if current_user&&current_user.events.include?(@event)%>
 	<p>Already attending event!</p>

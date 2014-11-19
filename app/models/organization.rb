@@ -9,6 +9,8 @@ class Organization < ActiveRecord::Base
 		"#{name}"
 	end
 
+
+	#Search bar categories
 	def self.search(search)
 	 
 	  if search

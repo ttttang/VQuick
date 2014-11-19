@@ -1,5 +1,6 @@
 class OrganizationsController < ApplicationController
-  before_action :set_organization, only: [:show]
+  before_action :set_organization, only: [:show, :edit, :update]
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
   	@organizations=Organization.search(params[:search])
@@ -20,6 +21,18 @@ class OrganizationsController < ApplicationController
 
   end  
   
+  def edit
+  end
+
+  def update
+    
+    if @organization.update(params[:organization].permit(:name, :website, :description, :contact, :phone, :email))
+      flash[:notice]='Organization updated.'
+      redirect_to @organization
+    else
+      render 'edit'
+    end
+  end
 
   def show
     allevents=Event.all
@@ -36,26 +49,12 @@ class OrganizationsController < ApplicationController
 
   end
 
-  def edit
-    @organization=Organization.find(params[:id])
-  end
-
-  def update
-    @organization=Organization.find(params[:id])
-    if @organization.update(params[:organization].permit(:name, :website, :description, :contact, :phone, :email))
-      flash[:notice]='Organization updated.'
-      redirect_to @organization
-    else
-      render 'edit'
-    end
-  end
-
 private
   def set_organization
   	@organization= Organization.find(params[:id])
   end
 
- #  def organization_params
-	# params.require(:organization).permit(:name)
- #  end
+  def organization_params
+	   @params.require(:organization).permit(:name)
+  end
 end

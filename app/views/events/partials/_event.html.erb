@@ -1,0 +1,31 @@
+<!--DISPLAY INFO FOR INDIVIDUAL EVENTS-->
+
+
+<%if controller_name == 'events'&&(action_name == 'myevents'||action_name=='index')%>	
+	<tr>
+		<td> <%= link_to event, event %></td>
+		<td> <%= event.date_and_time %></td>
+		<td> <%= event.description %></td>
+		<td> <%= event.requirements %></td>
+		<td> <%= link_to event.organization, event.organization %></td>
+	</tr>
+<%end%>
+
+
+<%if controller_name == 'events'&&action_name == 'show'%>
+	<ul>
+	
+		<li> Name: <%= @event %></li>
+		<li> Date: <%= @event.date_and_time %></li>
+		<li> Description: <%= @event.description %></li>
+		<li> Requirements: <%= @event.requirements %></li>
+		<li> Organization: <%= link_to @event.organization, @event.organization %></li>		
+		<li> Number of People Attending: <%= @allusers.size %></li>
+		<%if current_user&&@event.created_by==current_user.id%>
+			<%@allusers.each do |user|%>
+				<%=user.fname%> <%=user.lname%> | <%=user.email%> 
+
+			<%end%>
+		<%end%>
+	</ul>
+<%end%>

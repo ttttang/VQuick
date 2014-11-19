@@ -7,7 +7,10 @@ class ApplicationController < ActionController::Base
 protected
 
  def configure_permitted_parameters
-   devise_parameter_sanitizer.for(:sign_up) <<:fname <<:lname <<:name <<:admin <<:organization_id
-   # devise_parameter_sanitizer.for(:account_update) << :name
+
+
+ 	#Allow the these parameters to be passed to devise in user registration
+    devise_parameter_sanitizer.for(:sign_up) <<:fname <<:lname <<:name <<:admin <<:organization_id
+   
  end
 end

@@ -1,10 +1,17 @@
 
 
-/********FORMS**************/
+/*******************FORMS********************/
+
+/******NAVBAR FORM******/
+
 .navbar-form{
 	padding-top: 7px;
 }
 
+
+
+
+/*******FORMS********/
 .form-pad div{
 	padding: 10px;
 
@@ -36,7 +43,7 @@
 }
 
 .field input{
-	width: 450px;
+	width: 70%;
 }
 
 

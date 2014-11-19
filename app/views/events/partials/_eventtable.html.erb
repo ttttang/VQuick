@@ -1,15 +1,15 @@
+<!--EVENTS/INDEX TABLE-->
+
 <table>
 	<tbody>
 		<tr class = "pretty">
-			
-
 			<th><%= sortable "name", "Event"%></th>
 			<th><%= sortable "date_and_time", "Date and Time"%></th>
 			<th> Description </th>
 			<th><%= sortable "requirements", "Requirements" %></th>
 			<th>Organization</th>
 		</tr>
-		<%= render partial: "event", collection: @events %>
+		<%= render partial: "events/partials/event", collection: @events %>
 	</tbody>
 <table>
 	<%=will_paginate @events%>

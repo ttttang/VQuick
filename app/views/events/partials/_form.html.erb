@@ -1,5 +1,10 @@
 <%= form_for (@event) do |f| %>
 	<div class="field">
+		<%= f.label :category %><br>
+		<%= f.select(:category, ["Charity", "Educational", "Assisting Those in Need", "Community Service", "Sports", "Medical"], prompt: true) %>
+	</div>
+
+	<div class="field">
 		<%= f.label :name %><br>
 		<%= f.text_field :name %>
 	</div>

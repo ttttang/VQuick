@@ -1,19 +1,26 @@
+<!--EVENTS/INDEX LIST VIEW-->
+
 <ul class="alleventitems">
 	<% @events.each do |event| %>
-		<%=link_to (event) do%>
-			<ul class="eventitem">
-				<div class="eventbody">
-				<li><h2><%=event.name%></h2> <span>Date: </span><%=event.date_and_time.to_date.strftime("%A %B %d, %Y")%></li>
-					
+		<!--Only the most current events are displayed-->
+		<%if event.date_and_time>Time.now-5.hour%>
+			<%=link_to (event) do%>
+				<ul class="eventitem">
+					<div class="eventbody">
+						<li>
+							<h2><%=event.name%></h2> 
+							<span>Date: </span>
+							<%=event.date_and_time.to_date.strftime("%A %B %d, %Y")%>
+						</li>
+						
 						<li class="event-date"><span>Time:</span> <%=event.date_and_time.strftime("%I:%M %p")%> to <%=(event.date_and_time+event.hours.hours+event.minutes.minutes).strftime("%I:%M %p")%></li>
 						<li class="event-description"><span>Description:</span> <%=event.description%></li>
 					
 						<li class="event-req"><span>Requirements:</span> <%=event.requirements%></li>
 						<li class="event-org"><span>Organization:</span> <%=event.organization%></li>
-	
-				</div>
-			</ul>
-
+					</div>
+				</ul>
+			<%end%>
 		<%end%>
 	<%end%>
 	<%=will_paginate @events%>

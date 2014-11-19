@@ -1,16 +1,13 @@
 <h1>Organization Details</h1>
 
 <ul>
-	
-		
-			<li> Organization: <%= @organization.name%></li>
-			<li> Website: <%= link_to @organization.website, "http://"+@organization.website %> </li>
-			<li> Description: <%= @organization.description %> </li>
-			<li> Email: <%= @organization.email %> </li>
-			<li> Phone Number: <%= @organization.phone %> </li>
-			
-		
+	<li> Organization: <%= @organization.name%></li>
+	<li> Website: <%= link_to @organization.website, "http://"+@organization.website %> </li>
+	<li> Description: <%= @organization.description %> </li>
+	<li> Email: <%= @organization.email %> </li>
+	<li> Phone Number: <%= @organization.phone %> </li>	
 </ul>
+
 <ul>
 	<h4>Events:</h4>
 	<%@events.each do |event|%>
@@ -18,7 +15,5 @@
 			 <strong><%= event.name %></strong> 
 			at <%=event.date_and_time%> </li>
 		<%end%>
-
 	<%end%>
-
 </ul>
