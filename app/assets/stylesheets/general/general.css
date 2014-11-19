@@ -1,11 +1,16 @@
-div#bs-example-navbar-collapse-1.collapse.navbar-collapse{
-	color:yellow;
+.home{
+	background-image: url('assets/volunteer.jpg');
+	background-size:100%;
+}
+
+.trans{
+	background-color:white;
 }
 
 img.volunteer{
-	width:100%;
-	height: auto;
-	margin:0;
+	width:90%;
+	height: 60%;
+
 }
 
 
@@ -20,12 +25,9 @@ a{
 
 
 body { 
-<<<<<<< HEAD
+
 	background-color: white;
-=======
-	/*background-image: url("/assets/subtlebg1.jpg");*/
-	background-color: rgb(237, 230, 222);
->>>>>>> 11dd31365e58ba6d12b82ef769107d968d528e67
+
 	margin-top:30px; 
 }
 #login-nav input { margin-bottom: 15px; }
@@ -49,11 +51,13 @@ body {
 
 
 .containbg{
-<<<<<<< HEAD
-/*	background-color: rgb(66, 120, 161);*/
-=======
-	background-color: rgb(237, 230, 222);
->>>>>>> 11dd31365e58ba6d12b82ef769107d968d528e67
+
+
+	/*text-align: center;
+	position: center;*/
+
+	/*background-color: rgb(237, 230, 222);*/
+
 
 }
 

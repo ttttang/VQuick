@@ -9,13 +9,18 @@
 
 
 <body>
-	<div class="header-fix">
-		<%= render 'layouts/header'%>
-	</div>
-	<p class="navbar-text pull-right">
+	<%unless controller_name == 'pages'&&action_name == 'home'%>
+		<div class="header-fix">
+			<%= render 'layouts/header'%>
+		</div>
+
+	<%end%>
+	<p class="navbar-text pull-right"></p>
 
 	
-
+<%if controller_name == 'pages'&&action_name == 'home'%>
+	<div class="home"><%=yield%></div>
+<%else%>
 	<div class="container contentunder containbg">
 
 	
@@ -29,5 +34,6 @@
 
 		<%= yield %>
 	</div>
+	<%end%>
 </body>
 </html>

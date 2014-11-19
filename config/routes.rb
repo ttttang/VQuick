@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'myevents' => 'events#myevents'
   get 'pages/about_us'
   get 'pages/contact'
+  get 'pages/home'
   get 'attendevent' => 'events#attend'
   get 'unattend'=>'events#unattend'
   root "events#index", :listview=>'true'
