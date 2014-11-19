@@ -11,7 +11,7 @@ class Event < ActiveRecord::Base
 	validates :category, presence: true
 
 
-#Makes sure event date is in the futures
+#Makes sure newly created event is in the future
 def date_is_in_past
     if date_and_time.present? && date_and_time < Time.now
     	errors.add(:date_and_time, "can't be in the past")

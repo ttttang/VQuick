@@ -1,4 +1,5 @@
 
+<!--CURRENT USER'S CREATED EVENTS-->
 <%if current_user.admin==true%>
 	<%if @createdevents.size<1%>
 		<%=link_to "Create New Event", new_event_path, class: 'btn'%>
@@ -21,6 +22,7 @@
 	<%end%>
 <%end%>
 
+<!--EVENTS THE CURRENT USER PLANS TO ATTEND-->
 <%if @myevents.size<1%>
 	 <%=link_to "Check out available events", root_url, class: 'btn'%>
 	<h5>I do not have an event to attend yet.</h5>
@@ -41,8 +43,8 @@
 		</table>
 <%end%>
 
+<!--EVENTS THE CURRENT USER ATTENDED-->
 <%if @pastevents.size>=1%>
-	 
 	<h1>Events I Attended</h1>
 		<table>
 			<tbody>

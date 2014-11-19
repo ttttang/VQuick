@@ -1,6 +1,6 @@
 <!--DISPLAY INFO FOR INDIVIDUAL EVENTS-->
 
-
+<!--For Myevents and Event/Index-->
 <%if controller_name == 'events'&&(action_name == 'myevents'||action_name=='index')%>	
 	<tr>
 		<td> <%= link_to event, event %></td>
@@ -11,7 +11,7 @@
 	</tr>
 <%end%>
 
-
+<!--For Event/Show-->
 <%if controller_name == 'events'&&action_name == 'show'%>
 	<ul>
 	

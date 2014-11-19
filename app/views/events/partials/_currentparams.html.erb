@@ -1,11 +1,13 @@
-<%= form_tag events_path, class: 'viewchange', :method => 'get' do %>
-		<%=hidden_field_tag :direction, params[:direction]%>
-		<%=hidden_field_tag :sort, params[:sort]%>
-		<%=hidden_field_tag :search, params[:search]%>
-		
-		<%if @viewer!='true'%>
-			<%=hidden_field_tag :listview, "true"%>
-		<%end%>
+<!--Allow current url parameters to be preserved.-->
 
-		<%=submit_tag @viewer=='true' ? "Table View" : "List View", :name => nil%>
+<%= form_tag events_path, class: 'viewchange', :method => 'get' do %>
+	<%=hidden_field_tag :direction, params[:direction]%>
+	<%=hidden_field_tag :sort, params[:sort]%>
+	<%=hidden_field_tag :search, params[:search]%>
+	
+	<%if @viewer!='true'%>
+		<%=hidden_field_tag :listview, "true"%>
 	<%end%>
+
+	<%=submit_tag @viewer=='true' ? "Table View" : "List View", :name => nil%>
+<%end%>

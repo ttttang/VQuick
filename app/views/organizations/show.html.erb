@@ -8,12 +8,30 @@
 	<li> Phone Number: <%= @organization.phone %> </li>	
 </ul>
 
+<!--The organization's current events-->
 <ul>
-	<h4>Events:</h4>
+	<h4>Current Events:</h4>
 	<%@events.each do |event|%>
-		<li> <%=link_to (event) do%> 
-			 <strong><%= event.name %></strong> 
-			at <%=event.date_and_time%> </li>
+		<%if event.date_and_time>=Time.now%>
+			<li> 
+				<%=link_to (event) do%> 
+				 <strong><%= event.name %></strong> at <%=event.date_and_time%> 
+				<%end%>
+			</li>
+		<%end%>
+	<%end%>
+</ul>
+
+<!--The organization's past events-->
+<ul>
+	<h4>Past Events:</h4>
+	<%@events.each do |event|%>
+		<%if event.date_and_time<Time.now%>
+			<li> 
+				<%=link_to (event) do%> 
+				 <strong><%= event.name %></strong> at <%=event.date_and_time%> 
+				<%end%>
+			</li>
 		<%end%>
 	<%end%>
 </ul>

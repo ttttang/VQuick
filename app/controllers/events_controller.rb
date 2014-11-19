@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
- before_action :set_event, only: [:show]
+ before_action :set_event, only: [:show, :destroy, :edit, :update]
  before_action :authenticate_user!, except: [:index, :show] #Only users can access other actions
  helper_method :sort_column, :sort_direction #For sorting
   
@@ -34,13 +34,11 @@ class EventsController < ApplicationController
   end  
 
   def edit
-    @event=Event.find(params[:id])
+    
 
   end
 
   def update
-
-    @event=Event.find(params[:id])
     if @event.update(event_params)
       flash[:notice]='Event updated.'
       redirect_to myevents_path
@@ -50,10 +48,8 @@ class EventsController < ApplicationController
   end
 
   def destroy
-    @event=Event.find(params[:id])
     @event.destroy
     redirect_to myevents_path
-
   end
 
   def show
@@ -73,21 +69,16 @@ class EventsController < ApplicationController
         end
       end
 
-    
-
     #Find all events created by the user
     @createdevents=[]
     Event.search(params[:search]).each do |event|  
       if event.created_by == current_user.id&&event.date_and_time>Time.now
         @createdevents.push(event)
       end
-    end
-    
-     
+    end 
   end
 
   def attend
-
     #Joins user to event (attending an event)
     attendance=Attendance.new
     attendance.event_id=params[:attend]
@@ -113,7 +104,6 @@ private
   end
 
   def event_params
-    
       params[:event].permit(:name, :description, :requirements, :date_and_time, :hours, :minutes, :category)
   end
 
