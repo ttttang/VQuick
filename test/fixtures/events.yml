@@ -5,12 +5,12 @@
 # below each fixture, per the syntax in the comments below
 #
 
-<% 20.times do |n|%>
+<% 10.times do |n|%>
 event_<%= n %>:
   name: Event_<%= n %>
   description: <%=n%2==0? 'Fun event': 'Swanky event' %>
   requirements: <%=n%3==0? 'Ok for all ages': 'Permission slip needed' %>
-  date_and_time: <%= Time.now-n.days %>
+  date_and_time: <%= Time.now+n.days %>
   hours: <%= n%4+1%>
   minutes: <%= n%4*10 %>
   organization: <%= case n%3; when 0; "whospice"; when 1; "sod"; when 2; "ucla"; else "ymca"; end %> 
