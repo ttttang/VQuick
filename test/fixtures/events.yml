@@ -5,7 +5,7 @@
 # below each fixture, per the syntax in the comments below
 #
 
-<% 10.times do |n|%>
+<% 15.times do |n|%>
 event_<%= n %>:
   name: Event_<%= n %>
   description: <%=n%2==0? 'Fun event': 'Swanky event' %>
@@ -13,7 +13,18 @@ event_<%= n %>:
   date_and_time: <%= Time.now+n.days %>
   hours: <%= n%4+1%>
   minutes: <%= n%4*10 %>
-  organization: <%= case n%3; when 0; "whospice"; when 1; "sod"; when 2; "ucla"; else "ymca"; end %> 
-  created_by: <%= case n%3; when 0; "sylvester"; when 1; "ounie"; when 2; "tracy"; else "village"; end %>
+  organization: <%= case n%3; when 0; "ucla"; when 1; "sod"; when 2; "ucla"; else "ymca"; end %> 
+  created_by: <%= case n%3; when 0; "1"; when 1; "2"; when 2; "3"; else "4"; end %>
 <%end %>
 
+<% 15.times do |n|%>
+event_<%= n+12 %>:
+  name: Event_<%= n %>
+  description: <%=n%2==0? 'Fun event': 'Swanky event' %>
+  requirements: <%=n%3==0? 'Ok for all ages': 'Permission slip needed' %>
+  date_and_time: <%= Time.now-n.days+1.days %>
+  hours: <%= n%4+1%>
+  minutes: <%= n%4*10 %>
+  organization: <%= case n%3; when 0; "ucla"; when 1; "sod"; when 2; "ucla"; else "ymca"; end %> 
+  created_by: <%= n%2+1 %>
+<%end %>

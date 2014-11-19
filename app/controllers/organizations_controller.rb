@@ -46,9 +46,8 @@ class OrganizationsController < ApplicationController
         end
       end
     end
-
   end
-
+  
 private
   def set_organization
   	@organization= Organization.find(params[:id])
