@@ -149,39 +149,45 @@ a:hover{
 }
 
 
+/****************ORGANIZATION*******************/
+
+h4{
+	margin-left: 50px;
+}
+
+/*********PAGINATION************************/
+div.pagination {
+	padding:3px;
+	margin:3px;
+	text-align:center;
+}
+
+div.pagination a {
+	padding: 2px 5px 2px 5px;
+	margin-right: 2px;
+	border: 1px solid #ddd;
+	
+	text-decoration: none; 
+	color: #aaa;
+}
+div.pagination a:hover, div.pagination a:active {
+	padding: 2px 5px 2px 5px;
+	margin-right: 2px;
+	border: 1px solid #a0a0a0;
+}
+div.pagination span.current {
+	padding: 2px 5px 2px 5px;
+	margin-right: 2px;
+	border: 1px solid #e0e0e0;
+	font-weight: bold;
+	background-color: #f0f0f0;
+	color: #aaa;
+}
+div.pagination span.disabled {
+	padding: 2px 5px 2px 5px;
+	margin-right: 2px;
+	border: 1px solid #f3f3f3;
+	color: #ccc;
+
 /*******************VIEWS GENERAL***********************/
 
-/*******EVENT INDEX PAGE********/
-
-.viewhead{
-	font-weight: bold;
-	text-align: right;
-	font-size: 40px;
-	border-bottom: solid #515151 2px;
-}
-
-.viewchange{
-	color: blue;
-	font-weight: bold;
-	font-size: 20px;
-	padding-left: 45px;
-}
-
-h5{
-	padding: 30px;
-	font-style: italic;
-	color: gray;
-
-}
-
-.create-event
-{
-	margin: 25px;
-	padding: 10px;
-	/*border-radius: 20px;*/
-	/*color: #E0E0E0;
-	border: solid 1px #003300;
-	background-color: #339999 ;
-	font-weight: bold;*/
-
-}
