@@ -125,7 +125,7 @@ private
   end
 
   def event_params
-      params[:event].permit( :name, :description, :requirements, :date_and_time, :hours, :minutes, :category, :image, :street, :city_state, :zip)
+      params.require(:event).permit( :name, :description, :requirements, :date_and_time, :hours, :minutes, :category, :image, :street, :city_state, :zip)
   end
 
   #SORTING

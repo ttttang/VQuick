@@ -12,7 +12,7 @@ class Event < ActiveRecord::Base
 
 	#for images
 	has_attached_file :image, :styles => { :medium => "300x300>" }
-
+	validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
 #Makes sure newly created event is in the future
 def date_is_in_past
