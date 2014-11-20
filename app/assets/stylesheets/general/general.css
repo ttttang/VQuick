@@ -1,19 +1,53 @@
-.home{
-	background: url('assets/volunteer.jpg') no-repeat center center;
-	margin:-35px;
-	overflow: hidden;
-
-
+#cover-text{
+	color:gray;
+	font-size:5vw;
+	margin-left:100px;
 }
 
 
-.trans{
+.btn-style{
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:5px;
+	padding-bottom:5px;
+	font-size:22.5px;
+	background:transparent;
+	color:gray;
+}
+
+.btn-style:hover{
 	background-color:white;
 }
 
-.volunteer{
-	width:2000px;
-	height: ;
+.btn-style.hover{
+	hover:white;
+}
+
+.enter{
+	margin-left:30vw;
+	margin-top: 5vh;
+}
+
+
+.home{
+	background-image: url('/assets/volunteer3.jpg');
+/* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+	
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.trans{
+	background-color:white;
 }
 
 
@@ -168,5 +202,4 @@ h5{
   background-image: -o-linear-gradient(top, #9ed2f2, #2b92d6);
   background-image: linear-gradient(to bottom, #9ed2f2, #2b92d6);
   text-decoration: none;
-}
-}
+} 
