@@ -7,9 +7,9 @@
 		<%=link_to (event), class: 'box' do%>
 			<ul class="eventitem">
 				<div class="eventbody">
+					<li class="eventimage"> <%=image_tag event.image.url(:medium)%> </li>
 					<li class="eventname"> <h3><%=event.name%></h3> 
 					</li>
-
 					<li class="eventdate"> Date:
 						<%=event.date_and_time.strftime("%A %B %d, %Y")%> 
 					</li>
@@ -31,4 +31,6 @@
 	<%end%>
 	
 </ul>
+<div class="paginate">
 <%=will_paginate @events%>
+</div>

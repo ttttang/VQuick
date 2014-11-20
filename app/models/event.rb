@@ -10,6 +10,9 @@ class Event < ActiveRecord::Base
 	validate :date_is_in_past
 	validates :category, presence: true
 
+	#for images
+	has_attached_file :image, :styles => { :medium => "300x300>" }
+
 
 #Makes sure newly created event is in the future
 def date_is_in_past

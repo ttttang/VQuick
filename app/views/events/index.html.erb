@@ -10,8 +10,8 @@
 
 <!--Toggles between list view and items view-->
 <%if @return=='true'%>
-	<h5 class="toggle-events view-link toggleable-events">Table View</h5>
-	<h5 class="toggle-events view-link toggleable-event-list">Items View</h5>
+	<h5 class="toggle-events view-link toggleable-events viewchange">Table View</h5>
+	<h5 class="toggle-events view-link toggleable-event-list viewchange">Items View</h5>
 
 	<div class='toggleable-events'>
 		<%=render 'events/partials/eventitems'%>
@@ -22,8 +22,8 @@
 	</div>
 
 <%else%>
-	<h5 class="toggle-events view-link toggleable-event-list">Table View</h5>
-	<h5 class="toggle-events view-link toggleable-events">Item View</h5>
+	<h5 class="toggle-events view-link toggleable-event-list viewchange">Table View</h5>
+	<h5 class="toggle-events view-link toggleable-events viewchange">Item View</h5>
 
 	<div class='toggleable-event-list'>
 		<%=render 'events/partials/eventitems'%>
