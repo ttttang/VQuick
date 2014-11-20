@@ -11,27 +11,16 @@
 <!--The organization's current events-->
 <ul>
 	<h4>Current Events:</h4>
-	<%@events.each do |event|%>
-		<%if event.date_and_time>=Time.now%>
-			<li> 
-				<%=link_to (event) do%> 
-				 <strong><%= event.name %></strong> at <%=event.date_and_time%> 
-				<%end%>
-			</li>
-		<%end%>
-	<%end%>
+	<%=render partial: 'events/partials/event', collection: @currentevents %>
 </ul>
 
-<!--The organization's past events-->
-<ul>
-	<h4>Past Events:</h4>
-	<%@events.each do |event|%>
-		<%if event.date_and_time<Time.now%>
-			<li> 
-				<%=link_to (event) do%> 
-				 <strong><%= event.name %></strong> at <%=event.date_and_time%> 
-				<%end%>
-			</li>
-		<%end%>
-	<%end%>
-</ul>
+<%if @pastevents.size!=0%>
+	<p class="toggle-events">Show/Hide Past Events</p>
+	<!--The organization's past events-->
+	
+	<ul class="toggleable-events">
+		<h4>Past Events:</h4>
+		<%=render partial: 'events/partials/event', collection: @pastevents %>
+	</ul>
+
+<%end%>

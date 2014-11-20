@@ -3,7 +3,7 @@
 <ul class="alleventitems">
 	<% @events.each do |event| %>
 		<!--Only the most current events are displayed-->
-		<%if event.date_and_time>Time.now-5.hour%>
+		<%if event.date_and_time>Time.now+event.hours.hour%>
 			<%=link_to (event) do%>
 				<ul class="eventitem">
 					<div class="eventbody">

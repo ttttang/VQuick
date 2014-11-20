@@ -43,10 +43,12 @@
 		</table>
 <%end%>
 
+
 <!--EVENTS THE CURRENT USER ATTENDED-->
 <%if @pastevents.size>=1%>
-	<h1>Events I Attended</h1>
-		<table>
+	<p class="toggle-events">Show/Hide Past Events</p>
+	<h1 class="toggleable-events">Events I Attended</h1>
+		<table class="toggleable-events">
 			<tbody>
 				<tr>
 					<th> Name </th>
@@ -60,3 +62,4 @@
 			</tbody>
 		</table>
 <%end%>
+

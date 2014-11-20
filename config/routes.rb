@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get 'attendevent' => 'events#attend'
   get 'unattend'=>'events#unattend'
   
+  get'organizations/[:id]'=>'organizations/#show'
 
   #Resources
   resources :events

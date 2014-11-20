@@ -1,27 +1,27 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 a:
-  user: tracy
+  user: ounie
   event: event_1
 
 b:
-  user: sylvester
-  event: event_2
+  user: ounie
+  event: event_20
 
 c:
   user: tracy
   event: event_2
 
 d:
-  user: tracy
-  event: event_3
+  user: ounie
+  event: event_20
 
 e:
-  user: mary
+  user: sylvester
   event: event_5
 
 f:
-  user: cassidy
+  user: tracy
   event: event_6
 
 g:

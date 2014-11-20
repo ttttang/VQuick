@@ -14,7 +14,7 @@ event_<%= n %>:
   hours: <%= n%4+1%>
   minutes: <%= n%4*10 %>
   organization: <%= case n%3; when 0; "ucla"; when 1; "sod"; when 2; "ucla"; else "ymca"; end %> 
-  created_by: <%= case n%3; when 0; "1"; when 1; "2"; when 2; "3"; else "4"; end %>
+  created_by: <%= n%2+1 %>
 <%end %>
 
 <% 15.times do |n|%>

@@ -12,6 +12,9 @@ gem 'bootstrap-sass'
 #to make pages
 gem 'will_paginate'
 
+#fix script on reload issue
+gem 'jquery-turbolinks'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.7'
 # Use sqlite3 as the database for Active Record

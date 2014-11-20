@@ -6,6 +6,12 @@
 	<td> <%= myevents.description %></td>
 	<td> <%= myevents.requirements %></td>
 	<td> <%= link_to myevents.organization, myevents.organization %></td>
-	<td><%= link_to "Delete", myevents, method: :delete %> <br>
-<%= link_to "Edit", edit_event_path(myevents)%></td>
+	<td>
+	<%if myevents.created_by == current_user.id%>
+		<%= link_to "Delete", myevents, method: :delete %> <br>
+		<%= link_to "Edit", edit_event_path(myevents)%>
+	<%else%>
+		<%= link_to "Unattend", unattend_path%>
+	<%end%>
+	</td>
 </tr>

@@ -5,7 +5,6 @@ li{
 }
 
 a{
-
 	color: #0000CC;
 }
 
@@ -14,15 +13,17 @@ a:hover{
 
 }
 
+/*Yield Styling*/
+.contentunder {
+    padding-top: 57px;
+}
+
 /********************HOME PAGE*************************/
 .home{
 	background: url('assets/volunteer.jpg') no-repeat center center;
 	margin:-35px;
 	overflow: hidden;
-
-
 }
-
 
 .trans{
 	background-color:white;
@@ -64,10 +65,8 @@ body {
 }
 
 
-/*Prevent content from going on top of fixed navbar*/
-  .contentunder {
-    padding-top: 70px;
-  }
+
+  
 
 /*********LOGO**********/
 .logo{
@@ -137,6 +136,14 @@ h5{
 
 }
 
+.view-link{
+	border: none;
+	background-color: transparent;
+}
 
 
+/********TOGGLE PAST EVENTS*********/
+.toggleable-events{
+	display: none;
+}
 

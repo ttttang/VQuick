@@ -34,7 +34,10 @@ class EventsController < ApplicationController
   end  
 
   def edit
-    
+    #only the person who created the event can edit it
+    if current_user.id!=@event.created_by
+      redirect_to myevents_path
+    end
 
   end
 
@@ -62,7 +65,7 @@ class EventsController < ApplicationController
 
     #Display past events separately from current events
       current_user.events.each do |event|
-        if event.date_and_time>Time.now+5.hours
+        if event.date_and_time>Time.now-5.hours
           @myevents.push(event)
         else
           @pastevents.push(event)

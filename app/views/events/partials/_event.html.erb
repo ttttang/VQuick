@@ -19,7 +19,7 @@
 		<li> Date: <%= @event.date_and_time %></li>
 		<li> Description: <%= @event.description %></li>
 		<li> Requirements: <%= @event.requirements %></li>
-		<li> Organization: <%= link_to @event.organization, @event.organization %></li>		
+		<li> Organization: <%= link_to @event.organization, @event.organization%></li>		
 		<li> Number of People Attending: <%= @allusers.size %></li>
 		<%if current_user&&@event.created_by==current_user.id%>
 			<%@allusers.each do |user|%>
@@ -28,4 +28,14 @@
 			<%end%>
 		<%end%>
 	</ul>
+<%end%>
+
+
+<!--For Organization Events-->
+<%if controller_name == 'organizations'&&action_name == 'show'%>
+	<li> 
+		<%=link_to (event) do%> 
+		 <strong><%= event.name %></strong> at <%=event.date_and_time.to_date.strftime("%A %B %d, %Y")%> 
+		<%end%>
+	</li>
 <%end%>

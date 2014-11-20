@@ -37,15 +37,34 @@ class OrganizationsController < ApplicationController
   def show
     allevents=Event.all
     allusers=@organization.users 
-    @events=[]
+    events=[]
 
     allevents.each do |event|
       allusers.each do |user|
         if event.created_by==user.id
-          @events.push(event)
+          events.push(event)
         end
       end
     end
+
+    @currentevents=[]
+    @pastevents=[]
+    #Separate current events from past events for selected organization
+    events.each do |event|
+      if event.date_and_time>Time.now
+        @currentevents.push(event)
+        #Sort events by date
+        @currentevents.sort_by!{ |k| k[:date_and_time]}.reverse!
+      else
+        @pastevents.push(event)
+        @pastevents.sort_by!{ |k| k[:date_and_time]}.reverse!
+      end
+    end
+    
+
+      
+      
+    
   end
   
 private
