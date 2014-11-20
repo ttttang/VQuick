@@ -9,7 +9,7 @@
     <!--Organization -->
       <div>
         <%= f.label :"Organization" %>
-        <%= f.collection_select(:organization_id, Organization.all, :id, :name, prompt: "For Event Organizers Only") %>  <span><%=link_to "New Organization", new_organization_path%> </span>
+        <%= f.collection_select(:organization_id, Organization.all, :id, :name, prompt: "Required For Event Organizers") %>  <span><%=link_to "New Organization", new_organization_path%> </span>
       </div>
       <!--Admin?-->
       <div>
@@ -60,6 +60,12 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
+
+    <div class="field">
+      <%= f.label :image %> (optional)
+      <%= f.file_field :image, class: "form-control" %>
+    </div>
+
 
   <!--   Submit Button -->
   <div class="actions field-btn">
