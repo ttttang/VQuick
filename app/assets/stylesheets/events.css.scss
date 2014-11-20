@@ -5,6 +5,7 @@
 
 /*******EVENT INDEX PAGE********/
 
+/**This is the title "All Events" on the front page**/
 .viewhead{
 	margin-left: 7vw;
 	font-weight: bold;
@@ -12,10 +13,12 @@
 	display: inline-block;
 	margin-bottom: 0px;
 	padding-bottom: 0px;
+	border-bottom: 2px solid gray;
 }
 
+/**This is the "table view" & "list view" on the front page **/
 .viewchange{
-	margin-left: 6vw;
+	margin-left: 9vw;
 	margin-top:10px;
 	font-weight: bold;
 	font-size: 20px;
@@ -23,36 +26,37 @@
 
 }
 
-h5{
-	padding: 30px;
-	font-style: italic;
-	color: gray;
+/**to make the event title centered in boxes **/
+.eventname{
+	text-align:center;
 }
 
-
-.create-event
-{
-	margin: 25px;
-	padding: 10px;
-	/*border-radius: 20px;*/
-	/*color: #E0E0E0;
-	border: solid 1px #003300;
-	background-color: #339999 ;
-	font-weight: bold;*/
+/**to change event date in boxes **/
+.eventdate{
+	font-style:italic;
+	text-align:center;
+	font-size:18px;
 }
 
-.view-link{
-	border: none;
-	color: #6685C2;
-	background-color: transparent;
+/**to change time, requirements, and org in boxes **/
+.biggerfont{
+	font-size:16px;
 }
+
+/**to make the Time, Requirements, Org bold in box**/
+li span{
+	font-weight: bold;
+	margin-right:5px;
+}
+
 
 /*****************EVENT LIST VIEW***************************/
 
 /***MASONRY****/
-#event-box{
 
-	margin: 0 auto;
+/**this is to move the event boxes left more **/
+#event-box{
+	margin-left: 5vw;
 }
 
 .box{
@@ -75,10 +79,10 @@ h1 {
 
 }
 
+/**this creates the border of the box **/
 .eventitem{
 	list-style-type: none;
 	background: linear-gradient(to bottom right, rgb(80, 80, 80) , rgb(60, 60, 60));
-
 	width: 93%;
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -92,7 +96,6 @@ h1 {
 .eventitem .eventbody{
 
 	background-color: white;
-
 	padding: 1px;
 	padding-left: 10px;
 	color: rgb(69,69,69);
@@ -140,10 +143,7 @@ h1 {
 	color: rgb(69,69,69);
 }
 
-li span{
-	font-weight: bold;
-	margin-right: 20px;
-}
+
 
 /*****************EVENT TABLE VIEW***************************/
 
@@ -273,4 +273,31 @@ table tr:hover td {
 
 .eventshow{
 	list-style-type: none;
+}
+
+/************************MYEVENTS-SIGNEDIN******************/
+
+/**This is the text saying "you don't have an event yet" **/
+h5{
+	padding: 30px;
+	font-style: italic;
+	color: gray;
+}
+
+
+.create-event
+{
+	margin: 25px;
+	padding: 10px;
+	/*border-radius: 20px;*/
+	/*color: #E0E0E0;
+	border: solid 1px #003300;
+	background-color: #339999 ;
+	font-weight: bold;*/
+}
+
+.view-link{
+	border: none;
+	color: #6685C2;
+	background-color: transparent;
 }
