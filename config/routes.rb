@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {registrations: "users/registrations"}
 
   #Homepage -> Start with listview
-  root "events#index", :listview=>'true'
+  root "pages#home"
 
   #Events for individual users
   get 'myevents' => 'events#myevents'
@@ -22,10 +22,7 @@ Rails.application.routes.draw do
 
   #Resources
 
-  get 'events'=>'events#index', :listview=>'true'
-  root "events#index", :listview=>'true'
-  resources :organizations
- #resources :users
+  get 'events'=>'events#index'
 
   resources :events
   resources :organizations
