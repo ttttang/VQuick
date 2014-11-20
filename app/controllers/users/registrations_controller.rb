@@ -9,17 +9,19 @@ before_filter :configure_account_update_params, only: [:update]
 
   # POST /resource
   def create
+    par=params[:user][:organization_id]
     
-    
-    org=Organization.find(params[:user][:organization_id])
-
-    if org.code==params[:code]
-      super
+    if par!="" 
+      org=Organization.find(par)
+      if org.code==params[:code]||par==""||par=nil
+        super
+      else
+        redirect_to new_user_registration_path, :notice=>'Incorrect organization code.'
+      end 
     else
-
-     redirect_to new_user_registration_path, :notice=>'Incorrect organization code.'
-     
+      super
     end
+    
   end
 
   # GET /resource/edit
@@ -60,6 +62,7 @@ before_filter :configure_account_update_params, only: [:update]
 
   # The path used after sign up.
   def after_sign_up_path_for(resource)
+    
     super(resource)
   end
 

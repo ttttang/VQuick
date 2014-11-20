@@ -7,6 +7,14 @@
     margin-left: 0px;
 }
 
+.contentunderother{
+	padding-top: 57px;
+}
+
+.contentunderpull{
+	padding-top: 57px;
+	margin-bottom: -45px;
+}
 
 /*******************NAVBAR**********************/
 
