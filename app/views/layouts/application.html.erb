@@ -23,7 +23,7 @@
 <!--Set Different Styling for Home Page-->
 	<%if controller_name == 'pages'&&action_name == 'home'%>
 		<div class="home"><%=yield%></div> <!--The Yield-->
-	<%else%>
+	<%elsif controller_name == 'events'&&action_name == 'index'%>
 		<div class="contentunder">
 
 <!--Display Flash Notices-->
@@ -35,6 +35,10 @@
 
 			<%= yield %>  <!--The Yield-->
 		</div>
+
+	<%else%>
+		<div class="container"> <%=yield%></div>
+
 	<%end%>
 
 </body>

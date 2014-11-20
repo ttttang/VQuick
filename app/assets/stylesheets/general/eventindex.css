@@ -1,0 +1,43 @@
+
+/*******EVENT INDEX PAGE********/
+
+.viewhead{
+	margin-left: 7vw;
+	font-weight: bold;
+	font-size: 40px;
+	display: inline-block;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+.viewchange{
+	margin-left: 10px;
+	font-weight: bold;
+	font-size: 20px;
+	padding-bottom: 0px;
+	display: inline-block;
+}
+
+h5{
+	padding: 30px;
+	font-style: italic;
+	color: gray;
+}
+
+.create-event
+{
+	margin: 25px;
+	padding: 10px;
+	/*border-radius: 20px;*/
+	/*color: #E0E0E0;
+	border: solid 1px #003300;
+	background-color: #339999 ;
+	font-weight: bold;*/
+}
+
+.view-link{
+	border: none;
+	color: #6685C2;
+	background-color: transparent;
+}
+

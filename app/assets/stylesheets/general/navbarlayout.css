@@ -1,0 +1,144 @@
+
+
+/*Yield Styling*/
+.contentunder {
+    padding-top: 57px;
+    padding-left: 0px;
+    margin-left: 0px;
+}
+
+/********************HOME PAGE*************************/
+.home{
+	background: url('assets/volunteer.jpg') no-repeat center center;
+	margin:-35px;
+	overflow: hidden;
+}
+
+.trans{
+	background-color:white;
+}
+
+#cover-text{
+	color:gray;
+	font-size:5vw;
+	margin-left:100px;
+}
+
+
+.btn-style{
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:5px;
+	padding-bottom:5px;
+	font-size:22.5px;
+	background:transparent;
+	color:gray;
+}
+
+.btn-style:hover{
+
+	background-color:white;
+}
+
+.btn-style.hover{
+	hover:white;
+}
+
+.enter{
+	margin-left:30vw;
+	margin-top: 5vh;
+}
+
+
+.home{
+	background-image: url('/assets/volunteer3.jpg');
+/* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+	
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.trans{
+	background-color:white;
+}
+
+/*******************NAVBAR**********************/
+
+/*****NAVBAR GENERAL******/
+
+
+body { 
+
+	background-color: white;
+	margin-top:30px; 
+	padding-left: 0px;
+}
+
+#login-nav input { 
+	margin-bottom: 15px; 
+}
+
+.header-fix{
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	position: fixed;
+	z-index:1;
+	background-color: transparent;
+
+}
+
+.btn-pad{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+  
+
+/*********LOGO**********/
+.logo{
+	border-radius: 50%;
+	overflow: visible;
+
+}
+
+.logofirst
+{
+	color:black ;
+	padding-left: 12px;
+	margin: 0px;
+	font-size: 30px;
+	font-family: "Comic Sans MS";
+	text-decoration: none;
+
+}
+
+.logostyle
+{
+	color:black ;
+	font-size: 17px;
+	font-family: "Verdana";
+	padding-right: 10px;
+	text-decoration: none;
+
+}
+
+
+
+
+/*******************VIEWS GENERAL***********************/
+
+/********TOGGLE PAST EVENTS*********/
+.toggleable-events{
+	display: none;
+}
+
