@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
  
   
   def after_sign_in_path_for(resource)
-      events_path(:listview=>"true")
+      events_path
   end
 
 

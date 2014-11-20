@@ -6,7 +6,7 @@ class EventsController < ApplicationController
 
   def index
     #Events will be displayed by newest time
-    #10 events per page
+    #sort events by descending date
   	allevents= Event.search(params[:search]).order(sort_column+" "+sort_direction)
     @events=[]
     allevents.each do |event|
@@ -15,8 +15,11 @@ class EventsController < ApplicationController
       end
     end
 
+    #12 events per page
     @events=@events.paginate(:per_page => 12, :page=>params[:page])
-    @viewer=params[:listview]
+
+    #checks to see if returning to the index in table view
+    @return=params[:return]
   end
 
   def new
@@ -30,10 +33,14 @@ class EventsController < ApplicationController
     #Link the event to the user who created it
     @event.created_by=current_user.id
     
-    #Capitalize the event name before creating it     
+    #Capitalize the event name and city/state before saving them to the event     
     capname=params[:event][:name]
     @event.name=capname.slice(0,1).capitalize + capname.slice(1..-1)
     
+    caplocation=params[:event][:city_state]
+    @event.city_state=caplocation.slice(0,1).capitalize + capname.slice(1..-1)
+
+
     if @event.save
       redirect_to myevents_path, notice: "Event was successfully created."
     else
@@ -118,7 +125,7 @@ private
   end
 
   def event_params
-      params[:event].permit(:name, :description, :requirements, :date_and_time, :hours, :minutes, :category, :image)
+      params[:event].permit(:name, :description, :requirements, :date_and_time, :hours, :minutes, :category, :image, :street, :city_state, :zip)
   end
 
   #SORTING

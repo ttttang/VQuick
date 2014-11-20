@@ -15,6 +15,9 @@ event_<%= n %>:
   minutes: <%= n%4*10 %>
   organization: <%= case n%3; when 0; "ucla"; when 1; "sod"; when 2; "ucla"; else "ymca"; end %> 
   created_by: <%= n%2+1 %>
+  street: <%= case n%3; when 0; "123 Boom st"; when 1; "456 Yeah ave"; when 2; "789 Win blvd"; else "Big STREET"; end %>
+  city_state: <%= case n%3; when 0; "Anaheim, CA"; when 1; "Pheonix, Arizona"; when 2; "Austin, TX"; else "Nowhere, Maine"; end %>
+  zip: <%= n%4*11332+10000 %>
 <%end %>
 
 <% 15.times do |n|%>
@@ -27,4 +30,7 @@ event_<%= n+12 %>:
   minutes: <%= n%4*10 %>
   organization: <%= case n%3; when 0; "ucla"; when 1; "sod"; when 2; "ucla"; else "ymca"; end %> 
   created_by: <%= n%2+1 %>
+  street: <%= case n%3; when 0; "123 Boom st"; when 1; "456 Yeah ave"; when 2; "789 Win blvd"; else "Big STREET"; end %>
+  city_state: <%= case n%3; when 0; "Anaheim, CA"; when 1; "Pheonix, Arizona"; when 2; "Austin, TX"; else "Nowhere, Maine"; end %>
+  zip: <%= n%4*11332+10000 %>
 <%end %>

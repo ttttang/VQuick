@@ -5,7 +5,7 @@
 	<tr>
 		<td> <%= link_to event, event %></td>
 		<td> <%= event.date_and_time %></td>
-		
+		<td> <%= event.city_state %></td>
 		<td> <%= event.requirements %></td>
 		<td> <%= link_to event.organization, event.organization %></td>
 	</tr>
@@ -17,6 +17,7 @@
 	
 		<li> <span>Date:</span> <%= @event.date_and_time.strftime("%A %B %d, %Y") %></li>
 		<li> <span>Time:</span><%=@event.date_and_time.strftime("%I:%M %p")%> to <%=(@event.date_and_time+@event.hours.hours+@event.minutes.minutes).strftime("%I:%M %p")%></li>
+		<li> <span> Location:</span> <%= @event.street %>, <%= @event.city_state %> <%= @event.zip %></li>
 		<li> <span> Description:</span> <%= @event.description %></li>
 		<li> <span>Requirements:</span> <%= @event.requirements %></li>
 		<li> <span> Organization:</span> <%= link_to @event.organization, @event.organization%></li>		
@@ -32,11 +33,3 @@
 <%end%>
 
 
-<!--For Organization Events-->
-<%if false%>
-	<li> 
-		<%=link_to (event) do%> 
-		 <strong><%= event.name %></strong> on <%=event.date_and_time.to_date.strftime("%A %B %d, %Y")%> 
-		<%end%>
-	</li>
-<%end%>

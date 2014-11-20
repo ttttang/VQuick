@@ -32,6 +32,13 @@
 		<%= f.select(:minutes, [0,15,30,45], prompt:"minutes")%>
 	</div>
 
+	<div class="field">
+		<%=f.label :address%><br>
+		<%= f.text_field :street, placeholder: "Street" %><br> 
+		<%= f.text_field :city_state, placeholder: "City, State" %>  <%= f.number_field :zip, placeholder: "Zip Code" %>
+
+	</div>
+
 	<div class="field-btn">
 		<%= f.submit @event.new_record? ? "New Event" : "Create Event" %>
 	</div>

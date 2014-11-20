@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   #Custom devise registration controller
   devise_for :users, controllers: {registrations: "users/registrations"}
 
-  #Homepage -> Start with listview
+  #Homepage 
   root "pages#home"
 
   #Events for individual users

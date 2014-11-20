@@ -1,10 +1,35 @@
+<!--Preserves sorting as well as searching-->
+	<%=hidden_field_tag :direction, params[:direction]%>
+	<%=hidden_field_tag :sort, params[:sort]%>
+	<%=hidden_field_tag :search, params[:search]%>
+	<%=hidden_field_tag :return, params[:return]%>
+
 
 <h1 class="viewhead">All Events</h1>
+	
 
-<%if @viewer=='true' %>
-	<%=render 'events/partials/currentparams'%>
-	<%=render 'events/partials/eventitems'%>
+<!--Toggles between list view and items view-->
+<%if @return=='true'%>
+	<h5 class="toggle-events view-link toggleable-events">Table View</h5>
+	<h5 class="toggle-events view-link toggleable-event-list">Items View</h5>
+
+	<div class='toggleable-events'>
+		<%=render 'events/partials/eventitems'%>
+	</div>
+
+	<div class='toggleable-event-list'>
+		<%=render 'events/partials/eventtable'%>
+	</div>
+
 <%else%>
-	<%=render 'events/partials/currentparams'%>
-	<%=render 'events/partials/eventtable'%>
+	<h5 class="toggle-events view-link toggleable-event-list">Table View</h5>
+	<h5 class="toggle-events view-link toggleable-events">Item View</h5>
+
+	<div class='toggleable-event-list'>
+		<%=render 'events/partials/eventitems'%>
+	</div>
+
+	<div class='toggleable-events'>
+		<%=render 'events/partials/eventtable'%>
+	</div>
 <%end%>
