@@ -9,18 +9,34 @@
 </ul>
 
 <!--The organization's current events-->
-<ul>
+<table>
 	<h4>Current Events:</h4>
+	<tr>
+		<th> Name </th>
+		<th> Date </th>
+		<th> Description </th>
+		<th> Requirements </th>
+		<th> Organization </th>
+		
+	</tr>
 	<%=render partial: 'events/partials/event', collection: @currentevents %>
-</ul>
+</table>
 
 <%if @pastevents.size!=0%>
 	<p class="toggle-events">Show/Hide Past Events</p>
 	<!--The organization's past events-->
 	
-	<ul class="toggleable-events">
-		<h4>Past Events:</h4>
+	<table class="toggleable-events">
+		<h4 class="toggleable-events">Past Events:</h4>
+		<tr>
+			<th> Name </th>
+			<th> Date </th>
+			<th> Description </th>
+			<th> Requirements </th>
+			<th> Organization </th>
+			
+		</tr>
 		<%=render partial: 'events/partials/event', collection: @pastevents %>
-	</ul>
+	</table>
 
 <%end%>

@@ -7,7 +7,15 @@ class EventsController < ApplicationController
   def index
     #Events will be displayed by newest time
     #10 events per page
-  	@events= Event.search(params[:search]).order(sort_column+" "+sort_direction).paginate(:per_page => 12, :page=>params[:page])
+  	allevents= Event.search(params[:search]).order(sort_column+" "+sort_direction)
+    @events=[]
+    allevents.each do |event|
+      if(event.date_and_time>Time.now-5.hours)
+        @events.push(event)
+      end
+    end
+
+    @events=@events.paginate(:per_page => 12, :page=>params[:page])
     @viewer=params[:listview]
   end
 
@@ -72,6 +80,8 @@ class EventsController < ApplicationController
         end
       end
 
+    @myevents.sort_by!{ |k| k[:date_and_time]}.reverse!
+    @pastevents.sort_by!{ |k| k[:date_and_time]}.reverse!
     #Find all events created by the user
     @createdevents=[]
     Event.search(params[:search]).each do |event|  
@@ -79,6 +89,7 @@ class EventsController < ApplicationController
         @createdevents.push(event)
       end
     end 
+    @createdevents.sort_by!{ |k| k[:date_and_time]}.reverse!
   end
 
   def attend

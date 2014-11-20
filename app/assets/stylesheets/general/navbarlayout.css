@@ -5,10 +5,12 @@
     padding-top: 57px;
     padding-left: 0px;
     margin-left: 0px;
+    padding-bottom: 30px;
 }
 
 .contentunderother{
 	padding-top: 57px;
+	padding-bottom: 30px;
 }
 
 .contentunderpull{
@@ -127,7 +129,7 @@ body {
 	padding-left: 12px;
 	margin: 0px;
 	font-size: 30px;
-	font-family: "Comic Sans MS";
+	font-family: "Verdana";
 	text-decoration: none;
 
 }

@@ -1,7 +1,7 @@
 <!--DISPLAY INFO FOR INDIVIDUAL EVENTS-->
 
 <!--For Myevents and Event/Index-->
-<%if controller_name == 'events'&&(action_name == 'myevents'||action_name=='index')%>	
+<%if controller_name == 'events'&&(action_name == 'myevents'||action_name=='index')||controller_name == 'organizations'&&action_name == 'show'%>	
 	<tr>
 		<td> <%= link_to event, event %></td>
 		<td> <%= event.date_and_time %></td>
@@ -32,7 +32,7 @@
 
 
 <!--For Organization Events-->
-<%if controller_name == 'organizations'&&action_name == 'show'%>
+<%if false%>
 	<li> 
 		<%=link_to (event) do%> 
 		 <strong><%= event.name %></strong> at <%=event.date_and_time.to_date.strftime("%A %B %d, %Y")%> 
