@@ -1,42 +1,3 @@
-
-/******************VERY GENERAL***********************/
-ul{
-	padding-left: 5px;
-	margin-left: 5px;
-
-}
-
-li{
-	list-style-type: none;
-}
-
-a{
-	color: #0000CC;
-}
-
-a:hover{
-	text-decoration: none;
-
-}
-
-/*Yield Styling*/
-.contentunder {
-    padding-top: 57px;
-    padding-left: 0px;
-    margin-left: 0px;
-}
-
-/********************HOME PAGE*************************/
-.home{
-	background: url('assets/volunteer.jpg') no-repeat center center;
-	margin:-35px;
-	overflow: hidden;
-}
-
-.trans{
-	background-color:white;
-}
-
 #cover-text{
 	color:gray;
 	font-size:5vw;
@@ -55,7 +16,6 @@ a:hover{
 }
 
 .btn-style:hover{
-
 	background-color:white;
 }
 
@@ -90,21 +50,30 @@ a:hover{
 	background-color:white;
 }
 
+
 /*******************NAVBAR**********************/
 
 /*****NAVBAR GENERAL******/
+a{
+
+	color: #0000CC;
+}
+
 
 
 body { 
 
 	background-color: white;
-	margin-top:30px; 
-	padding-left: 0px;
-}
 
-#login-nav input { 
-	margin-bottom: 15px; 
+	margin-top:30px; 
 }
+#login-nav input { margin-bottom: 15px; }
+
+/*.nav-colored{
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+
+}*/
 
 .header-fix{
 	padding: 0px;
@@ -118,7 +87,21 @@ body {
 
 
 
-  
+.containbg{
+
+
+	/*text-align: center;
+	position: center;*/
+
+	/*background-color: rgb(237, 230, 222);*/
+
+
+}
+
+/*Prevent content from going on top of fixed navbar*/
+  .contentunder {
+    padding-top: 70px;
+  }
 
 /*********LOGO**********/
 .logo{
@@ -148,7 +131,10 @@ body {
 
 }
 
+a:hover{
+	text-decoration: none;
 
+}
 
 
 /*******************VIEWS GENERAL***********************/
@@ -156,19 +142,17 @@ body {
 /*******EVENT INDEX PAGE********/
 
 .viewhead{
-	margin-left: 70px;
 	font-weight: bold;
+	text-align: right;
 	font-size: 40px;
-	display: inline-block;
+	border-bottom: solid #515151 2px;
 }
 
 .viewchange{
-	margin-left: 70px;
+	color: blue;
 	font-weight: bold;
 	font-size: 20px;
-	padding-bottom: 5px;
-	display: inline-block;
-	
+	padding-left: 45px;
 }
 
 h5{
@@ -190,14 +174,32 @@ h5{
 
 }
 
-.view-link{
-	border: none;
-	background-color: transparent;
+.coolbtn {
+  background: #67b0e0;
+  background-image: -webkit-linear-gradient(top, #67b0e0, #2980b9);
+  background-image: -moz-linear-gradient(top, #67b0e0, #2980b9);
+  background-image: -ms-linear-gradient(top, #67b0e0, #2980b9);
+  background-image: -o-linear-gradient(top, #67b0e0, #2980b9);
+  background-image: linear-gradient(to bottom, #67b0e0, #2980b9);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  -webkit-box-shadow: 0px 1px 3px #666666;
+  -moz-box-shadow: 0px 1px 3px #666666;
+  box-shadow: 0px 1px 3px #666666;
+  font-family: Arial;
+  color: #e0e0e0;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
 }
 
-
-/********TOGGLE PAST EVENTS*********/
-.toggleable-events{
-	display: none;
-}
-
+.coolbtn:hover {
+  background: #9ed2f2;
+  background-image: -webkit-linear-gradient(top, #9ed2f2, #2b92d6);
+  background-image: -moz-linear-gradient(top, #9ed2f2, #2b92d6);
+  background-image: -ms-linear-gradient(top, #9ed2f2, #2b92d6);
+  background-image: -o-linear-gradient(top, #9ed2f2, #2b92d6);
+  background-image: linear-gradient(to bottom, #9ed2f2, #2b92d6);
+  text-decoration: none;
+} 
