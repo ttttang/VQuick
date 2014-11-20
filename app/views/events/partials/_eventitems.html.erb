@@ -1,10 +1,10 @@
 <!--EVENTS/INDEX LIST VIEW-->
 
-<ul class="alleventitems">
+<ul class="alleventitems transitions-enabled" id="event-box">
 	<% @events.each do |event| %>
 		<!--Only the most current events are displayed-->
 		<%if event.date_and_time>Time.now+event.hours.hour%>
-			<%=link_to (event) do%>
+			<%=link_to (event), class: 'box' do%>
 				<ul class="eventitem">
 					<div class="eventbody">
 						<li>
@@ -23,5 +23,6 @@
 			<%end%>
 		<%end%>
 	<%end%>
-	<%=will_paginate @events%>
+	
 </ul>
+<%=will_paginate @events%>

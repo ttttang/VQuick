@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+#masonry
+gem 'masonry-rails'
+
 #better where method
 gem 'squeel'
 

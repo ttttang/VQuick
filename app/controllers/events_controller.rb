@@ -7,7 +7,7 @@ class EventsController < ApplicationController
   def index
     #Events will be displayed by newest time
     #10 events per page
-  	@events= Event.search(params[:search]).order(sort_column+" "+sort_direction).paginate(:per_page => 10, :page=>params[:page])
+  	@events= Event.search(params[:search]).order(sort_column+" "+sort_direction).paginate(:per_page => 12, :page=>params[:page])
     @viewer=params[:listview]
   end
 
