@@ -1,8 +1,20 @@
 
+
+/*This is to make make a diff disappear when mobile*/
+@media screen and (min-width: 0px) and (max-width: 400px) {
+  #dis{ display: none; }  /* hide it on small screens */
+  .btn-style{ 
+  	margin-top: 5vh;
+  	margin-left: 25px;
+  }
+}
+
 #cover-text{
 	color:gray;
 	font-size:5vw;
-	margin-left:100px;
+	margin-left:185px;
+	margin-bottom:0px;
+	margin-top:40px;
 }
 
 
@@ -17,16 +29,15 @@
 }
 
 .btn-style:hover{
+	opacity:0.5;
 	background-color:white;
 }
 
-.btn-style.hover{
-	hover:white;
-}
+
 
 .enter{
 	margin-left:30vw;
-	margin-top: 5vh;
+	margin-top: 2vh;
 }
 
 
@@ -34,7 +45,7 @@
 	background-image: url('/assets/volunteer3.jpg');
 /* Set rules to fill background */
   min-height: 100%;
-  min-width: 1024px;
+  min-width: 1050px;
 	
   /* Set up proportionate scaling */
   width: 100%;
@@ -52,26 +63,91 @@
 }
 
 
-/******************VERY GENERAL***********************/
-ul{
-	padding-left: 5px;
-	margin-left: 5px;
+/*******************NAVBAR**********************/
 
-}
-
-li{
-	list-style-type: none;
-}
-
+/*****NAVBAR GENERAL******/
 a{
-	color: #6685C2;
+
+	color: #0000CC;
 }
 
-a:hover{
-	color: #6685C2;
+
+
+body { 
+
+	background-color: white;
+
+	margin-top:30px; 
+}
+#login-nav input { margin-bottom: 15px; }
+
+/*.nav-colored{
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+
+}*/
+
+.header-fix{
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	position: fixed;
+	z-index:1;
+	background-color: transparent;
+
+}
+
+
+
+.containbg{
+
+
+	/*text-align: center;
+	position: center;*/
+
+	/*background-color: rgb(237, 230, 222);*/
+
+
+}
+
+/*Prevent content from going on top of fixed navbar*/
+  .contentunder {
+    padding-top: 70px;
+  }
+
+/*********LOGO**********/
+.logo{
+	border-radius: 50%;
+	overflow: visible;
+
+}
+
+.logofirst
+{
+	color:black ;
+	padding-left: 12px;
+	margin: 0px;
+	font-size: 30px;
+	font-family: "Comic Sans MS";
 	text-decoration: none;
 
 }
+
+.logostyle
+{
+	color:black ;
+	font-size: 17px;
+	font-family: "Verdana";
+	padding-right: 10px;
+	text-decoration: none;
+
+}
+
+a:hover{
+	text-decoration: none;
+
+}
+
 
 /****************ORGANIZATION*******************/
 
@@ -113,3 +189,5 @@ div.pagination span.disabled {
 	border: 1px solid #f3f3f3;
 	color: #ccc;
 }
+/*******************VIEWS GENERAL***********************/
+
