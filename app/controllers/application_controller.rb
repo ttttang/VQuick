@@ -6,6 +6,13 @@ class ApplicationController < ActionController::Base
   #Allow sanitizer
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
+ 
+  
+  def after_sign_in_path_for(resource)
+      events_path(:listview=>"true")
+  end
+
+
 protected
 
  def configure_permitted_parameters
