@@ -2,3 +2,275 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+/*******EVENT INDEX PAGE********/
+
+.viewhead{
+	margin-left: 7vw;
+	font-weight: bold;
+	font-size: 40px;
+	display: inline-block;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+.viewchange{
+	margin-left: 6vw;
+	margin-top:10px;
+	font-weight: bold;
+	font-size: 20px;
+	padding-bottom: 0px;
+
+}
+
+h5{
+	padding: 30px;
+	font-style: italic;
+	color: gray;
+}
+
+
+.create-event
+{
+	margin: 25px;
+	padding: 10px;
+	/*border-radius: 20px;*/
+	/*color: #E0E0E0;
+	border: solid 1px #003300;
+	background-color: #339999 ;
+	font-weight: bold;*/
+}
+
+.view-link{
+	border: none;
+	color: #6685C2;
+	background-color: transparent;
+}
+
+/*****************EVENT LIST VIEW***************************/
+
+/***MASONRY****/
+#event-box{
+
+	margin: 0 auto;
+}
+
+.box{
+	margin: 5px;
+	width: 340px;
+}
+.box img{
+	width:100%;
+}
+
+
+h1 {
+	color: rgb(60,60,60);
+}
+
+.alleventitems{
+	list-style-type: none;
+	border-radius: 15px;
+
+
+}
+
+.eventitem{
+	list-style-type: none;
+	background: linear-gradient(to bottom right, rgb(80, 80, 80) , rgb(60, 60, 60));
+
+	width: 93%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-radius: 15px;
+	padding: 2px;
+	
+
+}
+
+
+.eventitem .eventbody{
+
+	background-color: white;
+
+	padding: 1px;
+	padding-left: 10px;
+	color: rgb(69,69,69);
+	border-radius: 10px; 
+	width: 100%;
+	padding-bottom: 10px;
+}
+
+.eventitem li h2{
+
+	background-color: white;
+	color: rgb(69,69,69);
+	text-align: left;
+	border-radius: 3px; 
+	width: 100%;
+	font-style: Verdana;
+	font-size: 30px;
+
+}
+
+.eventbody li{
+	margin-top: 1px;
+	margin-bottom: 1px;
+	
+}
+
+.eventbody-first{
+	display: inline-block;
+	margin-right: 50px;
+
+}
+
+.eventbody-second{
+	display: inline-block;
+
+}
+
+.event-title{
+	color: rgb(56,128,147);
+
+}
+
+
+.viewchange{
+	color: rgb(69,69,69);
+}
+
+li span{
+	font-weight: bold;
+	margin-right: 20px;
+}
+
+/*****************EVENT TABLE VIEW***************************/
+
+.pretty th .current{
+	padding-right: 40px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+.pretty th .asc{
+	background-image: url(/assets/arrow_up.png);
+
+}
+
+.pretty th .desc{
+	background-image: url(/assets/arrow_down.png);
+}
+
+
+
+table a:link {
+	color: #222;
+	font-weight: bold;
+	text-decoration:none;
+}
+table a:visited {
+	color: #222;
+	font-weight:bold;
+	text-decoration:none;
+}
+table a:active,
+table a:hover {
+	color: #bd5a35;
+	text-decoration:underline;
+}
+table {
+	
+	width: 85%;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#444;
+	font-size:13.5px;
+	text-shadow: 1px 1px 0px #fff;
+	background:#eaebec;
+	margin:20px;
+	margin-left: 90px;
+	border:#ccc 1px solid;
+
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+
+	-moz-box-shadow: 0 1px 2px #d1d1d1;
+	-webkit-box-shadow: 0 1px 2px #d1d1d1;
+	box-shadow: 0 1px 2px #d1d1d1;
+}
+table th {
+	padding:21px 25px 22px 25px;
+	border-top:1px solid #fafafa;
+	border-right:1px solid #e0e0e0;
+	border-bottom:1px solid #e0e0e0;
+
+	background: #ededed;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#ebebeb));
+	background: -moz-linear-gradient(top,  #ededed,  #ebebeb);
+}
+table th:first-child {
+	text-align: left;
+	
+}
+table tr:first-child th:first-child {
+	-moz-border-radius-topleft:3px;
+	-webkit-border-top-left-radius:3px;
+	border-top-left-radius:3px;
+}
+table tr:first-child th:last-child {
+	-moz-border-radius-topright:3px;
+	-webkit-border-top-right-radius:3px;
+	border-top-right-radius:3px;
+}
+table tr {
+	text-align: center;
+	padding-left:20px;
+}
+table td:first-child {
+	text-align: left;
+	padding-left:20px;
+	border-left: 0;
+}
+table td {
+	padding:18px;
+	border-top: 1px solid #ffffff;
+	border-bottom:1px solid #e0e0e0;
+	border-left: 1px solid #e0e0e0;
+
+	background: #fafafa;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
+	background: -moz-linear-gradient(top,  #fbfbfb,  #fafafa);
+}
+table tr.even td {
+	background: #f6f6f6;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f6f6f6));
+	background: -moz-linear-gradient(top,  #f8f8f8,  #f6f6f6);
+}
+table tr:last-child td {
+	border-bottom:0;
+}
+table tr:last-child td:first-child {
+	-moz-border-radius-bottomleft:3px;
+	-webkit-border-bottom-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+table tr:last-child td:last-child {
+	-moz-border-radius-bottomright:3px;
+	-webkit-border-bottom-right-radius:3px;
+	border-bottom-right-radius:3px;
+}
+table tr:hover td {
+	background: #f2f2f2;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
+	background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0);	
+}
+
+
+/**********EVENT/SHOW************/
+
+.eventshow{
+	list-style-type: none;
+}

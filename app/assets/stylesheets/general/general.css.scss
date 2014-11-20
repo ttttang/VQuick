@@ -1,5 +1,4 @@
 
-
 /*This is to make make a diff disappear when mobile*/
 @media screen and (min-width: 0px) and (max-width: 400px) {
   #dis{ display: none; }  /* hide it on small screens */
@@ -71,21 +70,19 @@ a{
 	color: #0000CC;
 }
 
-
-
 body { 
-
 	background-color: white;
-
 	margin-top:30px; 
 }
-#login-nav input { margin-bottom: 15px; }
 
-/*.nav-colored{
-	border-bottom-right-radius: 0;
-	border-bottom-left-radius: 0;
+#login-nav input { 
+	margin-bottom: 15px; 
+}
 
-}*/
+
+#login-nav input { 
+	margin-bottom: 15px; 
+}
 
 .header-fix{
 	padding: 0px;
@@ -97,18 +94,11 @@ body {
 
 }
 
-
-
-.containbg{
-
-
-	/*text-align: center;
-	position: center;*/
-
-	/*background-color: rgb(237, 230, 222);*/
-
-
+.btn-pad{
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
+
 
 /*Prevent content from going on top of fixed navbar*/
   .contentunder {
@@ -191,3 +181,26 @@ div.pagination span.disabled {
 }
 /*******************VIEWS GENERAL***********************/
 
+/********TOGGLE PAST EVENTS*********/
+.toggleable-events{
+	display: none;
+}
+
+
+/**************Yield Styling********************/
+.contentunder {
+    padding-top: 57px;
+    padding-left: 0px;
+    margin-left: 0px;
+    padding-bottom: 30px;
+}
+
+.contentunderother{
+	padding-top: 57px;
+	padding-bottom: 30px;
+}
+
+.contentunderpull{
+	padding-top: 57px;
+	margin-bottom: -45px;
+}
