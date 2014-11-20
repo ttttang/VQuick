@@ -7,6 +7,7 @@
 
 
 tracy:
+  id: 1
   fname: Tracy
   lname: Tang
   admin: true
@@ -15,14 +16,16 @@ tracy:
   encrypted_password: <%= User.new.send(:password_digest, 'password') %>
 
 sylvester:
+  id: 3
   fname: Sylvester 
   lname: Lan
   admin: true
-  organization: whospice
+  organization: ucla
   email: sylvesterlan100@gmail.com
   encrypted_password: <%= User.new.send(:password_digest, 'password') %>
 
 ounie:
+  id: 2
   fname: Ounie
   lname: Phakouson
   admin: true
@@ -36,38 +39,6 @@ community:
   admin: true
   organization: ymca
   email: community@email.com
-  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
-
-cassidy:
-  fname: Cassidy
-  lname: Tran
-  organization: ucla
-  admin: true
-  email: cassidy@email.com
-  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
-
-mary:
-  fname: Mary
-  lname: Good
-  admin: true
-  organization: whospice
-  email: mary@email.com
-  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
-
-david:
-  fname: David
-  admin: true
-  lname: Nguyen
-  organization: sod
-  email: david@email.com
-  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
-
-village:
-  fname: Village
-  lname: Peeps
-  admin: true
-  organization: ymca
-  email: village@email.com
   encrypted_password: <%= User.new.send(:password_digest, 'password') %>
 
 

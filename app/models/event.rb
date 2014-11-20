@@ -8,13 +8,17 @@ class Event < ActiveRecord::Base
 	validates :hours, numericality: {only_integer: true, greater_than_or_equal_to: 0, less_than: 8}
 	validates :minutes, numericality: {only_integer: true, greater_than_or_equal_to: 0, less_than: 59}
 	validate :date_is_in_past
+	validates :category, presence: true
 
+
+#Makes sure newly created event is in the future
 def date_is_in_past
     if date_and_time.present? && date_and_time < Time.now
     	errors.add(:date_and_time, "can't be in the past")
     end
 end	
 
+#Search bar searches these categories
 def self.search(search)
   if search
   	where('name LIKE ? OR description LIKE ? OR requirements LIKE ?', "%#{search}%","%#{search}%","%#{search}%")

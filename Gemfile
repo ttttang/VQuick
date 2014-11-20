@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+#masonry
+gem 'masonry-rails'
+
 #better where method
 gem 'squeel'
 
@@ -11,6 +14,9 @@ gem 'bootstrap-sass'
 
 #to make pages
 gem 'will_paginate'
+
+#fix script on reload issue
+gem 'jquery-turbolinks'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.7'

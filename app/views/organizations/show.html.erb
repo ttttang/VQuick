@@ -1,23 +1,40 @@
 <h1>Organization Details</h1>
 
 <ul>
+	<li> Organization: <%= @organization.name%></li>
+	<li> Website: <%= link_to @organization.website, "http://"+@organization.website %> </li>
+	<li> Description: <%= @organization.description %> </li>
+	<li> Email: <%= @organization.email %> </li>
+	<li> Phone Number: <%= @organization.phone %> </li>	
+</ul>
+
+<!--The organization's current events-->
+<table>
+	<h4>Current Events:</h4>
+	<tr>
+		<th> Name </th>
+		<th> Date </th>
+		<th> Requirements </th>
+		<th> Organization </th>
+		
+	</tr>
+	<%=render partial: 'events/partials/event', collection: @currentevents %>
+</table>
+
+<%if @pastevents.size!=0%>
+	<p class="toggle-events">Show/Hide Past Events</p>
+	<!--The organization's past events-->
 	
-		
-			<li> Organization: <%= link_to @organization.name, "http://"+@organization.website %> </li>
-			<li> Description: <%= @organization.description %> </li>
-			<li> Email: <%= @organization.email %> </li>
-			<li> Phone Number: <%= @organization.phone %> </li>
-			<li> Website: <%= @organization.website %> </li>
-		
-</ul>
-<ul>
-	<h4>Events:</h4>
-	<%@events.each do |event|%>
-		<li> <%=link_to (event) do%> 
-			 <strong><%= event.name %></strong> 
-			at <%=event.date_and_time%> </li>
-		<%end%>
+	<table class="toggleable-events">
+		<h4 class="toggleable-events">Past Events:</h4>
+		<tr>
+			<th> Name </th>
+			<th> Date </th>
+			<th> Requirements </th>
+			<th> Organization </th>
+			
+		</tr>
+		<%=render partial: 'events/partials/event', collection: @pastevents %>
+	</table>
 
-	<%end%>
-
-</ul>
+<%end%>

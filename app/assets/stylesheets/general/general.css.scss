@@ -1,0 +1,205 @@
+
+/*This is to make make a diff disappear when mobile*/
+@media screen and (min-width: 0px) and (max-width: 400px) {
+  #dis{ display: none; }  /* hide it on small screens */
+  .btn-style{ 
+  	margin-top: 5vh;
+  	margin-left: 25px;
+  }
+}
+
+#cover-text{
+	color:gray;
+	font-size:5vw;
+	margin-left:185px;
+	margin-bottom:0px;
+	margin-top:40px;
+}
+
+
+.btn-style{
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:5px;
+	padding-bottom:5px;
+	font-size:22.5px;
+	background:transparent;
+	color:gray;
+}
+
+.btn-style:hover{
+	opacity:0.5;
+	background-color:white;
+}
+
+
+
+.enter{
+	margin-left:30vw;
+	margin-top: 2vh;
+}
+
+
+.home{
+	background-image: url('/assets/volunteer3.jpg');
+/* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1050px;
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+	
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.trans{
+	background-color:white;
+}
+
+
+/*******************NAVBAR**********************/
+
+/*****NAVBAR GENERAL******/
+a{
+
+	color: #0000CC;
+}
+
+body { 
+	background-color: white;
+	margin-top:30px; 
+}
+
+#login-nav input { 
+	margin-bottom: 15px; 
+}
+
+
+#login-nav input { 
+	margin-bottom: 15px; 
+}
+
+.header-fix{
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	position: fixed;
+	z-index:1;
+	background-color: transparent;
+
+}
+
+.btn-pad{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
+/*Prevent content from going on top of fixed navbar*/
+  .contentunder {
+    padding-top: 70px;
+  }
+
+/*********LOGO**********/
+.logo{
+	border-radius: 50%;
+	overflow: visible;
+
+}
+
+.logofirst
+{
+	color:black ;
+	padding-left: 12px;
+	margin: 0px;
+	font-size: 30px;
+	font-family: "Comic Sans MS";
+	text-decoration: none;
+
+}
+
+.logostyle
+{
+	color:black ;
+	font-size: 17px;
+	font-family: "Verdana";
+	padding-right: 10px;
+	text-decoration: none;
+
+}
+
+a:hover{
+	text-decoration: none;
+
+}
+
+
+/****************ORGANIZATION*******************/
+
+h4{
+	margin-left: 50px;
+}
+
+/*********PAGINATION************************/
+div.pagination {
+	padding:3px;
+	margin:3px;
+	text-align:center;
+}
+
+div.pagination a {
+	padding: 2px 5px 2px 5px;
+	margin-right: 2px;
+	border: 1px solid #ddd;
+	
+	text-decoration: none; 
+	color: #aaa;
+}
+div.pagination a:hover, div.pagination a:active {
+	padding: 2px 5px 2px 5px;
+	margin-right: 2px;
+	border: 1px solid #a0a0a0;
+}
+div.pagination span.current {
+	padding: 2px 5px 2px 5px;
+	margin-right: 2px;
+	border: 1px solid #e0e0e0;
+	font-weight: bold;
+	background-color: #f0f0f0;
+	color: #aaa;
+}
+div.pagination span.disabled {
+	padding: 2px 5px 2px 5px;
+	margin-right: 2px;
+	border: 1px solid #f3f3f3;
+	color: #ccc;
+}
+
+/********TOGGLE PAST EVENTS*********/
+.toggleable-events{
+	display: none;
+}
+
+
+/**************Yield Styling********************/
+.contentunder {
+    padding-top: 57px;
+    padding-left: 0px;
+    margin-left: 0px;
+    padding-bottom: 30px;
+}
+
+.contentunderother{
+	padding-top: 57px;
+	padding-bottom: 30px;
+}
+
+.contentunderpull{
+	padding-top: 57px;
+	margin-bottom: -45px;
+}

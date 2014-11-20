@@ -1,14 +1,33 @@
 Rails.application.routes.draw do
+  #Custom devise registration controller
   devise_for :users, controllers: {registrations: "users/registrations"}
+
+  #Homepage -> Start with listview
+  root "pages#home"
+
+  #Events for individual users
   get 'myevents' => 'events#myevents'
+
+  #General business pages
   get 'pages/about_us'
   get 'pages/contact'
+  get 'pages/home'
+  
+  #Attending and unattending events
   get 'attendevent' => 'events#attend'
   get 'unattend'=>'events#unattend'
-  root "events#index", :listview=>'true'
-  resources :organizations
- #resources :users
+
+  
+  get'organizations/[:id]'=>'organizations/#show'
+
+  #Resources
+
+  get 'events'=>'events#index'
+
   resources :events
+  resources :organizations
+  #resources :users
+  
 
 
 

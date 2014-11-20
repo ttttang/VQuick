@@ -1,25 +1,14 @@
 <h1><%= @event.name %></h1>
 
-
-<ul>
-	
-			<li> Name: <%= @event %></li>
-			<li> Date: <%= @event.date_and_time %></li>
-			<li> Description: <%= @event.description %></li>
-			<li> Requirements: <%= @event.requirements %></li>
-			<li> Organization: <%= link_to @event.organization, @event.organization %></li>		
-		
-</ul>
+<%=render 'events/partials/event'%>
 
 <%if current_user&&current_user.events.include?(@event)%>
 	<p>Already attending event!</p>
 	<%=link_to "View my events", myevents_path%>
-	<%elsif current_user%>
-
-<%=link_to "Attend event!", attendevent_path(:attend=>@event.id), data: { confirm: 'Click OK to confirm your attendance!' }%>
+<%elsif current_user%>
+	<%=link_to "Attend event!", attendevent_path(:attend=>@event.id), data: { confirm: 'Click OK to confirm your attendance!' }%>
 <%else%>
-<p>Please sign in to attend event!</p>
-
+	<p>Please sign in to attend event!</p>
 <%end%>
 
 

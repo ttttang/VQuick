@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Proj2</title>
+  <title>VQuick | Let's Volunteer!</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -9,25 +9,34 @@
 
 
 <body>
-	<div class="header-fix">
-		<%= render 'layouts/header'%>
-	</div>
-	<p class="navbar-text pull-right">
-
 	
+<!--Remove Navbar from Home Page-->
+	<%unless controller_name == 'pages'&&action_name == 'home'%>
+		<div class="header-fix">
+			<%= render 'layouts/header'%>
+		</div>
 
-	<div class="container contentunder containbg">
+	<%end%>
+	<p class="navbar-text pull-right"></p>
 
-	
-
-	
+<!--Display Flash Notices-->
 	<% [:notice, :alert].each do |level| %>
 		<% if flash[level] %>
-			<div class="flash <% level %>"> <%= flash[level] %> </div>
+			<div class="flash <% level %> contentunderpull"> <%= flash[level] %> </div>
 		<% end %>
 	<% end %>
 
-		<%= yield %>
-	</div>
+<!--Set Different Styling for Home Page-->
+	<%if controller_name == 'pages'&&action_name == 'home'%>
+		<div class="home"><%=yield%></div> <!--The Yield-->
+	<%elsif controller_name == 'events'&&action_name == 'index'%>
+		<div class="contentunder">
+			<%= yield %>  <!--The Yield-->
+		</div>
+
+	<%else%>
+		<div class="container contentunderother"> <%=yield%></div>
+	<%end%>
+
 </body>
 </html>
