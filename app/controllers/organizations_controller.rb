@@ -11,7 +11,7 @@ class OrganizationsController < ApplicationController
   end
 
   def create
-    @organization = Organization.new(params[:organization].permit(:name, :website, :description, :contact, :phone, :email, :code))
+    @organization = Organization.new(params[:organization].permit(:name, :website, :description, :contact, :phone, :email, :code, :image))
     
     if @organization.save
       redirect_to new_user_registration_path, notice: "Organization was successfully created."
@@ -26,7 +26,7 @@ class OrganizationsController < ApplicationController
 
   def update
     
-    if @organization.update(params[:organization].permit(:name, :website, :description, :contact, :phone, :email))
+    if @organization.update(params[:organization].permit(:name, :website, :description, :contact, :phone, :email, :image))
       flash[:notice]='Organization updated.'
       redirect_to @organization
     else

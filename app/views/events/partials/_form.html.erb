@@ -35,4 +35,10 @@
 	<div class="field-btn">
 		<%= f.submit @event.new_record? ? "New Event" : "Create Event" %>
 	</div>
+
+	  <div class="field">
+	    <%= f.label :image %> (optional)
+	    <%= f.file_field :image, class: "form-control" %>
+	  </div>
+
 <% end %>
