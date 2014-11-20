@@ -7,16 +7,19 @@
 		<%=link_to (event), class: 'box' do%>
 			<ul class="eventitem">
 				<div class="eventbody">
-					<li>
-						<h3><%=event.name%></h3> 
-						<span>Date: </span>
-						<%=event.date_and_time.strftime("%A %B %d, %Y")%>
+					<li id="eventname"> <h3><%=event.name%></h3> 
 					</li>
-					
-					<li class="event-date"><span>Time:</span> <%=event.date_and_time.strftime("%I:%M %p")%> to <%=(event.date_and_time+event.hours.hours+event.minutes.minutes).strftime("%I:%M %p")%></li>
-				
-					<li class="event-req"><span>Requirements:</span> <%=event.requirements%></li>
-					<li class="event-org"><span>Organization:</span> <%=event.organization%></li>
+					<li id="eventdate"> Date:
+						<%=event.date_and_time.strftime("%A %B %d, %Y")%> 
+					</li>
+					<div class="biggerfont">
+						<li class="event-date"> <span> Time:</span> <%=event.date_and_time.strftime("%I:%M %p")%> to <%=(event.date_and_time+event.hours.hours+event.minutes.minutes).strftime("%I:%M %p")%>
+						</li>
+						<li class="event-req"><span> Requirements:</span> <%=event.requirements%>
+						</li>
+						<li class="event-org"> <span> Organization: </span> <%=event.organization%>
+						</li>
+					</div>
 				</div>
 			</ul>
 		<%end%>

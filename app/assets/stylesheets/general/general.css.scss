@@ -1,13 +1,23 @@
+/**************************COVERPAGE*******************/
 
-/*This is to make make a diff disappear when mobile*/
+/** Different views when it's mobile **/
 @media screen and (min-width: 0px) and (max-width: 400px) {
-  #dis{ display: none; }  /* hide it on small screens */
+/**This is to make 'Make a diff' disappear when mobile**/
+  #dis{ 
+  	display: none; 
+  }
+/**This is to move the volunteer button when mobile **/
   .btn-style{ 
   	margin-top: 5vh;
   	margin-left: 25px;
   }
+/** This is to move the event box masonry when mobile **/
+  #event-box{
+	margin-left: -2vw;
+}
 }
 
+/** This is the 'Make a Difference' on the cover page **/
 #cover-text{
 	color:gray;
 	font-size:5vw;
@@ -16,7 +26,7 @@
 	margin-top:40px;
 }
 
-
+/** This is to style our "Volunteer" button on the cover page **/
 .btn-style{
 	padding-left:10px;
 	padding-right:10px;
@@ -27,19 +37,20 @@
 	color:gray;
 }
 
+/** This is our 'Volunteer' button hover style **/
 .btn-style:hover{
 	opacity:0.5;
 	background-color:white;
 }
 
 
-
+/** This is to move our "volunteer" button on cover **/
 .enter{
 	margin-left:30vw;
 	margin-top: 2vh;
 }
 
-
+/** This is setting the background image on our cover page **/
 .home{
 	background-image: url('/assets/volunteer3.jpg');
 /* Set rules to fill background */
@@ -57,14 +68,16 @@
   overflow: hidden;
 }
 
-.trans{
-	background-color:white;
-}
-
 
 /*******************NAVBAR**********************/
 
 /*****NAVBAR GENERAL******/
+
+/** This makes the nav bar white **/
+.trans{
+	background-color:white;
+}
+
 a{
 
 	color: #0000CC;
