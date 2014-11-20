@@ -16,10 +16,17 @@ Rails.application.routes.draw do
   #Attending and unattending events
   get 'attendevent' => 'events#attend'
   get 'unattend'=>'events#unattend'
+
   
   get'organizations/[:id]'=>'organizations/#show'
 
   #Resources
+
+  get 'events'=>'events#index', :listview=>'true'
+  root "events#index", :listview=>'true'
+  resources :organizations
+ #resources :users
+
   resources :events
   resources :organizations
   #resources :users
