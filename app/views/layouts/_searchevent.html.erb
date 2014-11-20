@@ -3,13 +3,13 @@
 <!--Preserve the params for sorting and searching-->
 	<%=hidden_field_tag :direction, params[:direction]%>
 	<%=hidden_field_tag :sort, params[:sort]%>
-	<%=hidden_field_tag :return, params[:return]%>
+	
 	
 
 	
 	<p>
 		<%= text_field_tag :search, params[:search] %>  
-		<%= submit_tag "Search", :name => nil, :return=>'true' %>
+		<%= submit_tag "Search", :name => nil %>
 	</p>
 
 <% end %>

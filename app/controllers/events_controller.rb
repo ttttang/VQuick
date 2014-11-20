@@ -18,8 +18,7 @@ class EventsController < ApplicationController
     #12 events per page
     @events=@events.paginate(:per_page => 12, :page=>params[:page])
 
-    #checks to see if returning to the index in table view
-    @return=params[:return]
+    
   end
 
   def new
