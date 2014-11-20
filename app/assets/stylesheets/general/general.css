@@ -1,4 +1,9 @@
 /******************VERY GENERAL***********************/
+ul{
+	padding-left: 5px;
+	margin-left: 5px;
+
+}
 
 li{
 	list-style-type: none;
@@ -16,6 +21,8 @@ a:hover{
 /*Yield Styling*/
 .contentunder {
     padding-top: 57px;
+    padding-left: 0px;
+    margin-left: 0px;
 }
 
 /********************HOME PAGE*************************/
@@ -39,15 +46,11 @@ a:hover{
 /*****NAVBAR GENERAL******/
 
 
-.trans{
-	background-color:white;
-}
-
 body { 
 
 	background-color: white;
-
 	margin-top:30px; 
+	padding-left: 0px;
 }
 
 #login-nav input { 
@@ -104,17 +107,19 @@ body {
 /*******EVENT INDEX PAGE********/
 
 .viewhead{
+	margin-left: 70px;
 	font-weight: bold;
-	text-align: right;
 	font-size: 40px;
-	border-bottom: solid #515151 2px;
+	display: inline-block;
 }
 
 .viewchange{
-	color: blue;
+	margin-left: 70px;
 	font-weight: bold;
 	font-size: 20px;
-	padding-left: 45px;
+	padding-bottom: 5px;
+	display: inline-block;
+	
 }
 
 h5{

@@ -24,13 +24,15 @@
 	<%if controller_name == 'pages'&&action_name == 'home'%>
 		<div class="home"><%=yield%></div> <!--The Yield-->
 	<%else%>
-		<div class="container contentunder containbg">
+		<div class="contentunder">
+
 <!--Display Flash Notices-->
 		<% [:notice, :alert].each do |level| %>
 			<% if flash[level] %>
 				<div class="flash <% level %>"> <%= flash[level] %> </div>
 			<% end %>
 		<% end %>
+
 			<%= yield %>  <!--The Yield-->
 		</div>
 	<%end%>
