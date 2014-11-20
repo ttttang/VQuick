@@ -5,6 +5,7 @@
   #dis{ display: none; }  /* hide it on small screens */
   .btn-style{ 
   	margin-top: 5vh;
+  	margin-left: 25px;
   }
 }
 
@@ -28,8 +29,8 @@
 }
 
 .btn-style:hover{
+	opacity:0.5;
 	background-color:white;
-	hover:white;
 }
 
 
