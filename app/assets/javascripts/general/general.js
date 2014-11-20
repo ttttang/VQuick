@@ -7,10 +7,14 @@ $(document).ready(function(){
     //Allow past events to be hidden
     $(".toggleable-events").hide();
     $(".toggleable-event-list").show();
+
+
     $(".toggle-events").click(function(){
 	  $(".toggleable-events").toggle();
 	  $(".toggleable-event-list").toggle();
+
 	});
+
 
 
 });
