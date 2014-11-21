@@ -81,7 +81,7 @@ class EventsController < ApplicationController
         @createdevents.push(event)
       end
     end 
-    @createdevents.sort_by!{ |k| k[:date_and_time]}.reverse!
+    @createdevents.sort_by!{ |k| k[:date_and_time]}
     @createdevents=@createdevents.paginate(:per_page => 12, :page=>params[:page])
   end
   
@@ -99,7 +99,7 @@ class EventsController < ApplicationController
         end
       end
 
-    @myevents.sort_by!{ |k| k[:date_and_time]}.reverse!
+    @myevents.sort_by!{ |k| k[:date_and_time]}
     @pastevents.sort_by!{ |k| k[:date_and_time]}.reverse!
     @myevents=@myevents.paginate(:per_page => 12, :page=>params[:page])
     @pastevents=@pastevents.paginate(:per_page => 12, :page=>params[:page])
@@ -140,6 +140,6 @@ private
   end
 
   def sort_direction
-    %w[asc desc].include?(params[:direction]) ? params[:direction] : "desc"
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
   end
 end
