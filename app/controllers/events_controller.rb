@@ -41,7 +41,7 @@ class EventsController < ApplicationController
 
 
     if @event.save
-      redirect_to myevents_path, notice: "Event was successfully created."
+      redirect_to createdevents_path, notice: "Event was successfully created."
     else
       render 'new'
     end
@@ -58,7 +58,7 @@ class EventsController < ApplicationController
   def update
     if @event.update(event_params)
       flash[:notice]='Event updated.'
-      redirect_to myevents_path
+      redirect_to createdevents_path
     else
       render 'edit'
     end
