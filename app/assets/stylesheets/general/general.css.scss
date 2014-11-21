@@ -198,6 +198,22 @@ a:hover{
 
 }
 
+/********VALIDATION STYLING********/
+div .flash{
+	padding: 20px;
+	font-style: italic;
+	
+}
+
+.alert{
+	padding: 20px;
+	color: red;
+}
+
+.notice{
+	padding: 20px;
+	color: red;
+}
 
 /****************ORGANIZATION*******************/
 
@@ -261,3 +277,5 @@ div.pagination span.disabled {
 	padding-top: 57px;
 	margin-bottom: -45px;
 }
+
+

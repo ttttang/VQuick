@@ -32,13 +32,16 @@ class EventsController < ApplicationController
     #Link the event to the user who created it
     @event.created_by=current_user.id
     
-    #Capitalize the event name and city/state before saving them to the event     
-    capname=params[:event][:name]
-    @event.name=capname.slice(0,1).capitalize + capname.slice(1..-1)
-    
-    caplocation=params[:event][:city_state]
-    @event.city_state=caplocation.slice(0,1).capitalize + capname.slice(1..-1)
+    #Capitalize the event name and city/state before saving them to the event       
+      capname=params[:event][:name]
+      unless capname==nil||capname==""
+        @event.name=capname.slice(0,1).capitalize + capname.slice(1..-1)
+      end
 
+      caplocation=params[:event][:city_state]
+      unless caplocation==nil||caplocation=""
+        @event.city_state=caplocation.slice(0,1).capitalize + capname.slice(1..-1)
+      end
 
     if @event.save
       redirect_to createdevents_path, notice: "Event was successfully created."
@@ -57,8 +60,7 @@ class EventsController < ApplicationController
 
   def update
     if @event.update(event_params)
-      flash[:notice]='Event updated.'
-      redirect_to createdevents_path
+      redirect_to createdevents_path, notice: "Event was successfully updated."
     else
       render 'edit'
     end
@@ -66,7 +68,11 @@ class EventsController < ApplicationController
 
   def destroy
     @event.destroy
-    redirect_to myevents_path
+    if action_name==index  
+      redirect_to events_path
+    else
+      redirect_to createdevents_path
+    end
   end
 
   def show

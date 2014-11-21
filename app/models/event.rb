@@ -16,23 +16,23 @@ class Event < ActiveRecord::Base
 	has_attached_file :image, :styles => { :medium => "300x300>" }
 	validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
-#Makes sure newly created event is in the future
-def date_is_in_past
-    if date_and_time.present? && date_and_time < Time.now.in_time_zone("Pacific Time (US & Canada)")
-    	errors.add(:date_and_time, "can't be in the past")
-    end
-end	
+	#Makes sure newly created event is in the future
+	def date_is_in_past
+	    if date_and_time.present? && date_and_time < Time.now.in_time_zone("Pacific Time (US & Canada)")
+	    	errors.add(:date_and_time, "can't be in the past")
+	    end
+	end	
 
-#Search bar searches these categories
-def self.search(search)
-  if search
-  	where('name LIKE ? OR description LIKE ? OR requirements LIKE ?', "%#{search}%","%#{search}%","%#{search}%")
-  else
-    all
-  end
-end
+	#Search bar searches these categories
+	def self.search(search)
+	  if search
+	  	where('name LIKE ? OR description LIKE ? OR requirements LIKE ?', "%#{search}%","%#{search}%","%#{search}%")
+	  else
+	    all
+	  end
+	end
 
-def to_s
-	"#{name}"
-end
+	def to_s
+		"#{name}"
+	end
 end
