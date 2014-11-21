@@ -8,10 +8,12 @@ hr{
 	margin-right:7px;
 }
 
+/**this is to make the table view link blue **/
 h5 a{
 	color: #6685C2;
 }
 
+/**to make the links blue **/
 a{
 	color: #6685C2;
 }
@@ -136,12 +138,13 @@ body {
 .btn-block{
 	background:white;
 	color:gray;
-	border:1px solid black;
+	border:1px solid rgb(150,150,150);
 }
 
 .btn-block:hover{
 	background:transparent;
 	color:black;
+	border-color:black;
 }
 
 

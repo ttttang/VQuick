@@ -82,8 +82,8 @@
                               <div class="row">
                                  <div class="col-md-12">
                                     <%if user_signed_in?%> 
-                                       <%= link_to "Sign out", destroy_user_session_path, :method => :delete, class: "btn btn-success btn-block" %>
                                        <%=link_to "Account Settings", edit_user_registration_path, class: "btn btn-success btn-block"%>
+                                       <%= link_to "Sign out", destroy_user_session_path, :method => :delete, class: "btn btn-success btn-block" %>
                                     <%else%>
                                        <%= form_for(:user, :url => session_path(:user)) do |f| %>
                                        
