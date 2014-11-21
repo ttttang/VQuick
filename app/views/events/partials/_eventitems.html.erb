@@ -27,17 +27,17 @@
 
 				</div>
 			
-		
+			<%if action_name=='createdevents'||(current_user&&action_name=='index'&&current_user.id==eventitems.created_by)%>
+				<%= link_to "Delete", eventitems, method: :delete, data: { confirm: 'Are you sure you want to delete your event?'}, :class=>"underpost" %> 
+				<%= link_to "Edit", edit_event_path(eventitems), :class=>"underpost"%>
+			<%elsif action_name=='myevents'%>
+				<%=link_to "Unattend", unattend_path(:unattend=>eventitems.id), data: { confirm: 'Click OK to confirm your attendance!'}, :class=>"underpost"%>
+			
+
+			<%end%>
 			</ul>
 			
 	<%end%>
 
-	<%if action_name=='createdevents'||(current_user&&action_name=='index'&&current_user.id==eventitems.created_by)%>
-		<%= link_to "Delete", eventitems, method: :delete, data: { confirm: 'Are you sure you want to delete your event?'}, :class=>"underpost" %> |
-		<%= link_to "Edit", edit_event_path(eventitems), :class=>"underpost"%>
-	<%elsif action_name=='myevents'%>
-		<%=link_to "Unattend", unattend_path(:unattend=>eventitems.id), data: { confirm: 'Click OK to confirm your attendance!'}, :class=>"underpost"%>
 	
-
-	<%end%>
 </div>

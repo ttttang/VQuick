@@ -112,17 +112,20 @@ h1 {
 
 
 .eventitem .eventbody{
-	background-color: white;
+	background-color:  white;
 	padding: 1px;
 	padding-left: 10px;
 	color: rgb(69,69,69);
 	border-radius: 10px; 
 	width: 100%;
 	padding-bottom: 10px;
-	border: 1.3px solid rgb(60, 60, 60);
+	border: 2px solid rgb(120, 120, 120);
 
 }
+
+/**/
 .eventitem .eventbody:hover{
+	/*background-color: rgb(245, 245, 245);*/
 	background-color: rgb(245, 245, 245);
 }
 
@@ -299,6 +302,7 @@ table tr:hover td {
 /**take away the bullets **/
 .eventshow{
 	list-style-type: none;
+	padding-left: 0px;
 }
 
 /**fix the image in the show page **/
@@ -340,6 +344,7 @@ li span{
 	border:2px solid gray;
 	border-radius:15px;
 	padding:15px;
+	margin-right: 11vw;
 	margin-top:100px;
 }
 
@@ -364,9 +369,9 @@ li span{
 
 /**to move edit, unattend closer to the actual post in show page**/
 .underpost{
-	margin-top:0px;
+	margin-top:5px;
 	margin-left:10px;
-	padding-top:0px;
+	padding-top:5px;
 }
 
 /**to move "please sign in to attend" to center**/
