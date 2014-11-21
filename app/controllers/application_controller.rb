@@ -6,8 +6,6 @@ class ApplicationController < ActionController::Base
   #Allow sanitizer
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
- 
-  
   def after_sign_in_path_for(resource)
       events_path
   end
@@ -18,7 +16,6 @@ class ApplicationController < ActionController::Base
 
 
 protected
-
 	def configure_permitted_parameters
 	 	#Allow the these parameters to be passed to devise in user registration
 		devise_parameter_sanitizer.for(:sign_up) <<:fname <<:lname <<:name <<:admin <<:organization_id <<:image
