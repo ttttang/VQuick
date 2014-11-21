@@ -51,7 +51,7 @@ class OrganizationsController < ApplicationController
     @pastevents=[]
     #Separate current events from past events for selected organization
     events.each do |event|
-      if event.date_and_time>Time.now
+      if event.date_and_time>Time.now.in_time_zone("Pacific Time (US & Canada)")
         @currentevents.push(event)
         #Sort events by date
         @currentevents.sort_by!{ |k| k[:date_and_time]}.reverse!
