@@ -9,7 +9,8 @@
 
 
 <body>
-	
+<div class="wrapper">
+
 <!--Remove Navbar from Home Page-->
 	<%unless controller_name == 'pages'&&action_name == 'home'%>
 		<div class="header-fix">
@@ -39,6 +40,10 @@
 		</div>
 	<%end%>
 
+<div class="push"></div>
+</div>
+
+<div class="footer">
 	<%if action_name!='home'%>
 		<ul class="footer">
 			
@@ -50,5 +55,6 @@
 			</div>
 		</ul>
 	<%end%>
+</div>
 </body>
 </html>
