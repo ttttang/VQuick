@@ -12,7 +12,7 @@
 					<li class="eventname"> <h3><%=eventitems.name%></h3> 
 					</li>
 					<li class="eventdate"> Date:
-						<%=eventitems.date_and_time.strftime("%A %B %d, %Y")%> 
+						<%=eventitems.date_and_time.strftime("%A, %B %d, %Y")%> 
 					</li>
 					<hr>
 					<div class="biggerfont">
@@ -32,10 +32,10 @@
 			
 	<%end%>
 	<%if action_name=='createdevents'%>
-	<%= link_to "Delete", eventitems, method: :delete %> |
-			<%= link_to "Edit", edit_event_path(eventitems)%>
+		<%= link_to "Delete", eventitems, method: :delete, :class=>"underpost" %> |
+		<%= link_to "Edit", edit_event_path(eventitems), :class=>"underpost"%>
 	<%elsif action_name=='myevents'%>
-		<%=link_to "Unattend", unattend_path(:unattend=>eventitems.id)%>
+		<%=link_to "Unattend", unattend_path(:unattend=>eventitems.id), :class=>"underpost"%>
 	
 	<%end%>
 </div>
