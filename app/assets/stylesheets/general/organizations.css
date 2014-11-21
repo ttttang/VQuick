@@ -1,0 +1,51 @@
+/******************************ORGANIZATIONINDEX**************************/
+th.tableorg{
+	text-align:center;
+	color:rgb(70,70,70);
+	font-size:16px;
+	text-decoration:underline;
+}
+
+table th:first-child{
+	text-align:center;
+}
+
+table td:first-child{
+	text-align:center;
+}
+
+
+
+
+/******************************ORGANIZATIONSHOWPAGE**********************/
+
+.tabletitle{
+	margin-left:8vw;
+}
+
+
+/**to center the title organization on show page**/
+.orgtitle{
+	text-align:center;
+	color:rgb(69,69,69);
+}
+
+/**these are the details about the organization on org show**/
+.orgshow{
+	list-style-type:none;
+	color:rgb(90,90,90);
+	font-size:18px;
+	border:5px solid gray;
+	border-radius:15px;
+	padding:10px;
+	width:30%;
+	margin-left:32vw;
+}
+
+/**for the button to show/hide past events **/
+.btntoggle{
+	margin-left:38vw;
+	margin-bottom:10px;
+	margin-top:20px;
+}
+
