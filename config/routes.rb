@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   #Homepage 
   root "pages#home"
 
+  #EVENTS CREATED BY ADMIN
+  get 'createdevents'=>'events#createdevents'
+
   #Events for individual users
   get 'myevents' => 'events#myevents'
 

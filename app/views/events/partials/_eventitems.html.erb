@@ -1,36 +1,36 @@
 <!--EVENTS/INDEX LIST VIEW-->
-
-<ul class="alleventitems transitions-enabled" id="event-box">
-	<% @events.each do |event| %>
-		<!--Only the most current events are displayed-->
+<div class='box'>
+	<%=link_to (eventitems)  do%>
+		<ul class="eventitem">
 		
-		<%=link_to (event), class: 'box' do%>
-			<ul class="eventitem">
+			
 				<div class="eventbody">
-					<li class="eventimage"> <%=image_tag event.image.url(:medium)%> </li>
-					<li class="eventname"> <h3><%=event.name%></h3> 
+					<%if eventitems.image?%>
+						<li class="eventimage"> <%=image_tag eventitems.image.url(:medium)%> </li>
+					<%end%>
+					
+					<li class="eventname"> <h3><%=eventitems.name%></h3> 
 					</li>
 					<li class="eventdate"> Date:
-						<%=event.date_and_time.strftime("%A %B %d, %Y")%> 
+						<%=eventitems.date_and_time.strftime("%A %B %d, %Y")%> 
 					</li>
 					<hr>
 					<div class="biggerfont">
-						<li class="event-date"> <span> Time:</span> <%=event.date_and_time.strftime("%I:%M %p")%> to <%=(event.date_and_time+event.hours.hours+event.minutes.minutes).strftime("%I:%M %p")%>
+						<li class="event-date"> <span> Time:</span> <%=eventitems.date_and_time.strftime("%I:%M %p")%> to <%=(eventitems.date_and_time+eventitems.hours.hours+eventitems.minutes.minutes).strftime("%I:%M %p")%>
 						</li>
-						<li class="event-req"><span> Requirements:</span> <%=event.requirements%>
+						<li class="event-req"><span> Requirements:</span> <%=eventitems.requirements%>
 						</li>
-						<li class="event-org"> <span> Organization: </span> <%=event.organization%>
+						<li class="event-org"> <span> Organization: </span> <%=eventitems.organization%>
 						</li>
-						<li class="event-location"><span>Location:</span> <%=event.city_state%> </li>
+						<li class="event-location"><span>Location:</span> <%=eventitems.city_state%> </li>
 					</div>
 
 				</div>
-			</ul>
-		<%end%>
+			
 		
+			</ul>
+			
 	<%end%>
-	
-</ul>
-<div class="paginate">
-<%=will_paginate @events%>
+	<%= link_to "Delete", eventitems, method: :delete %> |
+			<%= link_to "Edit", edit_event_path(eventitems)%>
 </div>
