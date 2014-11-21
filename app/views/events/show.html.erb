@@ -5,10 +5,10 @@
 	<%=link_to "View my events", myevents_path%>
 <%elsif current_user%>
 
-	<%=link_to "Attend event!", attendevent_path(:attend=>@event.id), data: { confirm: 'Click OK to confirm your attendance!'}%>
+	<%=link_to "Attend event!", attendevent_path(:attend=>@event.id), :class=>"btn btn-default btnattendcolor", data: { confirm: 'Click OK to confirm your attendance!'}%>
 	
 <%else%>
-	<p>Please sign in to attend event!</p>
+	<p class="signin">Please sign in to attend event!</p>
 <%end%>
 
 

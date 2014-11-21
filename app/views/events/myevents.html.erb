@@ -1,4 +1,4 @@
-<h1 class="viewhead">Events I Plan to Attending</h1>
+<h1 class="viewhead">Events I Plan to Attend</h1>
 
 
 
@@ -8,8 +8,8 @@
 	<h5>I do not have an event to attend yet.</h5>
 <%else%>
 	
-	<h5 class="toggle-events view-link toggleable-event-list">Table View</h5>
-	<h5 class="toggle-events view-link toggleable-events">Item View</h5>
+	<h5 class="toggle-events view-link toggleable-event-list viewchange"><a href="#" >Table View</a></h5>
+	<h5 class="toggle-events view-link toggleable-events viewchange"><a href="#" >Item View</a></h5>
 
 	
 	<!--LIST VIEW-->
@@ -45,7 +45,7 @@
 
 <!--EVENTS THE CURRENT USER ATTENDED-->
 <%if @pastevents.size>=1%>
-		<h1 class="viewhead">Events I've Already Experienced</h1>
+		<h1 class="viewhead">Past Events</h1>
 		<table>
 			<tbody>
 				<tr>
