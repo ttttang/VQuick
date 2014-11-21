@@ -11,7 +11,7 @@ before_filter :configure_account_update_params, only: [:update]
   def create
     par=params[:user][:organization_id]
     
-    if par!="" 
+    if par!="" &&params[:admin]
       org=Organization.find(par)
       if org.code==params[:code]||par==""||par=nil
         super

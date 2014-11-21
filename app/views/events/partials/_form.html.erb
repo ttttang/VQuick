@@ -1,4 +1,14 @@
 <!--FORM FOR EVENTS/NEW OR EVENTS/EDIT-->
+<%if @event.errors.any?%>
+		<div id="errors">
+			<p>Please correct the following <%= pluralize(@event.errors.count, "error") %></p>
+			<ul>
+				<% @event.errors.full_messages.each do |msg| %>
+					<li><%=msg%></li>
+				<% end %>
+			</ul>
+		</div>
+<% end %>
 
 <%= form_for (@event) do |f| %>
 	<div class="field">

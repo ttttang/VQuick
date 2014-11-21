@@ -169,11 +169,6 @@ body {
 }
 
 
-/*Prevent content from going on top of fixed navbar*/
-  .contentunder {
-    padding-top: 70px;
-  }
-
 /*********LOGO**********/
 .logo{
 	border-radius: 50%;
@@ -208,20 +203,24 @@ a:hover{
 }
 
 /********VALIDATION STYLING********/
-div .flash{
-	padding: 20px;
+.flash{
+	padding-top: 30px;
+	padding-right: 60px;
 	font-style: italic;
-	
+	float: right;	
 }
 
 .alert{
-	padding: 20px;
+	padding-top: 20px;
+	padding-left: 100px;
+	margin-bottom: -20px;
 	color: red;
 }
 
 .notice{
-	padding: 20px;
-	color: red;
+	padding-top: 20px;
+	margin-bottom: -20px;
+	
 }
 
 /****************ORGANIZATION*******************/
@@ -248,7 +247,8 @@ div.pagination a {
 div.pagination a:hover, div.pagination a:active {
 	padding: 2px 5px 2px 5px;
 	margin-right: 2px;
-	border: 1px solid #a0a0a0;
+	border: 1px solid gray;
+	color: black;
 }
 div.pagination span.current {
 	padding: 2px 5px 2px 5px;
@@ -278,8 +278,10 @@ div.pagination span.disabled {
 }
 
 .contentunderother{
+	margin-left: 30px;
 	padding-top: 57px;
 	padding-bottom: 30px;
+	width: 100%
 }
 
 .contentunderpull{
@@ -287,4 +289,24 @@ div.pagination span.disabled {
 	margin-bottom: -45px;
 }
 
+/**************Footer********************/
+.footer{
+	padding-bottom: 50px;
+}
 
+.footer li{
+	display: inline-block;
+	padding-left: 5px;
+}
+
+.footer-right{
+	float: right;
+	margin-right: 93px;
+	
+}
+
+.copyright{
+	opacity: .5;
+	float: left;
+	margin-left: 63px;
+}

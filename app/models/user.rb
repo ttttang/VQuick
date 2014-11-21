@@ -9,10 +9,11 @@ class User < ActiveRecord::Base
 
 	validates :fname, length: {minimum: 2}
 	validates :lname, length: {minimum: 2}
-	
+	validates :email, uniqueness: true
 	validate :admin_organization
 	
 
+	protected
 	#Make sure admins select an organization
 	def admin_organization
 	    if admin && organization_id==nil

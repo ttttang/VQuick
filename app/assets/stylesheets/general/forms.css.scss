@@ -8,7 +8,21 @@
 	padding-top: 7px;
 }
 
+/********ERRORS*********/
+div#errors {
+ 
+   color:red;
+ 
+}
 
+form div.field_with_errors{
+	margin-bottom: 0;
+}
+
+form div.field_with_errors label{
+	color: red;
+	font-weight: bold;
+}
 
 
 /*******FORMS********/
@@ -29,7 +43,7 @@
 }
 
 .field .web{
-	width: 45%;
+	width: 65%;
 }
 
 .field label{

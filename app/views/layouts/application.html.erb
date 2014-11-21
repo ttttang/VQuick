@@ -18,29 +18,37 @@
 	<%end%>
 	<p class="navbar-text pull-right"></p>
 
-<!--Display Flash Notices-->
-	<% [:notice, :alert].each do |level| %>
-		<% if flash[level] %>
-			<div class="flash <% level %> contentunderpull"> <%= flash[level] %> </div>
-		<% end %>
-	<% end %>
 
 
 <!--Set Different Styling for Home Page-->
 	<%if controller_name == 'pages'&&action_name == 'home'%>
 		<div class="home">
+			<%=render 'layouts/flashnote'%>
 			<%=yield%>
 		</div> <!--The Yield-->
 	<%elsif controller_name == 'events'&&(action_name == 'index'||action_name == 'myevents'||action_name == 'createdevents')%>
 		<div class="contentunder">
-			<%= yield %>  <!--The Yield-->
+			<%=render 'layouts/flashnote'%>
+			<%= yield %>  
 		</div>
 
 	<%else%>
-		<div class="container contentunderother"> 
-			<%=yield%>
+		<div class="contentunderother"> 
+			<%=render 'layouts/flashnote'%>
+			<%=yield%> <!--The Yield-->
 		</div>
 	<%end%>
 
+	<%if action_name!='home'%>
+		<ul class="footer">
+			
+			<li class="copyright"> &#169; Tracy Tang and Sylvester Lan</li>
+			<div class="footer-right">
+				
+				<li><%=link_to "Contact Us", pages_contact_path%></li> |
+				<li><%=link_to "About Us", pages_contact_path%></li>
+			</div>
+		</ul>
+	<%end%>
 </body>
 </html>

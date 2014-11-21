@@ -1,4 +1,15 @@
 <!--Form for Organization/New and Organization/Edit-->
+<%if @organization.errors.any?%>
+		<div id="errors">
+			<p>Please correct the following <%= pluralize(@organization.errors.count, "error") %></p>
+			<ul>
+				<% @organization.errors.full_messages.each do |msg| %>
+					<li><%=msg%></li>
+				<% end %>
+			</ul>
+		</div>
+<% end %>
+
 <%= form_for (@organization) do |f| %>
 	<div class="field">
 		<%= f.label :name %><br>
