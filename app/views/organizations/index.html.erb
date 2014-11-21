@@ -1,15 +1,15 @@
-<h1>Organizations</h1>
+<h1 class="orgtitle">Organizations</h1>
 
 <table>
 	<tbody>
 		<tr>
-			<th> Organization Name </th>
-			<th> Description </th>
+			<th class="tableorg"> Organization Name </th>
+			<th class="tableorg"> Website </th>
 		</tr>
 		<% @organizations.each do |org| %>
 		<tr>
-			<td> <%= link_to org.name, org %> </td>
-			<td> <%= org.description %> </td>
+			<td class="blue"> <%= link_to org.name, org %> </td>
+			<td class="blue"> <%= link_to org.website, "http://"+org.website %> </td>
 		</tr>
 		<% end %>
 	</tbody>

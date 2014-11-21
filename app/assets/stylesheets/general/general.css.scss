@@ -18,7 +18,7 @@ a{
 	color: #6685C2;
 }
 
-/**************************COVERPAGE*******************/
+/**************************MEDIAQUERY*************************/
 
 /** Different views when it's mobile **/
 @media screen and (min-width: 0px) and (max-width: 400px) {
@@ -63,13 +63,15 @@ a{
   }
 }
 
+/**************************COVERPAGE*******************/
+
 /** This is the 'Make a Difference' on the cover page **/
 #cover-text{
 	color:gray;
 	font-size:5vw;
-	margin-left:185px;
+	margin-left:200px;
 	margin-bottom:0px;
-	margin-top:40px;
+	margin-top:50px;
 }
 
 /** This is to style our "Volunteer" button on the cover page **/

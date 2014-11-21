@@ -1,20 +1,19 @@
-<h1>Organization Details</h1>
+<h1 class="orgtitle"><%= @organization.name%></h1>
 
-<ul>
-	<li> Organization: <%= @organization.name%></li>
-	<li> Website: <%= link_to @organization.website, "http://"+@organization.website %> </li>
+<ul class="orgshow">
 	<li> Description: <%= @organization.description %> </li>
 	<li> Email: <%= @organization.email %> </li>
 	<li> Phone Number: <%= @organization.phone %> </li>	
+	<li> Website: <%= link_to @organization.website, "http://"+@organization.website%> </li>
 </ul>
 
 <!--The organization's current events-->
 <table>
-	<h4>Current Events:</h4>
+	<h4 class="tabletitle">Current Events:</h4>
 	<tr>
 		<th> Name </th>
 		<th> Date </th>
-		<th> Requirements </th>
+		<th> Time </th>
 		<th> Organization </th>
 		
 	</tr>
@@ -22,15 +21,15 @@
 </table>
 
 <%if @pastevents.size!=0%>
-	<p class="toggle-events">Show/Hide Past Events</p>
+	<p class="toggle-events btn btn-default btntoggle">Show/Hide Past Events</p>
 	<!--The organization's past events-->
 	
 	<table class="toggleable-events">
-		<h4 class="toggleable-events">Past Events:</h4>
+		<h4 class="toggleable-events tabletitle">Past Events:</h4>
 		<tr>
 			<th> Name </th>
 			<th> Date </th>
-			<th> Requirements </th>
+			<th> Time </th>
 			<th> Organization </th>
 			
 		</tr>
