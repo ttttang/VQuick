@@ -31,6 +31,9 @@
 			</ul>
 			
 	<%end%>
-	<%= link_to "Delete", eventitems, method: :delete %> |
-			<%= link_to "Edit", edit_event_path(eventitems)%>
+	<%if action_name=="createdevents"%><%= link_to "Delete", eventitems, method: :delete %> |
+		<%= link_to "Edit", edit_event_path(eventitems)%>
+	<%else%>
+		<%= link_to "Unattend", unattend_path(:unattend=>eventitems.id)%>
+	<%end%>
 </div>
