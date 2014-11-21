@@ -43,6 +43,13 @@ a{
 	padding-bottom:10px;
 }
 
+/**This is to change the size of the image in the show page when mobile**/
+  img{
+  	width:95%;
+  	padding-left:0px;
+  	margin-left:0px;
+  }
+
 /**This is to fix the buttons (attend,edit,delete) when logged in- show page**/
   .btnattendcolor-loggedin{
 	margin-left:18vw;
@@ -53,12 +60,6 @@ a{
   	margin-top:25px;
   	margin-left:-20px;
   	margin-right:20px;
-  }
-
-  img{
-  	width:95%;
-  	padding-left:0px;
-  	margin-left:0px;
   }
 }
 
