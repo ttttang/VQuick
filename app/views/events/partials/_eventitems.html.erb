@@ -32,7 +32,7 @@
 			
 	<%end%>
 
-	<%if action_name=='createdevents'%>
+	<%if action_name=='createdevents'||(current_user&&action_name=='index'&&current_user.id==eventitems.created_by)%>
 		<%= link_to "Delete", eventitems, method: :delete, :class=>"underpost" %> |
 		<%= link_to "Edit", edit_event_path(eventitems), :class=>"underpost"%>
 	<%elsif action_name=='myevents'%>
