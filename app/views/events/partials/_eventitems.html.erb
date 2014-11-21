@@ -31,6 +31,11 @@
 			</ul>
 			
 	<%end%>
+	<%if action_name=='createdevents'%>
 	<%= link_to "Delete", eventitems, method: :delete %> |
 			<%= link_to "Edit", edit_event_path(eventitems)%>
+	<%elsif action_name=='myevents'%>
+		<%=link_to "Unattend", unattend_path(:unattend=>eventitems.id)%>
+	
+	<%end%>
 </div>
