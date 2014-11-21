@@ -29,7 +29,7 @@
 <!--Set Different Styling for Home Page-->
 	<%if controller_name == 'pages'&&action_name == 'home'%>
 		<div class="home"><%=yield%></div> <!--The Yield-->
-	<%elsif controller_name == 'events'&&action_name == 'index'%>
+	<%elsif controller_name == 'events'&&(action_name == 'index'||action_name == 'myevents'||action_name == 'createdevents')%>
 		<div class="contentunder">
 			<%= yield %>  <!--The Yield-->
 		</div>

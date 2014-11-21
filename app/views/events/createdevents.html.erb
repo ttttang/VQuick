@@ -1,0 +1,41 @@
+<h1 class="viewhead">Events I am Organizing</h1>
+<!--CURRENT USER'S CREATED EVENTS-->
+<%if current_user.admin==true%>
+	<%if @createdevents.size<1%>
+		<%=link_to "Create New Event", new_event_path, class: 'btn'%>
+		<h5>I have not yet created an event!</h5>
+	<%else%>
+		
+<!--..............EVENTS THE USER CREATED................-->
+		
+		<!--TOGGLING LINKS-->
+		<h5 class="toggle-events view-link toggleable-event-list">Table View</h5>
+		<h5 class="toggle-events view-link toggleable-events">Item View</h5>
+		
+		<!--LIST VIEW-->
+		<div class='toggleable-event-list'>
+			<ul class="alleventitems transitions-enabled" id="event-box">
+				<%=render partial: 'events/partials/eventitems', collection: @createdevents%>
+			</ul>
+		</div>
+
+
+		<!--TABLE VIEW-->
+		<table class="toggleable-events">
+			<tbody>
+				<tr>
+					<th> Name </th>
+					<th> Date </th>
+					<th> Description </th>
+					<th> Requirements </th>
+					<th> Organization </th>
+					<th></th>
+				</tr>
+			<%= render partial: "events/partials/myevents", collection: @createdevents %>
+			</tbody>
+		</table>
+		<div class="paginate">
+		<%=will_paginate @createdevents%>
+		</div>
+	<%end%>
+<%end%>

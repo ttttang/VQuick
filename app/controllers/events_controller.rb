@@ -73,21 +73,7 @@ class EventsController < ApplicationController
     @allusers=@event.users
   end
 
-  def myevents
-    @myevents=[]
-    @pastevents=[]
-
-    #Display past events separately from current events
-      current_user.events.each do |event|
-        if event.date_and_time>Time.now-5.hours
-          @myevents.push(event)
-        else
-          @pastevents.push(event)
-        end
-      end
-
-    @myevents.sort_by!{ |k| k[:date_and_time]}.reverse!
-    @pastevents.sort_by!{ |k| k[:date_and_time]}.reverse!
+  def createdevents
     #Find all events created by the user
     @createdevents=[]
     Event.search(params[:search]).each do |event|  
@@ -96,6 +82,27 @@ class EventsController < ApplicationController
       end
     end 
     @createdevents.sort_by!{ |k| k[:date_and_time]}.reverse!
+    @createdevents=@createdevents.paginate(:per_page => 12, :page=>params[:page])
+  end
+  
+
+  def myevents
+    @myevents=[]
+    @pastevents=[]
+
+    #Display past events separately from current events
+      current_user.events.search(params[:search]).each do |event|
+        if event.date_and_time>Time.now-event.hours.hours
+          @myevents.push(event)
+        else
+          @pastevents.push(event)
+        end
+      end
+
+    @myevents.sort_by!{ |k| k[:date_and_time]}.reverse!
+    @pastevents.sort_by!{ |k| k[:date_and_time]}.reverse!
+    @myevents=@myevents.paginate(:per_page => 12, :page=>params[:page])
+    @pastevents=@pastevents.paginate(:per_page => 12, :page=>params[:page])
   end
 
   def attend

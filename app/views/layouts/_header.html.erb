@@ -22,10 +22,12 @@
                <ul class="nav navbar-nav nav-colored">
                   
                   <%if user_signed_in?%>
-                     <li><%=link_to "My Events", myevents_path%></li>
+                     <li><%=link_to "Events to Attend", myevents_path%></li>
                      
                      <%if current_user.admin==true%>
+                        <li><%=link_to "My Events", createdevents_path%></li>
                         <li><%=link_to "Create Event", new_event_path%></li>
+                        
                      <%end%>
                   <%end%>
 
@@ -49,7 +51,9 @@
                <%if controller_name == 'events'&&action_name == 'index'%>
                   <%=render 'layouts/searchevent'%>
                <%elsif controller_name == 'events'&&action_name == 'myevents'%>
-                  <%=render 'layouts/searchmyevent'%>  
+                  <%=render 'layouts/searchmyevent'%> 
+               <%elsif controller_name=='events'&&action_name=='createdevents'%>
+                  <%=render 'layouts/searchcreatedevents'%>
                <%elsif controller_name == 'organizations'&&action_name == 'index'%>   
                   <%=render 'layouts/searchorganization'%>
                <%else%>

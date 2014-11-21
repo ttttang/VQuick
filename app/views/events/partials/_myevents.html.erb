@@ -7,7 +7,7 @@
 	<td> <%= myevents.requirements %></td>
 	<td> <%= link_to myevents.organization, myevents.organization %></td>
 	<td>
-	<%if myevents.created_by == current_user.id%>
+	<%if myevents.created_by == current_user.id&&action_name=='createdevents'%>
 		<%= link_to "Delete", myevents, method: :delete %> <br>
 		<%= link_to "Edit", edit_event_path(myevents)%>
 	<%else%>
