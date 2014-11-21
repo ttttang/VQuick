@@ -42,6 +42,18 @@ a{
 	margin-right:-2vw;
 }
 
+/**This is to fix the buttons (attend,edit,delete) when logged in- show page**/
+  .btnattendcolor-loggedin{
+	margin-left:18vw;
+}
+
+/**This is to fix the box on event show page when mobile **/
+  .showbox{
+  	margin-top:25px;
+  	margin-left:-15px;
+  	margin-right:10px;
+
+  }
 }
 
 /** This is the 'Make a Difference' on the cover page **/
