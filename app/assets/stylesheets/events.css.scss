@@ -22,6 +22,7 @@
 	font-weight: bold;
 	font-size: 20px;
 	padding-bottom: 0px;
+	width:225px;
 
 }
 
@@ -100,7 +101,7 @@ h1 {
 	background: linear-gradient(to bottom right, rgb(80, 80, 80) , rgb(60, 60, 60));
 	width: 93%;
 	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-bottom: 7px;
 	border-radius: 15px;
 	padding: 2px;
 	
@@ -335,10 +336,28 @@ li span{
 	margin-top:100px;
 }
 
-.attendbtn{
-	border:2px solid gray;
+/**to move number of ppl attending down on show page**/
+.attendance{
+	margin-top:10px;
 }
 
+/**changing the "attend" into a button on show page**/
+.btnattendcolor{
+	background:rgb(180,180,180);
+	margin-left:40vw;
+}
+
+/**to move edit, unattend closer to the actual post in show page**/
+.underpost{
+	margin-top:0px;
+	margin-left:10px;
+	padding-top:0px;
+}
+
+/**to move "please sign in to attend" to center**/
+.signin{
+	text-align:center;
+}
 
 /************************MYEVENTS-SIGNEDIN******************/
 

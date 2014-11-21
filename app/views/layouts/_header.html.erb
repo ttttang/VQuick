@@ -72,7 +72,7 @@
                   <ul class="nav navbar-nav navbar-right">
                      <%if not(user_signed_in?)%>
                         <li>
-                           <%= link_to "Sign Up!", new_user_registration_path, class: "btn btn-block" %>
+                           <%= link_to "Sign Up!", new_user_registration_path, class: "btn" %>
                         </li>
                      <%end%>
                      <li class="dropdown">
@@ -104,11 +104,9 @@
                                        </div>
                                       
                                        <div class="actions">
-                                        <%= f.submit "Log in", class: "btn btn-success btn-block btn-pad"  %>
+                                        <%= f.submit "Log in", class: "btn btn-block btn-pad"  %>
                                        </div>
                                        <%= link_to "Forgot your password?", new_password_path(:user) %>
-                                       <div class="divider"></div>
-                                       <%= link_to "Sign Up!", new_user_registration_path, class: "btn btn-success btn-block" %>
                                        <% end %>
                                     <%end%>
                                  </div>

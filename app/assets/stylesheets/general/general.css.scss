@@ -4,10 +4,17 @@
 hr{
 	margin-top:4px;
 	margin-bottom:7px;
-	border-color:gray;
+	border-color:rgb(180,180,180);
 	margin-right:7px;
 }
 
+h5 a{
+	color: #6685C2;
+}
+
+a{
+	color: #6685C2;
+}
 
 /**************************COVERPAGE*******************/
 
@@ -96,11 +103,6 @@ hr{
 	background-color:white;
 }
 
-a{
-
-	color: #0000CC;
-}
-
 body { 
 	background-color: white;
 	margin-top:30px; 
@@ -130,6 +132,18 @@ body {
 	margin-bottom: 10px;
 }
 
+/**for the sign in & settings button in the navbar**/
+.btn-block{
+	background:white;
+	color:gray;
+	border:1px solid black;
+}
+
+.btn-block:hover{
+	background:transparent;
+	color:black;
+}
+
 
 /*Prevent content from going on top of fixed navbar*/
   .contentunder {
@@ -145,18 +159,18 @@ body {
 
 .logofirst
 {
-	color:black ;
+	color:rgb(69,69,69) ;
 	padding-left: 12px;
 	margin: 0px;
 	font-size: 30px;
-	font-family: "Comic Sans MS";
+	font-family: "Verdana";
 	text-decoration: none;
 
 }
 
 .logostyle
 {
-	color:black ;
+	color:rgb(69,69,69) ;
 	font-size: 17px;
 	font-family: "Verdana";
 	padding-right: 10px;
