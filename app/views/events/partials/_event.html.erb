@@ -14,16 +14,19 @@
 <!--For Event/Show-->
 <%if controller_name == 'events'&&action_name == 'show'%>
 	<ul class="eventshow">
-	
-		<li> <span>Date:</span> <%= @event.date_and_time.strftime("%A %B %d, %Y") %></li>
-		<li> <span>Time:</span><%=@event.date_and_time.strftime("%I:%M %p")%> to <%=(@event.date_and_time+@event.hours.hours+@event.minutes.minutes).strftime("%I:%M %p")%></li>
-		<li> <span> Location:</span> <%= @event.street %>, <%= @event.city_state %> <%= @event.zip %></li>
-		<li> <span> Description:</span> <%= @event.description %></li>
-		<li> <span>Requirements:</span> <%= @event.requirements %></li>
-		<li> <span> Organization:</span> <%= link_to @event.organization, @event.organization%></li>		
+	<div class="showbox">
+		<li><%= image_tag @event.image.url(:medium), :class => "showimage" %> </li>
+		<h1 class="showname"><%= @event.name %></h1>
+		<li class="showdate"> <span>Date:</span> <%= @event.date_and_time.strftime("%A %B %d, %Y") %></li>
+		<li class="showtime showbigger"> <span>Time:</span><%=@event.date_and_time.strftime("%I:%M %p")%> to <%=(@event.date_and_time+@event.hours.hours+@event.minutes.minutes).strftime("%I:%M %p")%></li>
+		<li class="showlocation showbigger"> <span> Location:</span> <%= @event.street %>, <%= @event.city_state %> <%= @event.zip %></li>
+		<li class="showdescription showbigger"> <span> Description:</span> <%= @event.description %></li>
+		<li class="showrequirement showbigger"> <span>Requirements:</span> <%= @event.requirements %></li>
+		<li class="showorganization showbigger"> <span> Organization:</span> <%= link_to @event.organization, @event.organization%></li>
+	</div>		
 		
 		<%if current_user&&@event.created_by==current_user.id%>
-			<li> <span>Number of People Attending: </span> <%= @allusers.size %></li>
+			<li> <span class="showbigger">Number of People Attending: </span> <%= @allusers.size %></li>
 			<%@allusers.each do |user|%>
 				<%=user.fname%> <%=user.lname%> | <%=user.email%> 
 

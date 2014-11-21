@@ -2,7 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
 /*******EVENT INDEX PAGE********/
 
 /**This is the title "All Events" on the front page**/
@@ -18,12 +17,22 @@
 
 /**This is the "table view" & "list view" on the front page **/
 .viewchange{
-	margin-left: 9vw;
+	margin-left: 8vw;
 	margin-top:10px;
 	font-weight: bold;
 	font-size: 20px;
 	padding-bottom: 0px;
 
+}
+
+/**move the word table view higher **/
+.toggle-events{
+	padding-top:5px;
+}
+
+/**this is to give the image a border radius**/
+img {
+	border-radius: 17px;
 }
 
 /**to make the event title centered in boxes **/
@@ -52,6 +61,7 @@ li span{
 /**to center the pagination **/
 .paginate{
 	text-align:center;
+	color:rgb(60,60,60);
 }
 
 
@@ -122,7 +132,9 @@ h1 {
 }
 
 .eventbody li{
-	margin-top: 1px;
+	margin-top: 12px;
+	margin-right:12px;
+	margin-left:5px;
 	margin-bottom: 1px;
 	
 }
@@ -276,9 +288,57 @@ table tr:hover td {
 
 /**********EVENT/SHOW************/
 
+/**take away the bullets **/
 .eventshow{
 	list-style-type: none;
 }
+
+/**fix the image in the show page **/
+.showimage{
+	margin-top:10px;
+	float:right;
+	margin-right:0vw;
+}
+
+/**to make the event title centered in the boxes **/
+.showname{
+	text-align:left;
+	text-decoration:underline;
+
+}
+
+/**to change event date in boxes **/
+.showdate{
+	font-style:italic;
+	text-align:left;
+	font-size:20px;
+}
+
+
+/**to make font bigger for time, location, description, requirement, org**/
+.showbigger{
+	font-size:16px;
+	text-align:left;
+}
+
+/**to make the Time, Requirements, Org, etc. bold in box**/
+li span{
+	font-weight: bold;
+	margin-right:5px;
+}
+
+/**to create a border around text on showpage**/
+.showbox{
+	border:2px solid gray;
+	border-radius:15px;
+	padding:15px;
+	margin-top:100px;
+}
+
+.attendbtn{
+	border:2px solid gray;
+}
+
 
 /************************MYEVENTS-SIGNEDIN******************/
 
