@@ -18,7 +18,7 @@ class Event < ActiveRecord::Base
 
 #Makes sure newly created event is in the future
 def date_is_in_past
-    if date_and_time.present? && date_and_time < Time.now
+    if date_and_time.present? && date_and_time < Time.now.in_time_zone("Pacific Time (US & Canada)")
     	errors.add(:date_and_time, "can't be in the past")
     end
 end	

@@ -10,7 +10,7 @@ class EventsController < ApplicationController
   	allevents= Event.search(params[:search]).order(sort_column+" "+sort_direction)
     @events=[]
     allevents.each do |event|
-      if(event.date_and_time>Time.now-5.hours)
+      if(event.date_and_time>Time.now.in_time_zone("Pacific Time (US & Canada)")-event.hours.hours)
         @events.push(event)
       end
     end
@@ -41,7 +41,7 @@ class EventsController < ApplicationController
 
 
     if @event.save
-      redirect_to myevents_path, notice: "Event was successfully created."
+      redirect_to createdevents_path, notice: "Event was successfully created."
     else
       render 'new'
     end
@@ -58,7 +58,7 @@ class EventsController < ApplicationController
   def update
     if @event.update(event_params)
       flash[:notice]='Event updated.'
-      redirect_to myevents_path
+      redirect_to createdevents_path
     else
       render 'edit'
     end
@@ -77,7 +77,7 @@ class EventsController < ApplicationController
     #Find all events created by the user
     @createdevents=[]
     Event.search(params[:search]).each do |event|  
-      if event.created_by == current_user.id&&event.date_and_time>Time.now
+      if event.created_by == current_user.id&&event.date_and_time>Time.now.in_time_zone("Pacific Time (US & Canada)")
         @createdevents.push(event)
       end
     end 
@@ -92,7 +92,7 @@ class EventsController < ApplicationController
 
     #Display past events separately from current events
       current_user.events.search(params[:search]).each do |event|
-        if event.date_and_time>Time.now-event.hours.hours
+        if event.date_and_time>Time.now.in_time_zone("Pacific Time (US & Canada)")-event.hours.hours
           @myevents.push(event)
         else
           @pastevents.push(event)
