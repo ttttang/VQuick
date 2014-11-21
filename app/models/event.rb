@@ -9,6 +9,8 @@ class Event < ActiveRecord::Base
 	validates :minutes, numericality: {only_integer: true, greater_than_or_equal_to: 0, less_than: 59}
 	validate :date_is_in_past
 	validates :category, presence: true
+	validates :street, presence: true
+	validates :city_state, presence: true
 
 	#for images
 	has_attached_file :image, :styles => { :medium => "300x300>" }
