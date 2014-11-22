@@ -44,13 +44,14 @@ a{
 		list-style-type: none;
 		border-radius: 15px;
 		padding-left: 0;
-		margin-left: 0;
+		margin-left: 2px;
 		width: 85%;
 	}
 
 	/**this creates the border of the box **/
 	.eventitem{
 		list-style-type: none;
+		margin-left: 2px;
 		padding-left: 0px;
 		padding-right: 0px;
 		margin-bottom: 10px;
@@ -58,7 +59,8 @@ a{
 
 	}
 	.copyright{
-		padding-left: 40px;
+		padding-left: 0px;
+		margin-left: 20px;
 	}
 
   .home{
