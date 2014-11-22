@@ -13,8 +13,8 @@
 	<tr>
 		<th> Name </th>
 		<th> Date </th>
-		<th> Time </th>
-		<th> Organization </th>
+		<th class="hidemobile"> Time </th>
+		<th class="hidemobile"> Organization </th>
 		
 	</tr>
 	<%=render partial: 'events/partials/event', collection: @currentevents %>
@@ -29,8 +29,8 @@
 		<tr>
 			<th> Name </th>
 			<th> Date </th>
-			<th> Time </th>
-			<th> Organization </th>
+			<th class="hidemobile"> Time </th>
+			<th class="hidemobile"> Organization </th>
 			
 		</tr>
 		<%=render partial: 'events/partials/event', collection: @pastevents %>

@@ -5,8 +5,8 @@
 	<tr>
 		<td> <%= link_to event, event %></td>
 		<td> <%= event.date_and_time.strftime("%A, %B %d, %Y")%> </td>
-		<td> <%=event.date_and_time.strftime("%I:%M %p")%> to <%=(event.date_and_time+event.hours.hours+event.minutes.minutes).strftime("%I:%M %p")%></td>
-		<td> <%= link_to event.organization, event.organization %></td>
+		<td class="hidemobile"> <%=event.date_and_time.strftime("%I:%M %p")%> to <%=(event.date_and_time+event.hours.hours+event.minutes.minutes).strftime("%I:%M %p")%></td>
+		<td class="hidemobile"> <%= link_to event.organization, event.organization %></td>
 	</tr>
 <%end%>
 

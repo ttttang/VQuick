@@ -34,9 +34,13 @@ a{
   	margin-left: 23px;
   }
 /** This is to move the event box masonry when mobile **/
-	  #event-box{
+	 #event-box{
 		margin-left: 0px;
 		padding-left: 0px;
+	}
+
+	.box{
+		width:100%;
 	}
 
 
@@ -50,10 +54,14 @@ a{
 		width: 85%;
 	}
 
+	.pagination{
+		margin-left:0vw;
+	}
+
 	/**this creates the border of the box **/
 	.eventitem{
 		list-style-type: none;
-		margin-left: 2px;
+		margin-left: 10vw;
 		padding-left: 0px;
 		padding-right: 0px;
 		margin-right: 0px;
@@ -109,13 +117,32 @@ a{
   }
 
   table{
-  	margin-left: 0;
+  	margin-left: 6vw;
   }
+
+ /****** For organizations show page **/
+ ul.orgshow{
+	/*padding:;*/
+	width:50%;
+	margin-left:22vw;
+}
+
+ th.hidemobile{
+ 	display: none;
+ }
+
+ td.hidemobile{
+ 	display:none;
+}
+
+p.toggle-events.btn.btn-default.btntoggle{
+	margin-left:22vw;
+}
 
 }
 
 
-@media screen and (min-width: 480px) and (max-width: 805px) {
+@media screen and (min-width: 485px) and (max-width: 805px) {
 /**This is to make 'Make a diff' disappear when mobile**/
   #dis{ 
   	display: none; 
@@ -193,6 +220,7 @@ a{
 	padding-left: 10px;
 	padding-right: 40px;
 	margin-bottom: 20px;
+	width: 250;
 
 	/*background: linear-gradient(to bottom right, rgb(80, 80, 80) , rgb(60, 60, 60));
 	width: 93%;
