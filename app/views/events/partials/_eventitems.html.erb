@@ -1,9 +1,9 @@
 <!--EVENTS/INDEX LIST VIEW-->
 <div class='box'>
-	<%=link_to (eventitems)  do%>
+	
 		<ul class="eventitem">
 		
-			
+			<%=link_to (eventitems)  do%>
 				<div class="eventbody">
 					<%if eventitems.image?%>
 						<li class="eventimage"> <%=image_tag eventitems.image.url(:medium)%> </li>
@@ -33,11 +33,11 @@
 			<%elsif action_name=='myevents'%>
 				<%=link_to "Unattend", unattend_path(:unattend=>eventitems.id), data: { confirm: 'Click OK to confirm your attendance!'}, :class=>"underpost"%>
 			
-
+				<%end%>
 			<%end%>
 			</ul>
 			
-	<%end%>
+	
 
 	
 </div>

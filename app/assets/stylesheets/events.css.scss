@@ -175,13 +175,14 @@ h1 {
 
 /*****************EVENT TABLE VIEW***************************/
 
-.pretty th .current{
+/*.pretty th .current{
 	padding-right: 40px;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	background-repeat: no-repeat;
 	background-position: right;
-}
+	text-align: c;
+}*/
 
 /*.pretty th .asc{
 	background-image: url(/assets/arrow_up.png);
@@ -234,13 +235,14 @@ table th {
 	border-top:1px solid #fafafa;
 	border-right:1px solid #e0e0e0;
 	border-bottom:1px solid #e0e0e0;
+	text-align: center;
 
 	background: #ededed;
 	background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#ebebeb));
 	background: -moz-linear-gradient(top,  #ededed,  #ebebeb);
 }
 table th:first-child {
-	text-align: left;
+	text-align: center;
 	
 }
 table tr:first-child th:first-child {
@@ -258,7 +260,7 @@ table tr {
 	padding-left:20px;
 }
 table td:first-child {
-	text-align: left;
+	text-align: center;
 	padding-left:20px;
 	border-left: 0;
 }
