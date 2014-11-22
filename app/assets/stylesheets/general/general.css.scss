@@ -62,10 +62,7 @@ a{
 
 	}
 	.copyright{
-		padding-left: 0px;
-		margin-left: 3px;
-		padding-right: 0px;
-		margin-right: 0px;
+		display: none;
 	}
 
   .home{
@@ -178,6 +175,9 @@ a{
   	margin-left: 0;
   }
 
+  .copyright{
+		display: none;
+	}
 
 
   .alleventitems{
