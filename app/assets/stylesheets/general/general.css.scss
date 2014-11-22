@@ -23,7 +23,7 @@ a{
 /**************************MEDIAQUERY*************************/
 
 /** Different views when it's mobile **/
-@media screen and (min-width: 0px) and (max-width: 500px) {
+@media screen and (min-width: 0px) and (max-width: 400px) {
 /**This is to make 'Make a diff' disappear when mobile**/
   #dis{ 
   	display: none; 
@@ -39,10 +39,10 @@ a{
 }
 
   .home{
-	background-image: image-url('volunteer3.jpg');
+	
 /* Set rules to fill background */
   min-height: 100%;
-  min-width: 1050px;
+  min-width: 100%;
 	
   /* Set up proportionate scaling */
   width: 100%;
