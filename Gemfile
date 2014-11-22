@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
+ruby '2.1.3'
 
 #Use sqlite3 as the database for Active Record, for heroku
 group :development, :test do
