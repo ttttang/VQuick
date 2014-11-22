@@ -23,7 +23,7 @@ a{
 /**************************MEDIAQUERY*************************/
 
 /** Different views when it's mobile **/
-@media screen and (min-width: 0px) and (max-width: 480px) {
+@media screen and (min-width: 0px) and (max-width: 485px) {
 /**This is to make 'Make a diff' disappear when mobile**/
   #dis{ 
   	display: none; 
@@ -34,15 +34,25 @@ a{
   	margin-left: 23px;
   }
 /** This is to move the event box masonry when mobile **/
-  #event-box{
-	margin-left: 0vw;
-	padding-left: 10px;
-}
+	  #event-box{
+		margin-left: 0px;
+		padding-left: 0px;
+	}
 
-.alleventitems{
-	margin-left: 10px;
-	padding-left: 10px;
-}
+
+	.alleventitems{
+		list-style-type: none;
+		border-radius: 15px;
+	}
+
+	/**this creates the border of the box **/
+	.eventitem{
+		list-style-type: none;
+		padding-left: 0px;
+		padding-right: 0px;
+		margin-bottom: 10px;
+
+	}
 
   .home{
 	
