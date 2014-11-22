@@ -43,7 +43,9 @@ a{
 	.alleventitems{
 		list-style-type: none;
 		border-radius: 15px;
-		width: 95%;
+		padding-left: 0;
+		margin-left: 0;
+		width: 85%;
 	}
 
 	/**this creates the border of the box **/
@@ -52,8 +54,11 @@ a{
 		padding-left: 0px;
 		padding-right: 0px;
 		margin-bottom: 10px;
-		width: 95%;
+		width: 85%;
 
+	}
+	.copyright{
+		padding-left: 200px;
 	}
 
   .home{
