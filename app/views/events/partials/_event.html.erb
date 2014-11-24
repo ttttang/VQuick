@@ -29,7 +29,7 @@
 		<%if current_user&&@event.created_by==current_user.id%>
 			<li class="attendance"> <span class="showbigger">Number of People Attending: </span> <%= @allusers.size %></li>
 			<%@allusers.each do |user|%>
-				<%=user.fname%> <%=user.lname%> | <%=user.email%> 
+				<%=user.fname%> <%=user.lname%> | <%=user.email%> <br>
 
 			<%end%>
 		<%end%>
