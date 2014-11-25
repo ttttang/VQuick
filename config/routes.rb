@@ -26,7 +26,7 @@ Rails.application.routes.draw do
   #Resources
 
   get 'events'=>'events#index'
-
+  resources :charges
   resources :events
   resources :organizations
   #resources :users
