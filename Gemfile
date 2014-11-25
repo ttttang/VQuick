@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.1.3'
 
+gem 'stripe', :git=> 'https://github.com/stripe/stripe-ruby'
 #Use sqlite3 as the database for Active Record, for heroku
 group :development, :test do
      gem 'sqlite3'
